@@ -37,7 +37,7 @@ body{
 }
 
 /* header */
-.top {
+/* .top {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,7 +67,7 @@ body{
   color: var(--white);
   border: 1px solid rgba(255,255,255,0.03);
   font-weight: 600;
-}
+} */
 
 /* menu icon */
 #menu-icon {
@@ -343,14 +343,14 @@ body.sidebar-open {
     margin-bottom:10px
 }
 
-/* footer */
+/* footer
 .footer {
   text-align: center;
   padding: 20px;
   color: var(--muted);
   font-size: 14px;
   border-top: 1px solid rgba(255,255,255,0.08);
-}
+} */
 
 /* responsive */
 @media(max-width:980px){
