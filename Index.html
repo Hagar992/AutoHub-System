@@ -5,23 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AutoHub</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="assets/css/MainStyle.css">
-  <link rel="stylesheet" href="assets/css/heederFooter.css">
+  <link rel="stylesheet" href="assets/css/headerFooter.css">
 </head>
 <body>
   <div class="wrap panel">
-<div class="top">
-  <div class="logo">AutoHub</div>
-  <div class="nav" id="nav">
-    <a href="Privacy.html">Privacy</a>
-    <a href="terms.html">Terms</a>
-    <a href="#">About</a>
-    <a href="contactUs.html">Contact</a>
-    <a href="#">Profile</a>
-    <button class="btn-light">Choose Now</button>
-  </div>
-  <div id="menu-icon">&#9776;</div>
-</div>
+    <header class="top">
+      <div class="logo">AutoHub</div>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contactUs.html">Contact</a>
+        <button class="btn-light">Choose Now</button>
+      </nav>
+      <div id="menu-icon">&#9776;</div>
+    </header>
 
 <!-- Sidebar + overlay -->
 <div id="overlay"></div>
@@ -144,13 +145,12 @@
     <div class="footer-section">
       <h4>Follow Us</h4>
       <div class="social-icons">
-        <a href="#"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
-        <a href="#"><img src="assets/icons/instagram.svg" alt="Instagram"></a>
-        <a href="#"><img src="assets/icons/twitter.svg" alt="Twitter"></a>
-      </div>
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
     </div>
   </div>
-
   <div class="footer-bottom">
     <p>© 2025 AutoHub. All rights reserved.</p>
   </div>
@@ -158,45 +158,7 @@
 
   </div>
 
-<script>
-  const menuIcon = document.getElementById("menu-icon");
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
-  const closeSidebar = document.getElementById("close-sidebar");
-  const navLinks = document.querySelectorAll("#nav a, #nav button");
-  const sidebarData = document.getElementById("sidebar-data");
-
-  // انسخ اللينكات اللي في الـ nav للـ sidebar
-  sidebarData.innerHTML = "";
-  navLinks.forEach(link => {
-    const cloned = link.cloneNode(true);
-    cloned.addEventListener("click", () => {
-      sidebar.classList.remove("open");
-      overlay.classList.remove("show");
-      document.body.classList.remove("sidebar-open");
-    });
-    sidebarData.appendChild(cloned);
-  });
-
-  // Open sidebar
-  menuIcon.addEventListener("click", () => {
-    sidebar.classList.add("open");
-    overlay.classList.add("show");
-    document.body.classList.add("sidebar-open");
-  });
-
-  // Close sidebar
-  function closeAll() {
-    sidebar.classList.remove("open");
-    overlay.classList.remove("show");
-    document.body.classList.remove("sidebar-open");
-  }
-
-  closeSidebar.addEventListener("click", closeAll);
-  overlay.addEventListener("click", closeAll);
-</script>
-
-
+<script src="assets/js/headerFooter.js"></script>
 
 </body>
 </html>

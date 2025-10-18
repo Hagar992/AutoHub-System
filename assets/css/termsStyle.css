@@ -1,8 +1,11 @@
-:root{
-  --bg:#0f0f10;
-  --white:#f5f5f5;
-  --accent: #ffd166;
+:root {
+  --bg: #0f0f10;
   --card: #111214;
+  --muted: #9b9b9b;
+  --white: #f5f5f5;
+  --accent: #ffd166;
+  --glass: rgba(255,255,255,0.04);
+  --rounded: 28px;
 }
 
 /* === Global Reset === */
@@ -38,48 +41,6 @@ body {
   background: linear-gradient(90deg, #ffd700, #ffb347);
   margin: 12px auto 0;
   border-radius: 3px;
-}
-/* Header */
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 32px;
-  background: var(--bg);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-.logo {
-  font-size: 22px;
-  font-weight: 800;
-}
-.nav {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-.nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-.nav a:hover, .nav a.active {
-  color: var(--accent);
-}
-.btn-light {
-  background: var(--glass);
-  padding: 8px 14px;
-  border-radius: 14px;
-  color: var(--white);
-  border: 1px solid rgba(255,255,255,0.08);
-  font-weight: 600;
-}
-#menu-icon {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
 }
 
 /* === Container === */
@@ -142,39 +103,6 @@ body {
     width: 60px;
     height: 2.5px;
   }
-  .top {
-    flex-wrap: wrap;
-  }
-  .logo {
-    font-size: 18px;
-  }
-  #menu-icon {
-    display: block;
-    font-size: 26px;
-    cursor: pointer;
-  }
-  .nav {
-    display: none;
-    flex-direction: column;
-    background: var(--card);
-    position: absolute;
-    top: 70px;
-    right: 0;
-    padding: 20px;
-    width: 220px;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    z-index: 99;
-  }
-  .nav.show {
-    display: flex;
-  }
-  .nav a, 
-  .btn-light {
-    font-size: 14px;
-    padding: 10px;
-    text-align: left;
-  }
   .container {
     padding: 30px;
     margin: 20px;
@@ -196,19 +124,6 @@ body {
   .section-title::after {
     width: 45px;
     height: 2px;
-  }
-   .logo {
-    font-size: 16px;
-  }
-  .nav {
-    width: 180px;
-    top: 60px;
-    padding: 15px;
-  }
-  .nav a, 
-  .btn-light {
-    font-size: 13px;
-    padding: 8px;
   }
   .container {
     padding: 20px;

@@ -5,48 +5,6 @@
   --card: #111214;
 }
 
-/* Header */
-.top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 32px;
-  background: var(--bg);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
-.logo {
-  font-size: 22px;
-  font-weight: 800;
-}
-.nav {
-  display: flex;
-  gap: 18px;
-  align-items: center;
-}
-.nav a {
-  color: var(--muted);
-  text-decoration: none;
-  font-size: 14px;
-  transition: color 0.3s;
-}
-.nav a:hover, .nav a.active {
-  color: var(--accent);
-}
-.btn-light {
-  background: var(--glass);
-  padding: 8px 14px;
-  border-radius: 14px;
-  color: var(--white);
-  border: 1px solid rgba(255,255,255,0.08);
-  font-weight: 600;
-}
-#menu-icon {
-  display: none;
-  font-size: 26px;
-  cursor: pointer;
-}
 /* ===== Privacy Policy Page Style ===== */
 body {
   background: var(--bg);
@@ -145,11 +103,6 @@ body {
   }
   .logo {
     font-size: 18px;
-  }
-  #menu-icon {
-    display: block;
-    font-size: 26px;
-    cursor: pointer;
   }
   .nav {
     display: none;
