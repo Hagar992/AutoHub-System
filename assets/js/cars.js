@@ -49,7 +49,7 @@ searchInput.addEventListener("input", () => {
   }
 });
 
-//status & brands (buttons)
+
 
 const brandButtons = document.querySelectorAll('#brandsbtns .typbtn');
 const statusButtons = document.querySelectorAll('#status .typbtn');
@@ -57,129 +57,12 @@ let activeBrands = [];
 let activeStatus = "";
 
 
-
-// function applyFilters() {
-//   let found = false;
-
-//   cards.forEach(card => {
-//     const text = card.innerText.toLowerCase();
-
-//     const matchBrand = activeBrands.length > 0
-//       ? activeBrands.some(brand => text.includes(brand.toLowerCase()))
-//       : true;
-
-//     const matchStatus = activeStatus
-//       ? text.includes(activeStatus.toLowerCase())
-//       : true;
-
-//     // ✅ فلتر السنة مضبوط
-//     const yearElements = card.querySelectorAll(".carstatus .cardet");
-//     let cardYear = null;
-//     yearElements.forEach(el => {
-//       const num = parseInt(el.innerText);
-//       if (!isNaN(num)) cardYear = num;
-//     });
-
-//     const fromYear = startYear !== "default" ? parseInt(startYear) : null;
-//     const toYear = endYear !== "default" ? parseInt(endYear) : null;
-
-//     let matchYear = true;
-//     if (fromYear && cardYear < fromYear) matchYear = false;
-//     if (toYear && cardYear > toYear) matchYear = false;
-
-//     if (matchBrand && matchStatus && matchYear) {
-//       card.style.display = "block";
-//       found = true;
-//     } else {
-//       card.style.display = "none";
-//     }
-//   });
-
-//   if (!found) msg();
-//   else clearmsg();
-// }
-
-
-
-// function applyFilters() {
-//   let found = false;
-
-//   // ⚠️ تحقق من ترتيب السنين
-//   if (startYear !== "default" && endYear !== "default" && parseInt(startYear) > parseInt(endYear)) {
-//     msg("⚠️ Invalid Year Range: 'From' must be less than 'To'");
-//     cards.forEach(card => card.style.display = "none");
-//     return;
-//   }
-
-// //  // ⚠️ تحقق من ترتيب الأسعار
-// //   if (fromPrice && toPrice && fromPrice > toPrice) {
-// //     // msg("Invalid Price Range");
-// //     // cards.forEach(card => card.style.display = "none");
-// //    document.getElementById("priceerror").style.display = "block";
-
-// //     return;
-// //   }
-
-//   cards.forEach(card => {
-//     const text = card.innerText.toLowerCase();
-
-//     // ✅ الماركات
-//     const matchBrand = activeBrands.length > 0
-//       ? activeBrands.some(brand => text.includes(brand.toLowerCase()))
-//       : true;
-
-//     // ✅ الحالة (new / used)
-//     const matchStatus = activeStatus
-//       ? text.includes(activeStatus.toLowerCase())
-//       : true;
-
-//     // ✅ السنة
-//     const yearElements = card.querySelectorAll(".carstatus .cardet");
-//     let cardYear = null;
-//     yearElements.forEach(el => {
-//       const num = parseInt(el.innerText);
-//       if (!isNaN(num)) cardYear = num;
-//     });
-
-//     const fromYearVal = startYear !== "default" ? parseInt(startYear) : null;
-//     const toYearVal = endYear !== "default" ? parseInt(endYear) : null;
-
-//     let matchYear = true;
-//     if (fromYearVal && cardYear < fromYearVal) matchYear = false;
-//     if (toYearVal && cardYear > toYearVal) matchYear = false;
-
-//     // ✅ السعر
-//     const priceText = card.querySelector(".money")?.innerText || "";
-//     const priceMatch = priceText.replace(/[^0-9]/g, ""); // يشيل الفواصل وEGP
-//     const cardPrice = parseInt(priceMatch);
-
-//     let matchPrice = true;
-//     if (fromPrice && cardPrice < fromPrice) matchPrice = false;
-//     if (toPrice && cardPrice > toPrice) matchPrice = false;
-
-//     // ✅ النتيجة النهائية
-//     if (matchBrand && matchStatus && matchYear && matchPrice) {
-//       card.style.display = "block";
-//       found = true;
-//     } else {
-//       card.style.display = "none";
-//     }
-//   });
-
-//   if (!found) msg();
-//   else clearmsg();
-// }
-
-
-
-
-
 function applyFilters() {
   let found = false;
 
-  // ⚠️ تحقق من ترتيب السنين
+
   // if (startYear !== "default" && endYear !== "default" && parseInt(startYear) > parseInt(endYear)) {
-  //   msg("⚠️ Invalid Year Range: 'From' must be less than 'To'");
+  //   msg(" Invalid Year Range: 'From' must be less than 'To'");
   //   cards.forEach(card => card.style.display = "none");
   //   return;
   // }
@@ -187,19 +70,19 @@ function applyFilters() {
   cards.forEach(card => {
     const text = card.innerText.toLowerCase();
 
-    // ✅ الماركات (من الزرار أو من select)
+  
     const matchBrand =
       (activeBrands.length > 0
         ? activeBrands.some(brand => text.includes(brand.toLowerCase()))
         : true) &&
       (selectedBrand ? text.includes(selectedBrand) : true);
 
-    // ✅ الحالة (new / used)
+  
     const matchStatus = activeStatus
       ? text.includes(activeStatus.toLowerCase())
       : true;
 
-    // ✅ السنة
+   
     const yearElements = card.querySelectorAll(".carstatus .cardet");
     let cardYear = null;
     yearElements.forEach(el => {
@@ -214,7 +97,7 @@ function applyFilters() {
     if (fromYearVal && cardYear < fromYearVal) matchYear = false;
     if (toYearVal && cardYear > toYearVal) matchYear = false;
 
-    // ✅ السعر
+
     const priceText = card.querySelector(".money")?.innerText || "";
     const priceMatch = priceText.replace(/[^0-9]/g, "");
     const cardPrice = parseInt(priceMatch);
@@ -223,7 +106,7 @@ function applyFilters() {
     if (fromPrice && cardPrice < fromPrice) matchPrice = false;
     if (toPrice && cardPrice > toPrice) matchPrice = false;
 
-    // ✅ النتيجة النهائية
+ 
     if (matchBrand && matchStatus && matchYear && matchPrice) {
       card.style.display = "block";
       found = true;
@@ -235,11 +118,6 @@ function applyFilters() {
   if (!found) msg();
   else clearmsg();
 }
-
-
-
-
-
 
 
 brandButtons.forEach(button => {
@@ -278,11 +156,7 @@ statusButtons.forEach(button => {
   });
 });
 
-//order
 
-// year & brands (Select)
-
-// 🧩 Year filters (From / To)
 const startYearSelect = document.getElementById('startyear');
 const endYearSelect = document.getElementById('endyear');
 
@@ -302,7 +176,7 @@ endYearSelect.addEventListener('change', (e) => {
   endYear = e.target.value;
   applyFilters();
 });
-// 💰 Price Filters
+
 const fromPriceInput = document.getElementById('fromPrice');
 const toPriceInput = document.getElementById('toPrice');
 
@@ -319,7 +193,7 @@ toPriceInput.addEventListener('input', () => {
   applyFilters();
 });
 
-// 🧩 Order Filter
+
 const orderSelect = document.getElementById('order');
 const cardsContainer = document.getElementById('cards');
 
@@ -328,9 +202,9 @@ orderSelect.addEventListener('change', () => {
   sortCards(orderBy);
 });
 
-// 🔹 دالة الترتيب
+
 function sortCards(orderBy) {
-  let sortedCards = [...cards]; // نعمل نسخة من الكروت
+  let sortedCards = [...cards]; 
 
   sortedCards.sort((a, b) => {
     const nameA = a.querySelector('.cartitle').innerText.trim().toLowerCase();
@@ -350,11 +224,11 @@ function sortCards(orderBy) {
       case "year":
         return yearA - yearB;
       default:
-        return 0; // Default (مايعملش ترتيب)
+        return 0; 
     }
   });
 
-  // نرجّع ترتيب الكروت جوه الـ DOM
+
   sortedCards.forEach(card => cardsContainer.appendChild(card));
 }
 
