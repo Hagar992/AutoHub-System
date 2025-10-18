@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/headerFooter.css">
+    <link rel="stylesheet" href="assets/css/cars.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <title>Cars</title>
+</head>
+<body>
+   <!---------------------start navbar------------------------------- -->
+   <header class="top">
+      <div class="logo">AutoHub</div>
+      <nav class="nav" id="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="Privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="contactUs.html">Contact</a>
+        <button class="btn-light">Choose Now</button>
+      </nav>
+      <div id="menu-icon">&#9776;</div>
+    </header>
+
+<!-- Sidebar + overlay -->
+<div id="overlay"></div>
+<aside id="sidebar">
+  <button id="close-sidebar">&times;</button>
+  <div id="sidebar-data"></div>
+</aside>
+     <!-- <nav>
+<a href=""id="logo"><img src="assets/img/car in logo.png" alt="logo"  width="100px" height="30pc"></a>  
+<ul id="navlinks">
+<li><a href="">Home</a></li>
+<li><a href="">About Us</a></li>
+<li><a href="">Terms</a></li>
+    </ul>
+<ul id="navicons">
+        <li><i class="fa-solid fa-heart"></i></li>
+        <li><i class="fa-solid fa-bell"></i></li> -->
+        <!-- <div id="user">
+            <i class="fa-solid fa-bars"></i>
+            <p>Log in</p>
+            <li ><i class="fa-solid fa-user"></i></li>
+        </div> -->
+        <!-- <li ><i class="fa-solid fa-user"></i></li>
+          </ul>
+     </nav> -->
+<!---------------------end navbar------------------------------- -->
+     <section id="header">
+        <div>
+            <h2>Fueled by adrenaline <br>guided by performance ...</h2>
+        </div>
+       </section>
+     <!---------------------end header------------------------------- -->
+     <aside>
+ 
+
+       <div id="ordertag" class="line" >
+
+            <div class="title">
+<i class="fa-solid fa-filter"></i>
+            <p>Order</p>
+            </div>
+           
+<div class="filterarea">
+       <select name="order" id="order" class="paddten" >
+            <option value="default">Default</option>
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+            <option value="year">Model Year</option>
+         </select>
+</div>
+     
+       </div>
+<!-- ------------------------car type-------------------------------- -->
+  <div class="line" id="status">
+
+            <div class="title">
+ <i class="fa-solid fa-car"></i>
+            <p >Car Status</p>
+            </div>
+           
+<div class="filterarea">
+
+       <button class="typbtn" >New</button>
+       <button class="typbtn">Used</button>
+
+</div>
+     
+       </div>
+       <!-- ------------------------price---------------------------- -->
+        
+         <!-- <div class="line"  >
+
+            <div class="title">
+<i class="fa-solid fa-coins"></i>
+            <p>Price</p>
+            </div>
+           
+<div class="filterarea">
+<p class="filtername">From</p>
+         
+         <input type="money" class="moneyfilter">
+<p class="filtername">To</p>
+<input type="money" class="moneyfilter">  
+</div>
+     
+       </div> -->
+       <div class="line">
+
+  <div class="title">
+    <i class="fa-solid fa-coins"></i>
+    <p>Price</p>
+  </div>
+
+  <div class="filterarea">
+    <p class="filtername">From</p>
+    <input type="number" id="fromPrice" class="moneyfilter" placeholder=" Min Price">
+    <p class="filtername">To</p>
+    <input type="number" id="toPrice" class="moneyfilter" placeholder=" Max Price">
+  </div>
+<p id="priceerror"></p>
+</div>
+
+       <!-- ------------------------year---------------------------- -->
+        <div class="line" >
+
+            <div class="title">
+ <i class="fa-solid fa-calendar"></i>
+            <p>Year</p>
+            </div>
+           
+<div class="filterarea">
+<p class="filtername">From</p>
+         <select name="startyear" id="startyear" class="paddten" >
+            <option value="default">All</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+         </select>
+<p class="filtername">To</p>
+       <select name="endyear" id="endyear" class="paddten" >
+            <option value="default">All</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+         </select>
+</div>
+     
+       </div>
+       <!-- ---------------------------Brand-------------------------- -->
+       <div id="brandsbtns" class="line" >
+
+            <div class="title">
+ <i class="fa-solid fa-car-side"></i>
+            <p>Brands</p>
+            </div>
+           
+<div class="filterarea" >
+
+       <button class="typbtn">Mercedes</button>
+       <button class="typbtn">Opel</button>
+       <button class="typbtn">Jeep</button>
+       <button class="typbtn">Volvo</button>
+       <button class="typbtn">Chevrolet</button>
+       <button class="typbtn">Kia</button>
+       <button class="typbtn">Peugeot</button>
+       <button class="typbtn">Renault</button>
+       <button class="typbtn">Dodge</button>
+       <button class="typbtn">Citroën</button>
+       <button class="typbtn">Toyota</button>
+       <button class="typbtn">BMW</button>
+       <button class="typbtn">Hyundai</button>
+       <button class="typbtn">Mitsubishi</button>
+       <button class="typbtn">Land Rover</button>
+       <button class="typbtn">BYD</button>
+       <button class="typbtn">Suzuki</button>
+       
+
+</div>
+     
+       </div>
+
+       <!-- <div class="filterarea" id="brandsselect">
+            
+        <div class="title" >
+     <i class="fa-solid fa-car-side"></i>
+         <label for="brands" ><p>Brands</p></label>
+        </div>
+      <div>
+ <i class="fa-solid fa-sort" id="icon"></i>
+         <select name="sort" id="sort" class="paddten" >
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Opel">Opel</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Kia">Kia</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Renault">Renault</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Citroen">Citroën</option>
+            <option value="Toyota">Toyota</option>
+            <option value="BMW">BMW</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="BYD">BYD</option>
+            <option value="Suzuki">Suzuki</option>
+         </select>
+</div>
+     
+       </div> -->
+        <div id="brandsselect"class="line" >
+
+            <div class="title">
+<i class="fa-solid fa-car-side"></i>
+            <p>Brands</p>
+            </div>
+           
+<div class="filterarea">
+       <select name="brand" id="brand" class="paddten" >
+            <option value="default">All Brands</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Opel">Opel</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Kia">Kia</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Renault">Renault</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Citroen">Citroën</option>
+            <option value="Toyota">Toyota</option>
+            <option value="BMW">BMW</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="BYD">BYD</option>
+            <option value="Suzuki">Suzuki</option>
+         </select>
+</div>
+     
+       </div>
+     </aside>
+      <!---------------------end aside------------------------------- -->
+     <main>
+        <div id="searchbar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder=" Search" id="search">
+         <button id="searchBtn">Search</button>
+        </div>
+        <div id="cards">
+
+
+<a href="cardetails.html" class="card">
+ <img src="assets/img/car1.jpg" alt="Carimg">
+<div class="carinfo">
+<h3 class="cartitle">Land Rover Defender</h3>
+<div class="carstatus">
+<i class="fa-solid fa-car"></i>
+<p class="cardet">2022</p>
+<p class="cardet">used</p>
+<p class="cardet">Petrol</p>
+<p class="cardet">Automatic</p>
+</div>
+</div>
+<div class="carprice">
+<p class="price">Price</p>
+<p class="money">1,200,000 EGP</p>
+</div>
+</a>
+<a href="" class="card">
+ <img src="assets/img/car2.jpg" alt="Carimg">
+<div class="carinfo">
+<h3 class="cartitle">Land Rover Defender</h3>
+<div class="carstatus">
+<i class="fa-solid fa-car"></i>
+<p class="cardet">2022</p>
+<p class="cardet">used</p>
+<p class="cardet">Petrol</p>
+<p class="cardet">Automatic</p>
+</div>
+</div>
+<div class="carprice">
+<p class="price">Price</p>
+<p class="money">1,200,000 EGP</p>
+</div>
+</a>
+<a href="" class="card">
+ <img src="assets/img/car3.jpg" alt="Carimg">
+<div class="carinfo">
+<h3 class="cartitle">Land Rover Defender</h3>
+<div class="carstatus">
+<i class="fa-solid fa-car"></i>
+<p class="cardet">2022</p>
+<p class="cardet">used</p>
+<p class="cardet">Petrol</p>
+<p class="cardet">Automatic</p>
+</div>
+</div>
+<div class="carprice">
+<p class="price">Price</p>
+<p class="money">1,200,000 EGP</p>
+</div>
+</a>
+<a href="" class="card">
+ <img src="assets/img/car1.jpg" alt="Carimg">
+<div class="carinfo">
+<h3 class="cartitle">jeep</h3>
+<div class="carstatus">
+<i class="fa-solid fa-car"></i>
+<p class="cardet">2021</p>
+<p class="cardet">used</p>
+<p class="cardet">Petrol</p>
+<p class="cardet">Automatic</p>
+</div>
+</div>
+<div class="carprice">
+<p class="price">Price</p>
+<p class="money">1,200,000 EGP</p>
+</div>
+</a>
+<a href="" class="card">
+ <img src="assets/img/car1.jpg" alt="Carimg">
+<div class="carinfo">
+<h3 class="cartitle">Land Rover Defender</h3>
+<div class="carstatus">
+<i class="fa-solid fa-car"></i>
+<p class="cardet">2025</p>
+<p class="cardet">new</p>
+<p class="cardet">Petrol</p>
+<p class="cardet">Automatic</p>
+</div>
+</div>
+<div class="carprice">
+<p class="price">Price</p>
+<p class="money">1,200,000 EGP</p>
+</div>
+</a>
+<a href="" class="card">
+ <img src="assets/img/car1.jpg" alt="Carimg">
+<div class="carinfo">
+<h3 class="cartitle">Mercedes</h3>
+<div class="carstatus">
+<i class="fa-solid fa-car"></i>
+<p class="cardet">2023</p>
+<p class="cardet">new</p>
+<p class="cardet">Petrol</p>
+<p class="cardet">Automatic</p>
+</div>
+</div>
+<div class="carprice">
+<p class="price">Price</p>
+<p class="money">900,000 EGP</p>
+</div>
+</a>
+<a href="" class="card">
+ <img src="assets/img/car1.jpg" alt="Carimg">
+<div class="carinfo">
+<h3 class="cartitle">BMW</h3>
+<div class="carstatus">
+<i class="fa-solid fa-car"></i>
+<p class="cardet">2019</p>
+<p class="cardet">used</p>
+<p class="cardet">Petrol</p>
+<p class="cardet">Automatic</p>
+</div>
+</div>
+<div class="carprice">
+<p class="price">Price</p>
+<p class="money">700,000 EGP</p>
+</div>
+</a>
+
+
+ <p id="notfound"></p>
+ </main>
+  <!---------------------end main------------------------------- -->
+  <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h4>AutoHub</h4>
+      <p>Find your perfect car in just a few clicks — reliable, fast, and affordable.</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="Privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="contactUs.html">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>Follow Us</h4>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 AutoHub. All rights reserved.</p>
+  </div>
+</footer>
+
+    <script src="assets/js/cars.js"></script>
+    <script src="assets/js/headerFooter.js"></script>
+</body>
+</html>
