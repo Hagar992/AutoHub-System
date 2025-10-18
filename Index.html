@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AutoHub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/MainStyle.css">
+</head>
+<body>
+  <div class="wrap panel">
+<div class="top">
+  <div class="logo">AutoHub</div>
+  <div class="nav" id="nav">
+    <a href="Privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+    <a href="#">About</a>
+    <a href="contactUs.html">Contact</a>
+    <a href="#">Profile</a>
+    <button class="btn-light">Choose Now</button>
+  </div>
+  <div id="menu-icon">&#9776;</div>
+</div>
+
+<!-- Sidebar + overlay -->
+<div id="overlay"></div>
+<aside id="sidebar">
+  <button id="close-sidebar">&times;</button>
+  <div id="sidebar-data"></div>
+</aside>
+
+
+
+    <!-- HERO -->
+    <section class="hero">
+     <video class="video" autoplay loop>
+      <source src="assets/img/headder.mp4" type="video/mp4">
+    </video>
+     <div class="overlay">
+        <h1 class="title">Find your car in 30 seconds — simple terms, instant result</h1>
+
+        <div class="search-row">
+          <input class="input" placeholder="Brand" />
+          <input class="input" placeholder="Date" />
+          <input class="input" placeholder="Car type" />
+          <button class="search-btn">Search</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- white card with featured cars -->
+    <div class="card-row">
+      <h2 class="section-title black">Most Picked Cars</h2>
+        <div class="car-item">
+          <img src="assets/img/mostPick.jpg" alt="bmw">
+          <div class="meta">
+            <h4>BMW 3 Series (G20)</h4>
+            <p class="muted">2.0L — 5 seats</p>
+          </div>
+          <div class="price">$65/day</div>
+        </div>
+        
+        <div class="car-item">
+          <img src="assets/img/mostPick.jpg" alt="merc">
+          <div class="meta">
+            <h4>Mercedes E-Class</h4>
+            <p class="muted">Comfort & Luxury</p>
+          </div>
+          <div class="price">$75/day</div>
+        </div>
+       
+        <div class="car-item">
+          <img src="assets/img/mostPick.jpg" alt="toyota">
+          <div class="meta">
+            <h4>Tesla Model 3</h4>
+            <p class="muted">Electric — zero emissions</p>
+          </div>
+          <div class="price">$90/day</div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- features -->
+    <h2 class="section-title white">WHY US !!?</h2>
+    <section class="features">
+     
+      <div class="feature">
+        <h5>Perfect technical condition</h5>
+        <p>Regular checks and maintenance before every rental.</p>
+      </div>
+      <div class="feature">
+        <h5>Wide selection</h5>
+        <p>Different ranges and classes — economy to luxury.</p>
+      </div>
+      <div class="feature">
+        <h5>Transparent pricing</h5>
+        <p>No hidden fees — everything clear before booking.</p>
+      </div>
+      <div class="feature">
+        <h5>Flexible rental terms</h5>
+        <p>Daily, weekly and monthly options.</p>
+      </div>
+      <div class="feature">
+        <h5>Car delivery</h5>
+        <p>Delivery to your location on demand.</p>
+      </div>
+      <div class="feature">
+        <h5>Insurance & safety</h5>
+        <p>Full coverage and 24/7 roadside assistance.</p>
+      </div>
+    </section>
+
+    <!-- three-step section -->
+    <section class="steps">
+      <img class="bgimg" src="assets/img/footer.jpg" alt="step-bg">
+      <div class="steps-panel">
+        <h3>Rent in 3 easy steps</h3>
+        <div class="step"><strong>1</strong> Choose the right car</div>
+        <div class="step"><strong>2</strong> Pay securely</div>
+        <div class="step"><strong>3</strong> Receive the car and enjoy</div>
+        <div style="margin-top:12px;text-align:left"><button class="search-btn">Start Now</button></div>
+      </div>
+    </section>
+
+  <footer class="footer">
+    <p>© 2025 AutoHub. All rights reserved.</p>
+  </footer>
+  </div>
+
+<script>
+  const menuIcon = document.getElementById("menu-icon");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const closeSidebar = document.getElementById("close-sidebar");
+  const navLinks = document.querySelectorAll("#nav a, #nav button");
+  const sidebarData = document.getElementById("sidebar-data");
+
+  // انسخ اللينكات اللي في الـ nav للـ sidebar
+  sidebarData.innerHTML = "";
+  navLinks.forEach(link => {
+    const cloned = link.cloneNode(true);
+    cloned.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+      document.body.classList.remove("sidebar-open");
+    });
+    sidebarData.appendChild(cloned);
+  });
+
+  // Open sidebar
+  menuIcon.addEventListener("click", () => {
+    sidebar.classList.add("open");
+    overlay.classList.add("show");
+    document.body.classList.add("sidebar-open");
+  });
+
+  // Close sidebar
+  function closeAll() {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("show");
+    document.body.classList.remove("sidebar-open");
+  }
+
+  closeSidebar.addEventListener("click", closeAll);
+  overlay.addEventListener("click", closeAll);
+</script>
+
+
+
+</body>
+</html>
