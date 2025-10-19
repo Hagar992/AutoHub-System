@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - AutoHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --card: #111214;
+      --muted: #9b9b9b;
+      --white: #f5f5f5;
+      --accent: #ffd166;
+      --glass: rgba(255,255,255,0.04);
+      --rounded: 28px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Header Styles */
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background: var(--card);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover, .nav a.active {
+      color: var(--accent);
+    }
+
+    .btn-light {
+      background: var(--glass);
+      padding: 8px 14px;
+      border-radius: 14px;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.03);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-light:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    #menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--white);
+    }
+
+    /* Sidebar Styles */
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s ease;
+      z-index: 1000;
+    }
+
+    #overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #sidebar {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 280px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: -4px 0 25px rgba(0, 0, 0, 0.6);
+      transition: right 0.4s ease;
+      z-index: 1001;
+      padding: 60px 20px;
+      color: var(--white);
+      overflow-y: auto;
+    }
+
+    #sidebar.open {
+      right: 0;
+    }
+
+    #close-sidebar {
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 28px;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    #sidebar a {
+      display: block;
+      text-decoration: none;
+      color: var(--white);
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+
+    #sidebar a:hover {
+      color: var(--accent);
+    }
+
+    body.sidebar-open {
+      overflow: hidden;
+    }
+
+    /* About Page Styles */
+    .section-title {
+      text-align: center;
+      color: var(--white);
+      font-size: 38px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin: 30px 0 30px;
+      letter-spacing: 2px;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), #ffb347);
+      margin: 12px auto 0;
+      border-radius: 3px;
+    }
+
+    .about-hero {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, var(--accent), #ffb347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .about-hero p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-content {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    .about-section {
+      margin-bottom: 60px;
+    }
+
+    .about-section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: var(--accent);
+      position: relative;
+      display: inline-block;
+    }
+
+    .about-section h2::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    .about-section p {
+      font-size: 16px;
+      color: var(--muted);
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+
+    .mission-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .mission-card {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .mission-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .mission-card i {
+      font-size: 40px;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .mission-card h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: var(--white);
+    }
+
+    .mission-card p {
+      color: var(--muted);
+    }
+
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .team-member {
+      background: var(--card);
+      padding: 30px;
+      border-radius: 20px;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .team-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      border: 3px solid var(--accent);
+    }
+
+    .team-member h4 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .team-member p {
+      color: var(--muted);
+    }
+
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .skill-item {
+      background: var(--card);
+      padding: 20px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .skill-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .skill-item i {
+      font-size: 30px;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .skill-item h4 {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+
+    .cta-section {
+      text-align: center;
+      margin: 80px 0;
+      padding: 60px 20px;
+      background: var(--card);
+      border-radius: 20px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-section h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .cta-section p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--accent), #ffb347);
+      color: var(--bg);
+      padding: 12px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      display: inline-block;
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(255, 209, 102, 0.3);
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: var(--card);
+      padding: 40px 20px 20px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+    }
+
+    .footer-section h4 {
+      color: var(--white);
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .footer-section p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-section ul li a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: var(--accent);
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: var(--white);
+      margin-right: 12px;
+      font-size: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+      transform: scale(1.2);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 30px;
+      padding-top: 15px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 980px) {
+      .nav {
+        display: none;
+      }
+      
+      #menu-icon {
+        display: block;
+      }
+      
+      .about-hero h1 {
+        font-size: 36px;
+      }
+      
+      .section-title {
+        font-size: 32px;
+      }
+      
+      .about-section h2 {
+        font-size: 28px;
+      }
+      
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .about-hero h1 {
+        font-size: 30px;
+      }
+      
+      .section-title {
+        font-size: 28px;
+      }
+      
+      .about-section h2 {
+        font-size: 24px;
+      }
+      
+      .mission-cards, .team-container, .skills-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .cta-section h2 {
+        font-size: 28px;
+      }
+      
+      .logo-text {
+        font-size: 18px;
+      }
+      
+      .logo-img {
+        height: 35px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo-text {
+        display: none;
+      }
+      
+      .logo-container {
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="top">
+    <div class="logo-container">
+      <img src="https://github.com/Hagar992/AutoHub-System/blob/Aya-Al-Refaey/assets/img/car%20in%20logo.png?raw=true" alt="AutoHub Logo" class="logo-img">
+      <div class="logo-text">AutoHub</div>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="Privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contactUs.html">Contact</a>
+      <button class="btn-light">Choose Now</button>
+    </nav>
+    <div id="menu-icon">&#9776;</div>
+  </header>
+
+  <!-- Sidebar + overlay -->
+  <div id="overlay"></div>
+  <aside id="sidebar">
+    <button id="close-sidebar">&times;</button>
+    <div id="sidebar-data"></div>
+  </aside>
+
+  <!-- About Hero Section -->
+  <section class="about-hero fade-in">
+    <h1>About AutoHub</h1>
+    <p>We're revolutionizing the way people buy and rent cars, offering a seamless experience without upfront payments. Our platform connects users with the best deals and trusted dealers.</p>
+  </section>
+
+  <!-- About Content -->
+  <div class="about-content">
+    <!-- Our Story -->
+    <section class="about-section fade-in">
+      <h2>Our Story</h2>
+      <p>AutoHub was founded with a simple mission: to make car buying and renting accessible, transparent, and hassle-free for everyone. We recognized the challenges people face in traditional car markets and set out to create a modern solution.</p>
+      <p>Our platform eliminates the need for upfront payments, connects users directly with trusted dealers, and provides a seamless digital experience from browsing to finalizing your vehicle choice.</p>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="about-section fade-in">
+      <h2>Our Mission & Vision</h2>
+      <div class="mission-cards">
+        <div class="mission-card">
+          <i class="fas fa-bullseye"></i>
+          <h3>Our Mission</h3>
+          <p>To simplify car sales and rentals by ensuring transparency, trust, and convenience for our customers. We're committed to eliminating the stress and uncertainty from the vehicle acquisition process.</p>
+        </div>
+        <div class="mission-card">
+          <i class="fas fa-eye"></i>
+          <h3>Our Vision</h3>
+          <p>To become the leading online car marketplace in the region, making vehicle ownership and rentals accessible to everyone. We envision a future where finding your perfect car is as easy as a few clicks.</p>
+        </div>
+        <div class="mission-card">
+          <i class="fas fa-handshake"></i>
+          <h3>Our Values</h3>
+          <p>Transparency, customer-centricity, innovation, and trust form the foundation of everything we do. We believe in building lasting relationships with both our customers and partners.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="about-section fade-in">
+      <h2>Meet Our Team</h2>
+      <p>Our diverse team of professionals brings together expertise in technology, automotive industry, and customer service to deliver an exceptional experience.</p>
+      <div class="team-container">
+        <div class="team-member">
+          <img src="https://placehold.co/120x120/0a3d62/ffffff?text=HA" alt="Hagar Atia">
+          <h4>Hagar Atia</h4>
+          <p>.NET Full Stack Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://placehold.co/120x120/0a3d62/ffffff?text=AY" alt="Aya">
+          <h4>Aya</h4>
+          <p>.NET Full Stack Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://placehold.co/120x120/3c6382/ffffff?text=DH" alt="Doha">
+          <h4>Doha</h4>
+          <p>.NET Full Stack Developer</p>
+        </div>
+        <div class="team-member">
+          <img src="https://placehold.co/120x120/e74c3c/ffffff?text=YH" alt="Yehia">
+          <h4>Yehia</h4>
+          <p>.NET Full Stack Developer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Skills -->
+    <section class="about-section fade-in">
+      <h2>Our Expertise</h2>
+      <p>We leverage cutting-edge technology and industry knowledge to deliver a superior platform for our users.</p>
+      <div class="skills-container">
+        <div class="skill-item">
+          <i class="fas fa-code"></i>
+          <h4>Full Stack Development</h4>
+          <p>Modern web applications with .NET</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-car"></i>
+          <h4>Automotive Industry</h4>
+          <p>Deep understanding of car markets</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Security & Privacy</h4>
+          <p>Protecting user data and transactions</p>
+        </div>
+        <div class="skill-item">
+          <i class="fas fa-mobile-alt"></i>
+          <h4>Responsive Design</h4>
+          <p>Optimized for all devices</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Call to Action -->
+  <section class="cta-section fade-in">
+    <h2>Ready to Find Your Perfect Car?</h2>
+    <p>Join thousands of satisfied customers who have found their ideal vehicle through AutoHub.</p>
+    <a href="index.html" class="btn-primary">Browse Vehicles</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>AutoHub</h4>
+        <p>Find your perfect car in just a few clicks — reliable, fast, and affordable.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="Aboutnew.html">About</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AutoHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sidebar functionality
+    const menuIcon = document.getElementById("menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const closeSidebar = document.getElementById("close-sidebar");
+    const navLinks = document.querySelectorAll("#nav a, #nav button");
+    const sidebarData = document.getElementById("sidebar-data");
+
+    // Copy nav links to sidebar
+    sidebarData.innerHTML = "";
+    navLinks.forEach(link => {
+      const cloned = link.cloneNode(true);
+      cloned.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+        document.body.classList.remove("sidebar-open");
+      });
+      sidebarData.appendChild(cloned);
+    });
+
+    // Open sidebar
+    menuIcon.addEventListener("click", () => {
+      sidebar.classList.add("open");
+      overlay.classList.add("show");
+      document.body.classList.add("sidebar-open");
+    });
+
+    // Close sidebar
+    function closeAll() {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+      document.body.classList.remove("sidebar-open");
+    }
+
+    closeSidebar.addEventListener("click", closeAll);
+    overlay.addEventListener("click", closeAll);
+
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInOnScroll = () => {
+      fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.style.opacity = "1";
+          element.style.transform = "translateY(0)";
+        }
+      });
+    };
+    
+    // Set initial state
+    window.addEventListener('DOMContentLoaded', () => {
+      fadeElements.forEach(element => {
+        element.style.opacity = "0";
+        element.style.transform = "translateY(20px)";
+        element.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+      });
+      
+      // Trigger initial check
+      fadeInOnScroll();
+    });
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', fadeInOnScroll);
+  </script>
+</body>
+</html>

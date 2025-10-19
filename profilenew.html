@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - AutoHub</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --bg: #0f0f10;
+      --card: #111214;
+      --muted: #9b9b9b;
+      --white: #f5f5f5;
+      --accent: #ffd166;
+      --glass: rgba(255,255,255,0.04);
+      --rounded: 28px;
+      --danger: #e74c3c;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    /* Header Styles */
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      background: var(--card);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      margin-bottom: 30px;
+      border-radius: 15px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+    }
+
+    .logo-text {
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: var(--white);
+    }
+
+    .nav {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .nav a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover, .nav a.active {
+      color: var(--accent);
+    }
+
+    .btn-light {
+      background: var(--glass);
+      padding: 8px 14px;
+      border-radius: 14px;
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.03);
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-light:hover {
+      background: rgba(255,255,255,0.08);
+    }
+
+    #menu-icon {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--white);
+    }
+
+    /* Sidebar Styles */
+    #overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(6px);
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.4s ease;
+      z-index: 1000;
+    }
+
+    #overlay.show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    #sidebar {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 280px;
+      height: 100%;
+      background: rgba(20, 20, 20, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: -4px 0 25px rgba(0, 0, 0, 0.6);
+      transition: right 0.4s ease;
+      z-index: 1001;
+      padding: 60px 20px;
+      color: var(--white);
+      overflow-y: auto;
+    }
+
+    #sidebar.open {
+      right: 0;
+    }
+
+    #close-sidebar {
+      background: none;
+      border: none;
+      color: var(--white);
+      font-size: 28px;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      cursor: pointer;
+    }
+
+    #sidebar a {
+      display: block;
+      text-decoration: none;
+      color: var(--white);
+      font-size: 16px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: 0.3s;
+    }
+
+    #sidebar a:hover {
+      color: var(--accent);
+    }
+
+    body.sidebar-open {
+      overflow: hidden;
+    }
+
+    /* Profile Container */
+    .profile-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+
+    /* Profile Header */
+    .profile-header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(135deg, rgba(255,209,102,0.1) 0%, rgba(255,179,71,0.05) 100%);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .profile-header h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+      color: var(--white);
+    }
+
+    .profile-header p {
+      color: var(--muted);
+      margin-bottom: 20px;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      background: rgba(0,0,0,0.2);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .tab-btn {
+      flex: 1;
+      padding: 18px;
+      background: none;
+      border: none;
+      color: var(--muted);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      position: relative;
+    }
+
+    .tab-btn:hover {
+      color: var(--white);
+      background: rgba(255,255,255,0.05);
+    }
+
+    .tab-btn.active {
+      color: var(--accent);
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    /* Tab Content */
+    .tab-content {
+      display: none;
+      padding: 30px;
+    }
+
+    .tab-content.active {
+      display: block;
+      animation: fadeIn 0.5s ease;
+    }
+
+    .tab-content h3 {
+      font-size: 24px;
+      margin-bottom: 25px;
+      color: var(--white);
+      position: relative;
+      display: inline-block;
+    }
+
+    .tab-content h3::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -8px;
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    /* Form Styles */
+    form {
+      display: grid;
+      gap: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      color: var(--white);
+      font-size: 16px;
+      transition: all 0.3s;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(255,209,102,0.2);
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: linear-gradient(90deg, var(--accent), #ffb347);
+      color: var(--bg);
+      border: none;
+      border-radius: 10px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-align: center;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 209, 102, 0.3);
+    }
+
+    .upload-btn {
+      background: rgba(255,255,255,0.1);
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .upload-btn:hover {
+      background: rgba(255,255,255,0.15);
+      box-shadow: 0 5px 15px rgba(255,255,255,0.1);
+    }
+
+    .danger {
+      background: linear-gradient(90deg, var(--danger), #c0392b);
+      color: white;
+    }
+
+    .danger:hover {
+      box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+    }
+
+    /* Cars List */
+    ul {
+      list-style: none;
+    }
+
+    li {
+      padding: 15px;
+      background: rgba(255,255,255,0.05);
+      border-radius: 10px;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--accent);
+      transition: all 0.3s;
+    }
+
+    li:hover {
+      background: rgba(255,255,255,0.08);
+      transform: translateX(5px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .fade-in {
+      animation: fadeIn 0.8s ease forwards;
+    }
+
+    /* Footer Styles */
+    .footer {
+      background: var(--card);
+      padding: 40px 20px 20px;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 60px;
+      border-radius: 15px;
+    }
+
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .footer-section {
+      flex: 1 1 250px;
+    }
+
+    .footer-section h4 {
+      color: var(--white);
+      margin-bottom: 12px;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .footer-section p {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 8px;
+      border-left: none;
+      padding: 0;
+      background: none;
+    }
+
+    .footer-section ul li a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .footer-section ul li a:hover {
+      color: var(--accent);
+    }
+
+    .social-icons {
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      color: var(--white);
+      margin-right: 12px;
+      font-size: 20px;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: var(--accent);
+      transform: scale(1.2);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      margin-top: 30px;
+      padding-top: 15px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 980px) {
+      .nav {
+        display: none;
+      }
+      
+      #menu-icon {
+        display: block;
+      }
+      
+      .profile-header h2 {
+        font-size: 24px;
+      }
+      
+      .tab-content h3 {
+        font-size: 22px;
+      }
+      
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 10px;
+      }
+      
+      .profile-header {
+        padding: 30px 15px;
+      }
+      
+      .profile-pic {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .tabs {
+        flex-direction: column;
+      }
+      
+      .tab-btn {
+        padding: 15px;
+      }
+      
+      .tab-content {
+        padding: 20px;
+      }
+      
+      .logo-text {
+        font-size: 18px;
+      }
+      
+      .logo-img {
+        height: 35px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .logo-text {
+        display: none;
+      }
+      
+      .logo-container {
+        gap: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="top">
+    <div class="logo-container">
+      <img src="https://github.com/Hagar992/AutoHub-System/blob/Aya-Al-Refaey/assets/img/car%20in%20logo.png?raw=true" alt="AutoHub Logo" class="logo-img">
+      <div class="logo-text">AutoHub</div>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="index.html">Home</a>
+      <a href="Aboutnew.html">About</a>
+      <a href="Privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+      <a href="contactUs.html">Contact</a>
+      <button class="btn-light">Choose Now</button>
+    </nav>
+    <div id="menu-icon">&#9776;</div>
+  </header>
+
+  <!-- Sidebar + overlay -->
+  <div id="overlay"></div>
+  <aside id="sidebar">
+    <button id="close-sidebar">&times;</button>
+    <div id="sidebar-data"></div>
+  </aside>
+
+  <!-- Profile Container -->
+  <div class="profile-container fade-in">
+    
+    <!-- User Info -->
+    <div class="profile-header">
+      <img src="https://placehold.co/120x120/0a3d62/ffffff?text=SA" alt="User Photo" class="profile-pic" id="profile-pic">
+      <h2 id="username">Shams A.</h2>
+      <p id="user-email">shams@example.com</p>
+      <label for="upload-photo" class="btn upload-btn">Change Photo</label>
+      <input type="file" id="upload-photo" accept="image/*" hidden>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="info">My Info</button>
+      <button class="tab-btn" data-tab="cars">My Cars</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content active" id="info">
+      <h3>Personal Information</h3>
+      <form id="info-form">
+        <label>Full Name</label>
+        <input type="text" value="Shams A.">
+        
+        <label>Email</label>
+        <input type="email" value="shams@example.com">
+        
+        <label>Phone</label>
+        <input type="text" value="+20 0000 000 000">
+        
+        <button type="submit" class="btn">Save Changes</button>
+      </form>
+    </div>
+
+    <div class="tab-content" id="cars">
+      <h3>My Cars</h3>
+      <ul>
+        <li>Toyota Corolla 2021 - For Sale</li>
+        <li>Hyundai Elantra 2020 - Rented</li>
+        <li>BMW X5 2022 - For Rent</li>
+        <li>Mercedes C-Class 2023 - Sold</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="settings">
+      <h3>Account Settings</h3>
+      <div class="settings-options">
+        <div class="setting-item">
+          <h4>Notification Preferences</h4>
+          <p>Manage how you receive notifications</p>
+          <button class="btn upload-btn">Configure</button>
+        </div>
+        
+        <div class="setting-item">
+          <h4>Privacy Settings</h4>
+          <p>Control your privacy and data</p>
+          <button class="btn upload-btn">Manage</button>
+        </div>
+        
+        <div class="setting-item">
+          <h4>Delete Account</h4>
+          <p>Permanently delete your account and data</p>
+          <button class="btn danger">Delete Account</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>AutoHub</h4>
+        <p>Find your perfect car in just a few clicks — reliable, fast, and affordable.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="Privacy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms & Conditions</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contactUs.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AutoHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Sidebar functionality
+    const menuIcon = document.getElementById("menu-icon");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+    const closeSidebar = document.getElementById("close-sidebar");
+    const navLinks = document.querySelectorAll("#nav a, #nav button");
+    const sidebarData = document.getElementById("sidebar-data");
+
+    // Copy nav links to sidebar
+    sidebarData.innerHTML = "";
+    navLinks.forEach(link => {
+      const cloned = link.cloneNode(true);
+      cloned.addEventListener("click", () => {
+        sidebar.classList.remove("open");
+        overlay.classList.remove("show");
+        document.body.classList.remove("sidebar-open");
+      });
+      sidebarData.appendChild(cloned);
+    });
+
+    // Open sidebar
+    menuIcon.addEventListener("click", () => {
+      sidebar.classList.add("open");
+      overlay.classList.add("show");
+      document.body.classList.add("sidebar-open");
+    });
+
+    // Close sidebar
+    function closeAll() {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("show");
+      document.body.classList.remove("sidebar-open");
+    }
+
+    closeSidebar.addEventListener("click", closeAll);
+    overlay.addEventListener("click", closeAll);
+
+    // Tab functionality
+    const tabBtns = document.querySelectorAll('.tab-btn');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Remove active class from all buttons and contents
+        tabBtns.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        
+        // Add active class to clicked button
+        btn.classList.add('active');
+        
+        // Show corresponding content
+        const tabId = btn.getAttribute('data-tab');
+        document.getElementById(tabId).classList.add('active');
+      });
+    });
+
+    // Photo upload functionality
+    const uploadPhoto = document.getElementById('upload-photo');
+    const profilePic = document.getElementById('profile-pic');
+
+    uploadPhoto.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          profilePic.src = e.target.result;
+        }
+        reader.readAsDataURL(file);
+      }
+    });
+
+    // Form submission
+    const infoForm = document.getElementById('info-form');
+    infoForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Profile updated successfully!');
+    });
+
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInOnScroll = () => {
+      fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.style.opacity = "1";
+          element.style.transform = "translateY(0)";
+        }
+      });
+    };
+    
+    // Set initial state
+    window.addEventListener('DOMContentLoaded', () => {
+      fadeElements.forEach(element => {
+        element.style.opacity = "0";
+        element.style.transform = "translateY(20px)";
+        element.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+      });
+      
+      // Trigger initial check
+      fadeInOnScroll();
+    });
+    
+    // Listen for scroll events
+    window.addEventListener('scroll', fadeInOnScroll);
+  </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+  <div class="profile-container fade-in">
+    
+    <!-- User Info -->
+    <div class="profile-header">
+      <img src="images/user.jpg" alt="User Photo" class="profile-pic" id="profile-pic">
+      <h2 id="username">Shams A.</h2>
+      <p id="user-email">shams@example.com</p>
+      <label for="upload-photo" class="btn upload-btn">Change Photo</label>
+      <input type="file" id="upload-photo" accept="image/*" hidden>
+    </div>
+
+    <!-- Tabs -->
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="info">My Info</button>
+      <button class="tab-btn" data-tab="cars">My Cars</button>
+      <button class="tab-btn" data-tab="settings">Settings</button>
+    </div>
+
+    <!-- Tab Content -->
+    <div class="tab-content active" id="info">
+      <h3>Personal Information</h3>
+      <form id="info-form">
+        <label>Full Name</label>
+        <input type="text" value="Shams A.">
+        
+        <label>Email</label>
+        <input type="email" value="shams@example.com">
+        
+        <label>Phone</label>
+        <input type="text" value="+20 0000 000 000">
+        
+        <button type="submit" class="btn">Save Changes</button>
+      </form>
+    </div>
+
+    <div class="tab-content" id="cars">
+      <h3>My Cars</h3>
+      <ul>
+        <li>Toyota Corolla 2021 - For Sale</li>
+        <li>Hyundai Elantra 2020 - Rented</li>
+      </ul>
+    </div>
+
+    <div class="tab-content" id="settings">
+      <h3>Account Settings</h3>
+      <button class="btn danger">Delete Account</button>
+    </div>
+  </div>
+
+  <script src="profile.js"></script>
+</body>
+</html>
