@@ -1,3 +1,6 @@
+using AutoHub_System.Data;
+using Microsoft.EntityFrameworkCore;
+
 namespace AutoHub_System
 {
     public class Program
@@ -9,6 +12,11 @@ namespace AutoHub_System
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            // Register DbContext + Connection String
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+            );
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -16,6 +24,7 @@ namespace AutoHub_System
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
             app.UseRouting();
 
             app.UseAuthorization();
