@@ -20,7 +20,7 @@ namespace AutoHub_System.Models
         public string EngineType { get; set; }
         public float Price { get; set; }
         public string Transimission { get; set; }
-
+        public int Fuel_Economy { get; set; }
         // Relationship
         public ICollection<Order> Orders { get; set; }
     }

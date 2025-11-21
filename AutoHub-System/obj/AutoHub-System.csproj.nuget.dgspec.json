@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\رواد مصر الرقميه\\Graduation project\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj": {}
+    "E:\\Auto hub\\AutoHub-System\\AutoHub-System.csproj": {}
   },
   "projects": {
-    "E:\\رواد مصر الرقميه\\Graduation project\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj": {
+    "E:\\Auto hub\\AutoHub-System\\AutoHub-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\رواد مصر الرقميه\\Graduation project\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj",
+        "projectUniqueName": "E:\\Auto hub\\AutoHub-System\\AutoHub-System.csproj",
         "projectName": "AutoHub-System",
-        "projectPath": "E:\\رواد مصر الرقميه\\Graduation project\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj",
-        "packagesPath": "C:\\Users\\Shams\\.nuget\\packages\\",
-        "outputPath": "E:\\رواد مصر الرقميه\\Graduation project\\AutoHub-System\\AutoHub-System\\obj\\",
+        "projectPath": "E:\\Auto hub\\AutoHub-System\\AutoHub-System.csproj",
+        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+        "outputPath": "E:\\Auto hub\\AutoHub-System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Shams\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -85,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

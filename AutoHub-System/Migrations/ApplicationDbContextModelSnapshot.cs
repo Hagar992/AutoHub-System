@@ -61,6 +61,9 @@ namespace AutoHub_System.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Fuel_Economy")
+                        .HasColumnType("int");
+
                     b.Property<int>("Mileage")
                         .HasColumnType("int");
 
