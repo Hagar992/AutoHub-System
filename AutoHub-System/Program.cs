@@ -1,4 +1,7 @@
 using AutoHub_System.Data;
+using AutoHub_System.Models;
+using AutoHub_System.Repositories;
+using AutoHub_System.Services;
 using Microsoft.EntityFrameworkCore;
 
 namespace AutoHub_System
@@ -12,10 +15,13 @@ namespace AutoHub_System
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+           
             // Register DbContext + Connection String
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineConnection"))
             );
+            builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
+            builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 
             var app = builder.Build();
 

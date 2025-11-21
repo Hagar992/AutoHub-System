@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AutoHub_System.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251117081513_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20251121200152_v2")]
+    partial class v2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,6 +63,9 @@ namespace AutoHub_System.Migrations
                     b.Property<string>("Feature")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Fuel_Economy")
+                        .HasColumnType("int");
 
                     b.Property<int>("Mileage")
                         .HasColumnType("int");

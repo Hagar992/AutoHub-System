@@ -1,46 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\",
+  "WorkspaceRootPath": "E:\\Auto hub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\.gitignore.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\.gitignore.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\migrations\\20251117081513_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\migrations\\20251117081513_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\models\\depositepolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\depositepolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\class.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\graduation project\\autohub-system\\autohub-system\\autohub-system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\autohub-system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\auto hub\\autohub-system\\services\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\services\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -63,127 +27,15 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": ".gitignore.txt",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\.gitignore.txt",
-              "RelativeDocumentMoniker": "AutoHub-System\\.gitignore.txt",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\.gitignore.txt",
-              "RelativeToolTip": "AutoHub-System\\.gitignore.txt",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAowBQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-11-17T08:22:18.072Z",
+              "Title": "Service.cs",
+              "DocumentMoniker": "E:\\Auto hub\\AutoHub-System\\Services\\Service.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Services\\Service.cs",
+              "ToolTip": "E:\\Auto hub\\AutoHub-System\\Services\\Service.cs*",
+              "RelativeToolTip": "AutoHub-System\\Services\\Service.cs*",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwAcAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T20:41:17.169Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "20251117081513_InitialCreate.cs",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Migrations\\20251117081513_InitialCreate.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Migrations\\20251117081513_InitialCreate.cs",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Migrations\\20251117081513_InitialCreate.cs",
-              "RelativeToolTip": "AutoHub-System\\Migrations\\20251117081513_InitialCreate.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T08:15:13.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "AutoHub-System\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAB8AAAAgMzMzMzMrwBcAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T07:52:25.226Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Class.cs",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Models\\Class.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Models\\Class.cs",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Models\\Class.cs",
-              "RelativeToolTip": "AutoHub-System\\Models\\Class.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T07:46:06.305Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DepositePolicy.cs",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Models\\DepositePolicy.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Models\\DepositePolicy.cs",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Models\\DepositePolicy.cs",
-              "RelativeToolTip": "AutoHub-System\\Models\\DepositePolicy.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T07:45:39.769Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Models\\User.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Models\\User.cs",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Models\\User.cs",
-              "RelativeToolTip": "AutoHub-System\\Models\\User.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA4wBMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T07:44:35.88Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Program.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Program.cs",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Program.cs",
-              "RelativeToolTip": "AutoHub-System\\Program.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswBUAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T07:41:59.539Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\appsettings.json",
-              "RelativeDocumentMoniker": "AutoHub-System\\appsettings.json",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\appsettings.json",
-              "RelativeToolTip": "AutoHub-System\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-17T07:40:19.953Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Order.cs",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Models\\Order.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Models\\Order.cs",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\Models\\Order.cs",
-              "RelativeToolTip": "AutoHub-System\\Models\\Order.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAUwBcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-17T07:51:22.776Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "AutoHub-System.csproj",
-              "DocumentMoniker": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj",
-              "RelativeDocumentMoniker": "AutoHub-System\\AutoHub-System.csproj",
-              "ToolTip": "E:\\\u0631\u0648\u0627\u062F \u0645\u0635\u0631 \u0627\u0644\u0631\u0642\u0645\u064A\u0647\\Graduation project\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj",
-              "RelativeToolTip": "AutoHub-System\\AutoHub-System.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-11-17T07:34:41.93Z"
             }
           ]
         }
