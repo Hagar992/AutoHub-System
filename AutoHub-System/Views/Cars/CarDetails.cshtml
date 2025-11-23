@@ -1,0 +1,143 @@
+﻿@model Car
+@{
+    Layout = "_HeaderAndFooterLayout";
+}
+@section styles {
+    <link href="~/assets/css/details.css" rel="stylesheet" />
+}
+@section jscript {
+    <script src="~/assets/js/details.js"></script>
+}
+
+<div id="content">
+    <div id="imgs">
+        <img src="@Model.CarImage.FirstOrDefault()" alt="img1" id="mainimage">
+        <div id="options">
+            @foreach(var img in @Model.CarImage)
+            {
+                <img src="@img" alt="car image" class="small" onclick="changeImage('@img', this)">
+            }
+
+            
+        </div>
+    </div>
+    <div id="maininfo">
+        <h2 id="carname"> @Model.Brand @Model.Model</h2>
+        <div class="price">
+            EGP @Model.Price.ToString("N0")
+        </div>
+        <div id="squares">
+            <div class="square">
+                <div class="icon"><i class="fa-solid fa-calendar-days"></i></div>
+                <div>
+                    <p>Model Year</p>
+                    <p class="ans">@Model.Year</p>
+                </div>
+
+
+            </div>
+            <div class="square">
+                <div class="icon">
+                    <i class="fa-solid fa-car-side"></i>
+                </div>
+                <div>
+                    <p>Car Status</p>
+                    <p class="ans">@Model.CarSatus</p>
+                </div>
+
+            </div>
+            <div class="square">
+                <div class="icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <div>
+                    <p>Color</p>
+                    <p class="ans">@Model.Color</p>
+                </div>
+
+
+            </div>
+            <div class="square">
+                <div class="icon">
+                    <i class="fa-solid fa-chair"></i>
+                </div>
+                <div>
+                    <p>Seats</p>
+                    <p class="ans">@Model.SeatNumer</p>
+                </div>
+
+
+            </div>
+            <div class="square">
+                <div class="icon">
+                    <i class="fa-solid fa-gear"></i>
+                </div>
+                <div>
+                    <p>Transmission</p>
+                    <p class="ans">@Model.Transimission</p>
+                </div>
+
+
+            </div>
+            <div class="square">
+                <div class="icon">
+                    <i class="fa-solid fa-gas-pump"></i>
+                </div>
+                <div>
+                    <p>Engine Type</p>
+                    <p class="ans">@Model.EngineType</p>
+                </div>
+
+
+            </div>
+            <div class="square">
+                <div class="icon">
+                    <i class="fa-solid fa-gauge-simple-high"></i>
+                </div>
+                <div>
+                    <p>Fuel Economy</p>
+                    <p>(liters/100km)</p>
+                    <p class="ans">@Model.Fuel_Economy</p>
+                </div>
+
+
+            </div>
+            <div class="square">
+                <div class="icon">
+                    <i class="fa-solid fa-road"></i>
+                </div>
+                <div>
+                    <p>Miles</p>
+
+                    <p class="ans">@Model.Mileage.ToString("N0") miles</p>
+                </div>
+
+
+            </div>
+            <a href="#" class="buttonn">Book Now</a>
+        </div>
+
+
+
+    </div>
+    <div id="mainmain">
+
+        <h3 id="desc">Car Description :</h3>
+        <div id="details">
+         @Model.Description
+        </div>
+
+
+        <h3>Other Features :</h3>
+        <div class="tags">
+            @foreach(var item in @Model.Feature)
+            {
+                <p>@item</p>
+            }
+        </div>
+
+
+        <a href="#" class="buttonn" id="last">Book Now</a>
+    </div>
+
+</div>
