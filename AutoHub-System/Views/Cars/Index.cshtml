@@ -1,0 +1,109 @@
+﻿@model List<Car>
+@{
+    Layout = "_HeaderAndFooterLayout";
+}
+@section styles {
+    <link href="~/assets/css/cars.css" rel="stylesheet" />
+}
+@section jscript {
+  <script src="~/assets/js/cars.js"></script>
+  <script> //DOHA
+ window.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const brand = params.get("brand")?.trim();
+        const year = params.get("year")?.trim();
+        const status = params.get("status"); // "new" or "used"
+
+        if (brand) {
+            // تفعيل زر الماركة
+            const brandBtn = Array.from(document.querySelectorAll('#brandsbtns .typbtn'))
+                .find(btn => btn.innerText.trim().toLowerCase() === brand.toLowerCase());
+            if (brandBtn) {
+                brandBtn.classList.add('active');
+                window.activeBrands = [brandBtn.innerText.trim()];
+            }
+
+            // تفعيل الـ select
+            const brandSelect = document.getElementById('brand');
+            if (brandSelect) {
+                brandSelect.value = brand;
+                window.selectedBrand = brand.toLowerCase();
+            }
+
+            // تفعيل شريط البحث
+            const searchInput = document.getElementById('search');
+            if (searchInput) searchInput.value = brand;
+        }
+
+        if (year) {
+            const startYear = document.getElementById('startyear');
+            const endYear = document.getElementById('endyear');
+            if (startYear) startYear.value = year;
+            if (endYear) endYear.value = year;
+            window.startYear = year;
+            window.endYear = year;
+        }
+
+        if (status) {
+            const btnId = status === "new" ? "newBtn" : "usedBtn";
+            const btn = document.getElementById(btnId);
+            if (btn) {
+                document.querySelectorAll('#status .typbtn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                window.activeStatus = status;
+            }
+        }
+
+        // نطبّق الفلاتر فورًا
+        setTimeout(() => {
+            if (typeof applyFilters === "function") applyFilters();
+            if (brand && typeof runSearch === "function") runSearch();
+        }, 100);
+    });
+    </script>
+}
+<section id="header">
+        <div>
+            <h2>Fueled by adrenaline <br>guided by performance ...</h2>
+        </div>
+       </section>
+     <!---------------------end header------------------------------- -->
+     <div class="aside">
+ 
+
+      <partial name="_PartialFiltersLayout"></partial>
+</div class="aside">
+      <!---------------------end aside------------------------------- -->
+     <main>
+        <div id="searchbar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" placeholder=" Search" id="search">
+         <button id="searchBtn">Search</button>
+        </div>
+        <div id="cards">
+
+        @foreach (var item in Model)
+        {
+             <a href="/cars/cardetails/@item.CarID" class="card"> 
+                <img src="@item.CarImage.FirstOrDefault()" alt="Carimg">
+                <div class="carinfo">
+                    <h3 class="cartitle">@item.Brand @item.Model</h3>
+                    <div class="carstatus">
+                        <i class="fa-solid fa-car"></i>
+                        <p class="cardet">@item.Year</p>
+                        <p class="cardet">@item.CarSatus</p>
+                        <p class="cardet">@item.EngineType</p>
+                        <p class="cardet">@item.Transimission</p>
+                    </div>
+                </div>
+                <div class="carprice">
+                    <p class="price">Price</p>
+                    <p class="money">@item.Price.ToString("N0") EGP</p> 
+                </div>
+             </a>
+
+        }
+
+        </div>
+ <p id="notfound"></p>
+ </main>

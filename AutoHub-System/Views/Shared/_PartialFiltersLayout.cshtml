@@ -1,0 +1,186 @@
+﻿<div id="ordertag" class="line">
+
+    <div class="title">
+        <i class="fa-solid fa-filter"></i>
+        <p>Order</p>
+    </div>
+
+    <div class="filterarea">
+        <select name="order" id="order" class="paddten">
+            <option value="default">Default</option>
+            <option value="name">Name</option>
+            <option value="price">Price</option>
+            <option value="year">Model Year</option>
+        </select>
+    </div>
+
+</div>
+<!-- ------------------------car type-------------------------------- -->
+<div class="line" id="status">
+
+    <div class="title">
+        <i class="fa-solid fa-car"></i>
+        <p>Car Status</p>
+    </div>
+
+    <div class="filterarea">
+
+        <button class="typbtn" id="newBtn">New</button>
+        <button class="typbtn" id="usedBtn" >Used</button>
+
+    </div>
+
+</div>
+<!-- ------------------------price---------------------------- -->
+<!-- <div class="line"  >
+
+            <div class="title">
+<i class="fa-solid fa-coins"></i>
+            <p>Price</p>
+            </div>
+
+<div class="filterarea">
+<p class="filtername">From</p>
+
+         <input type="money" class="moneyfilter">
+<p class="filtername">To</p>
+<input type="money" class="moneyfilter">
+</div>
+
+       </div> -->
+<div class="line">
+
+    <div class="title">
+        <i class="fa-solid fa-coins"></i>
+        <p>Price</p>
+    </div>
+
+    <div class="filterarea">
+        <p class="filtername">From</p>
+        <input type="number" id="fromPrice" class="moneyfilter" placeholder=" Min Price">
+        <p class="filtername">To</p>
+        <input type="number" id="toPrice" class="moneyfilter" placeholder=" Max Price">
+    </div>
+    <p id="priceerror"></p>
+</div>
+
+<!-- ------------------------year---------------------------- -->
+<div class="line">
+
+    <div class="title">
+        <i class="fa-solid fa-calendar"></i>
+        <p>Year</p>
+    </div>
+
+    <div class="filterarea">
+        <p class="filtername">From</p>
+        <select name="startyear" id="startyear" class="paddten">
+            <option value="default">All</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+        <p class="filtername">To</p>
+        <select name="endyear" id="endyear" class="paddten">
+            <option value="default">All</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+        </select>
+    </div>
+
+</div>
+<!-- ---------------------------Brand-------------------------- -->
+<div id="brandsbtns" class="line">
+
+    <div class="title">
+        <i class="fa-solid fa-car-side"></i>
+        <p>Brands</p>
+    </div>
+
+    <div class="filterarea">
+
+        <button class="typbtn">Mercedes</button>
+        <button class="typbtn">Opel</button>
+        <button class="typbtn">Jeep</button>
+        <button class="typbtn">Volvo</button>
+        <button class="typbtn">Chevrolet</button>
+        <button class="typbtn">Kia</button>
+        <button class="typbtn">Peugeot</button>
+        <button class="typbtn">Renault</button>
+        <button class="typbtn">Dodge</button>
+        <button class="typbtn">Citroën</button>
+        <button class="typbtn">Toyota</button>
+        <button class="typbtn">BMW</button>
+        <button class="typbtn">Hyundai</button>
+        <button class="typbtn">Mitsubishi</button>
+        <button class="typbtn">Land Rover</button>
+        <button class="typbtn">BYD</button>
+        <button class="typbtn">Suzuki</button>
+
+
+    </div>
+
+</div>
+
+<!-- <div class="filterarea" id="brandsselect">
+
+        <div class="title" >
+     <i class="fa-solid fa-car-side"></i>
+         <label for="brands" ><p>Brands</p></label>
+        </div>
+      <div>
+ <i class="fa-solid fa-sort" id="icon"></i>
+         <select name="sort" id="sort" class="paddten" >
+            <option value="Mercedes-Benz">Mercedes-Benz</option>
+            <option value="Opel">Opel</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Kia">Kia</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Renault">Renault</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Citroen">Citroën</option>
+            <option value="Toyota">Toyota</option>
+            <option value="BMW">BMW</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="BYD">BYD</option>
+            <option value="Suzuki">Suzuki</option>
+         </select>
+</div>
+
+       </div> -->
+<div id="brandsselect" class="line">
+
+    <div class="title">
+        <i class="fa-solid fa-car-side"></i>
+        <p>Brands</p>
+    </div>
+
+    <div class="filterarea">
+        <select name="brand" id="brand" class="paddten">
+            <option value="default">All Brands</option>
+            <option value="Mercedes">Mercedes</option>
+            <option value="Opel">Opel</option>
+            <option value="Jeep">Jeep</option>
+            <option value="Volvo">Volvo</option>
+            <option value="Chevrolet">Chevrolet</option>
+            <option value="Kia">Kia</option>
+            <option value="Peugeot">Peugeot</option>
+            <option value="Renault">Renault</option>
+            <option value="Dodge">Dodge</option>
+            <option value="Citroen">Citroën</option>
+            <option value="Toyota">Toyota</option>
+            <option value="BMW">BMW</option>
+            <option value="Hyundai">Hyundai</option>
+            <option value="Mitsubishi">Mitsubishi</option>
+            <option value="Land Rover">Land Rover</option>
+            <option value="BYD">BYD</option>
+            <option value="Suzuki">Suzuki</option>
+        </select>
+    </div>
+
+</div>

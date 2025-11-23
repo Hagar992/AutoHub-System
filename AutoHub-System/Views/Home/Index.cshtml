@@ -1,0 +1,165 @@
+﻿@model AutoHub_System.ViewModels.IndexViewModel
+@{
+    Layout = null;  
+}
+
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AutoHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="~/assets/css/MainStyle.css" />
+    <link rel="stylesheet" href="~/assets/css/headerFooter.css" />
+</head>
+<body>
+    <div class="wrap panel">
+
+        <!-- Header -->
+        <header class="top">
+            <div class="logo">AutoHub</div>
+            <nav class="nav" id="nav">
+                <a asp-controller="Home" asp-action="Index">Home</a>
+                <a asp-controller="Home" asp-action="About">About</a>
+                <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+                <a asp-controller="Home" asp-action="Terms">Terms</a>
+                <a asp-controller="Home" asp-action="Contact">Contact</a>
+                <a asp-controller="Cars" asp-action="Index">Choose Now</a>
+            </nav>
+            <div id="menu-icon">&#9776;</div>
+        </header>
+
+        <!-- Sidebar + Overlay -->
+        <div id="overlay"></div>
+        <aside id="sidebar">
+            <button id="close-sidebar">×</button>
+            <div id="sidebar-data"></div>
+        </aside>
+
+        <!-- HERO -->
+        <section class="hero">
+            <video class="video" autoplay loop muted playsinline>
+                <source src="~/img/headder.mp4" type="video/mp4">
+            </video>
+            <div class="overlay">
+                <h1 class="title">Find your car in 30 seconds — simple terms, instant result</h1>
+                <div class="search-row">
+                    <input id="BrandInput" class="input" placeholder="Brand" />
+                    <input id="YearInput" class="input" placeholder="Date" />
+                    @* <input id="TypeInput" class="input"  /> *@
+                    <select id="StatusInput" class="input" placeholder="Car type">
+                        <option value="">New or Used?</option>
+                        <option value="New">New</option>
+                        <option value="Used">Used</option>
+                    </select>
+                    <button class="search-btn">Search</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Most Picked Cars -->
+       <div class="card-row">
+    <h2 class="section-title black">WE RECOMMEND FOR YOU</h2>
+
+    @foreach (var car in Model.MostPickedCars)
+    {
+        <div class="car-item">
+                    <img src="~/img/default-car.jpg" alt="@car.Brand  @car.Model" />
+
+            <div class="meta">
+                        <h4>@car.Brand  @car.Model</h4>
+                <p class="muted">@car.Description</p>
+            </div>
+
+            <div class="price">
+                <strong>$@car.Price</strong>
+            </div>
+
+            <a asp-controller="Cars" asp-action="Details" asp-route-id="@car.CarID" 
+               class="btn-book">Book Now</a>
+        </div>
+    }
+</div>
+            <!-- WHY US -->
+        <h2 class="section-title white">WHY US !!?</h2>
+        <section class="features">
+            <div class="feature"><h5>Perfect technical condition</h5><p>Regular checks and maintenance before every rental.</p></div>
+            <div class="feature"><h5>Wide selection</h5><p>Different ranges and classes — economy to luxury.</p></div>
+            <div class="feature"><h5>Transparent pricing</h5><p>No hidden fees — everything clear before booking.</p></div>
+            <div class="feature"><h5>Flexible rental terms</h5><p>Daily, weekly and monthly options.</p></div>
+            <div class="feature"><h5>Car delivery</h5><p>Delivery to your location on demand.</p></div>
+            <div class="feature"><h5>Insurance & safety</h5><p>Full coverage and 24/7 roadside assistance.</p></div>
+        </section>
+
+        <!-- 3 Steps -->
+        <section class="steps">
+            <img class="bgimg" src="~/img/footer.jpg" alt="step-bg">
+            <div class="steps-panel">
+                <h3>Rent in 3 easy steps</h3>
+                <div class="step"><strong>1</strong> Choose the right car</div>
+                <div class="step"><strong>2</strong> Pay securely</div>
+                <div class="step"><strong>3</strong> Receive the car and enjoy</div>
+                <div style="margin-top:12px;text-align:left">
+                    <a asp-controller="Cars" asp-action="Index" class="search-btn">Start Now</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section"><h4>AutoHub</h4><p>Find your perfect car in just a few clicks — reliable, fast, and affordable.</p></div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+                        <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                        <li><a asp-controller="Home" asp-action="Terms">Terms & Conditions</a></li>
+                        <li><a asp-controller="Home" asp-action="About">About</a></li>
+                        <li><a asp-controller="Home" asp-action="Contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-icons">
+                        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© @DateTime.Now.Year AutoHub. All rights reserved.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="~/assets/js/headerFooter.js"></script>
+    <script>
+        document.querySelector(".search-btn").addEventListener("click", () => {
+              const brand = document.getElementById("BrandInput")?.value.trim() || "";
+              const year = document.getElementById("YearInput")?.value.trim() || "";
+              const status = document.getElementById("StatusInput")?.value || "";
+
+              const params = new URLSearchParams();
+              if (brand) params.append("brand", brand);
+              if (year) params.append("year", year);
+              if (status) params.append("status", status.toLowerCase());
+
+              const url = "/Cars/Index" + (params.toString() ? "?" + params.toString() : "");
+              window.location.href = url;
+          });
+
+          // Enter في أي حقل = بحث
+          document.querySelectorAll("#BrandInput, #YearInput, #StatusInput").forEach(el => {
+              el.addEventListener("keypress", e => {
+                  if (e.key === "Enter") document.querySelector(".search-btn").click();
+              });
+          });
+    </script>
+
+</body>
+</html>
