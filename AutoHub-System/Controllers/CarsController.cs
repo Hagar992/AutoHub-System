@@ -6,8 +6,8 @@ namespace AutoHub_System.Controllers
     [Route("/{Controller}/{action=index}/{id?}")]
     public class CarsController : Controller
     {
-        IService<Car> cs;
-        public CarsController(IService<Car> _cs)
+        IBaseService<Car> cs;
+        public CarsController(IBaseService<Car> _cs)
         {
             cs = _cs;
         }

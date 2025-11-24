@@ -18,7 +18,7 @@ namespace AutoHub_System.Models
         public int Mileage { get; set; }
         public string Color { get; set; }
         public string EngineType { get; set; }
-        public float Price { get; set; }
+        public decimal Price { get; set; }
         public string Transimission { get; set; }
         public int Fuel_Economy { get; set; }
         public string MainImage => CarImage != null && CarImage.Any()

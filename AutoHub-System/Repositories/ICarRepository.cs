@@ -5,6 +5,7 @@ namespace AutoHub_System.Repositories
     public interface ICarRepository
     {
         Task<List<Car>> GetAllCarsAsync();
+        //Task<Car?> GetByIdAsync(int id);
         Task<Car?> GetCarByIdAsync(int id);
     }
 }

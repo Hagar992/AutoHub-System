@@ -28,5 +28,10 @@ namespace AutoHub_System.Services
             var random = new Random();
             return cars.OrderBy(x => random.Next()).Take(count).ToList();
         }
+
+        public async Task<Car?> GetByIdAsync(int id)
+        {
+            return await _carRepository.GetCarByIdAsync(id); 
+        }
     }
 }

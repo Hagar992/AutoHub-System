@@ -66,7 +66,7 @@
     @foreach (var car in Model.MostPickedCars)
     {
         <div class="car-item">
-                    <img src="~/img/default-car.jpg" alt="@car.Brand  @car.Model" />
+                    <img src="~/img/@car.MainImage" alt="@car.Brand  @car.Model" />
 
             <div class="meta">
                         <h4>@car.Brand  @car.Model</h4>
@@ -77,7 +77,7 @@
                 <strong>$@car.Price</strong>
             </div>
 
-            <a asp-controller="Cars" asp-action="Details" asp-route-id="@car.CarID" 
+            <a asp-controller="Cars" asp-action="CarDetails" asp-route-id="@car.CarID" 
                class="btn-book">Book Now</a>
         </div>
     }

@@ -1,63 +1,108 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AutoHub_System.Models;
 using AutoHub_System.Services;
-using AutoHub_System.Models;
+using AutoHub_System.ViewModels;
+using Microsoft.AspNetCore.Mvc;
 using Stripe.Checkout;
-
 namespace AutoHub_System.Controllers
 {
     public class PaymentController : Controller
     {
-         private readonly IPaymentService _paymentService;
-
-        public PaymentController(IPaymentService paymentService)
-        {
+        private readonly IPaymentService _paymentService;
+        private readonly ICarService _carService;
+        public PaymentController(IPaymentService paymentService, ICarService carService) // تم التغيير من baseService
+        {
             _paymentService = paymentService;
+            _carService = carService;
         }
-
-        public IActionResult Index()
+        public async Task<IActionResult> Index(int carId, decimal deposit)
         {
-            return View();
+            var car = await _carService.GetByIdAsync(carId);
+            if (car == null) return NotFound();
+
+           
+            deposit = car.Price * 0.1m;
+
+            var vm = new PaymentViewModel
+            {
+                CarID = car.CarID,
+                Deposit = deposit,
+                CarBrand = car.Brand,
+                CarModel = car.Model,
+                Price = car.Price
+            };
+
+            return View(vm);
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateCheckoutSession(PaymentInfo model)
+        public async Task<IActionResult> CreateCheckoutSession(PaymentViewModel model)
         {
-            var amount = 100.00m;
+            // ====== لو فيه أخطاء في الـ validation ======
+            if (!ModelState.IsValid)
+            {
+                // نجيب السيارة تاني عشان نعبي البيانات في الـ Model ونرجعها للـ View
+                var carForError = await _carService.GetByIdAsync(model.CarID);
+                if (carForError != null)
+                {
+                    model.CarBrand = carForError.Brand;
+                    model.CarModel = carForError.Model;
+                    model.Price = carForError.Price;
+                    model.Deposit = carForError.Price * 0.1m;
+                }
+                return View("Index", model);
+            }
+
+            // ====== لو كل حاجة تمام (نجيب السيارة مرة تانية للـ Stripe) ======
+            var car = await _carService.GetByIdAsync(model.CarID);
+            if (car == null)
+            {
+                ModelState.AddModelError("", "Car not found.");
+                // لو السيارة مش موجودة نرجع تاني مع البيانات
+                model.CarBrand = "Unknown";
+                model.CarModel = "Car";
+                model.Price = 0;
+                model.Deposit = 0;
+                return View("Index", model);
+            }
+
+            var amount = model.Deposit;
+            var exchangeRate = 48.5m;
+            var amountUSD = Math.Round(amount / exchangeRate, 2);
 
             var options = new SessionCreateOptions
             {
                 PaymentMethodTypes = new List<string> { "card" },
                 LineItems = new List<SessionLineItemOptions>
+        {
+            new SessionLineItemOptions
             {
-                new SessionLineItemOptions
+                PriceData = new SessionLineItemPriceDataOptions
                 {
-                    PriceData = new SessionLineItemPriceDataOptions
+                    UnitAmountDecimal = amountUSD * 100,
+                    Currency = "usd",
+                    ProductData = new SessionLineItemPriceDataProductDataOptions
                     {
-                        UnitAmountDecimal = amount * 100,
-                        Currency = "egp",
-                        ProductData = new SessionLineItemPriceDataProductDataOptions
-                        {
-                            Name = "Service Payment"
-                        }
-                    },
-                    Quantity = 1,
+                        Name = $"Deposit 10% - {car.Brand} {car.Model}"
+                    }
                 },
-            },
+                Quantity = 1,
+            }
+        },
                 Mode = "payment",
-                SuccessUrl = Url.Action("Success", "Home", null, Request.Scheme) + "?session_id={CHECKOUT_SESSION_ID}",
-                CancelUrl = Url.Action("Cancel", "Home", null, Request.Scheme),
+                SuccessUrl = Url.Action("Success", "Payment", null, Request.Scheme) + "?session_id={CHECKOUT_SESSION_ID}",
+                CancelUrl = Url.Action("Cancel", "Payment", null, Request.Scheme),
             };
 
             var service = new SessionService();
-            var session = await service.CreateAsync(options);
+            Session session = await service.CreateAsync(options);
 
-            
+            // حفظ البيانات لصفحة الـ Success
             TempData["Name"] = model.Name;
             TempData["Email"] = model.Email;
             TempData["Phone"] = model.Phone;
             TempData["Phone2"] = model.Phone2;
             TempData["SSN"] = model.SSN;
-            TempData["Amount"] = amount.ToString();
+            TempData["Amount"] = amount.ToString("N0");
 
             return Redirect(session.Url);
         }
@@ -66,7 +111,6 @@ namespace AutoHub_System.Controllers
         {
             var service = new SessionService();
             var session = await service.GetAsync(session_id);
-
             if (session.PaymentStatus == "paid")
             {
                 var payment = new PaymentInfo
@@ -80,23 +124,17 @@ namespace AutoHub_System.Controllers
                     CreatedAt = DateTime.Now
                 };
 
-                
                 await _paymentService.SavePaymentAsync(payment);
-
                 ViewBag.Name = payment.Name;
                 ViewBag.Amount = payment.Amount.ToString("F2");
-
                 return View("Success");
             }
-
             return RedirectToAction("Cancel");
         }
-
         public IActionResult Cancel()
         {
             return View();
         }
-        
+
     }
 }
-

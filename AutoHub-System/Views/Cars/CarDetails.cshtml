@@ -1,6 +1,7 @@
 ﻿@model Car
 @{
     Layout = "_HeaderAndFooterLayout";
+    var deposit = Model.Price * 0.1m;
 }
 @section styles {
     <link href="~/assets/css/details.css" rel="stylesheet" />
@@ -15,7 +16,7 @@
         <div id="options">
             @foreach(var img in @Model.CarImage)
             {
-                <img src="@img" alt="car image" class="small" onclick="changeImage('@img', this)">
+                <img src="~/img/@img" alt="car image" class="small" onclick="changeImage('@img', this)">
             }
 
             
@@ -114,7 +115,16 @@
 
 
             </div>
-            <a asp-controller="Payment" asp-action="Index" class="buttonn">Book Now</a> @* ==> doha *@
+            <a asp-controller="Payment"
+               asp-action="Index"
+               asp-route-carId="@Model.CarID"
+               asp-route-deposit="@deposit"
+               asp-route-brand="@Model.Brand"
+               asp-route-model="@Model.Model"
+               asp-route-price="@Model.Price"
+               class="buttonn">
+                Book Now
+            </a> @* ==> doha *@
             @* <a href="#" class="buttonn">Book Now</a>    ==> aya *@
         </div>
 
@@ -137,7 +147,17 @@
             }
         </div>
 
-        <a asp-controller="Payment" asp-action="Index" class="buttonn" id="last">Book Now</a> @* ==> doha *@
+        <a asp-controller="Payment"
+           asp-action="Index"
+           asp-route-carId="@Model.CarID"
+           asp-route-deposit="@deposit"
+           asp-route-brand="@Model.Brand"
+           asp-route-model="@Model.Model"
+           asp-route-price="@Model.Price"
+           class="buttonn" id="last">
+            Book Now
+        </a>@* ==> doha *@
+        
         @* <a href="#" class="buttonn" id="last">Book Now</a>    ==> aya *@
     </div>
 

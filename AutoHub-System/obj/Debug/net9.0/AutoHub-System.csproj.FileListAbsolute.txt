@@ -670,7 +670,9 @@ D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\compress
 D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\compressed\yw8gug35r8-jiccieylfn.gz
 D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\bin\Debug\net9.0\Newtonsoft.Json.dll
 D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\bin\Debug\net9.0\Stripe.net.dll
-D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\compressed\zk0qd6rvo1-fqfne5pnnh.gz
 D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\compressed\7cyes2gip0-3bf7i9mm6f.gz
 D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\compressed\zixygyi4kc-mi88zvyqkm.gz
 D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\compressed\um50om3tga-a3aaur9pan.gz
+D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\AutoHub-System.sourcelink.json
+D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\compressed\f826le5dov-b4jwtkegza.gz
+D:\DEPI\AutoHub-System-display_all_cars\AutoHub-System\obj\Debug\net9.0\compressed\zk0qd6rvo1-brwsptmeha.gz

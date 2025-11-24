@@ -85,7 +85,7 @@
         @foreach (var item in Model)
         {
              <a href="/cars/cardetails/@item.CarID" class="card"> 
-                <img src="@item.CarImage.FirstOrDefault()" alt="Carimg">
+                <img src="~/img/@item.MainImage" alt="Carimg">
                 <div class="carinfo">
                     <h3 class="cartitle">@item.Brand @item.Model</h3>
                     <div class="carstatus">

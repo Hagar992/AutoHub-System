@@ -6,8 +6,8 @@ namespace AutoHub_System.Models
     {
         public int OrderID { get; set; }
         public float TotalPrice { get; set; }
-        public float PriceWhenBook { get; set; }
-        public string Status { get; set; }
+        public float PricWhenBook { get; set; }
+        public string Staetus { get; set; }
         public DateTime OrderDate { get; set; }
 
         // Foreign Keys
