@@ -95,7 +95,8 @@
         <p>Don't worry, <span class="highlight">no amount has been charged</span> to your card.</p>
         <p>You can try again anytime.</p>
 
-        <a href="/" class="btn">Try Payment Again</a>
+        @* <a href="/" class="btn">Try Payment Again</a> *@
+        <a asp-controller="Payment" class="btn" asp-action="index">Payment Again</a>
 
         <div class="footer-note">
             If you're facing any issue, feel free to contact support
