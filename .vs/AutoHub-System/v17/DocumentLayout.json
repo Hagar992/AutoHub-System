@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\DEPI\\AutoHub-System-display_all_cars\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\depi\\autohub-system-display_all_cars\\autohub-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\depi\\autohub-system-display_all_cars\\autohub-system\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -51,6 +55,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\appsettings.json",
+              "RelativeDocumentMoniker": "AutoHub-System\\appsettings.json",
+              "ToolTip": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\appsettings.json",
+              "RelativeToolTip": "AutoHub-System\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-25T13:55:44.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "PaymentController.cs",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Controllers\\PaymentController.cs",
               "RelativeDocumentMoniker": "AutoHub-System\\Controllers\\PaymentController.cs",
@@ -63,7 +80,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Cancel.cshtml",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Views\\Payment\\Cancel.cshtml",
               "RelativeDocumentMoniker": "AutoHub-System\\Views\\Payment\\Cancel.cshtml",
@@ -75,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Car.cs",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Models\\Car.cs",
               "RelativeDocumentMoniker": "AutoHub-System\\Models\\Car.cs",
@@ -87,7 +104,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "CarDetails.cshtml",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Views\\Cars\\CarDetails.cshtml",
               "RelativeDocumentMoniker": "AutoHub-System\\Views\\Cars\\CarDetails.cshtml",
@@ -99,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Views\\Cars\\Index.cshtml",
               "RelativeDocumentMoniker": "AutoHub-System\\Views\\Cars\\Index.cshtml",
@@ -111,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "_HeaderAndFooterLayout.cshtml",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Views\\Shared\\_HeaderAndFooterLayout.cshtml",
               "RelativeDocumentMoniker": "AutoHub-System\\Views\\Shared\\_HeaderAndFooterLayout.cshtml",
@@ -123,7 +140,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "CarRepository.cs",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Repositories\\CarRepository.cs",
               "RelativeDocumentMoniker": "AutoHub-System\\Repositories\\CarRepository.cs",
@@ -135,7 +152,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "IPaymentRepository.cs",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Repositories\\IPaymentRepository.cs",
               "RelativeDocumentMoniker": "AutoHub-System\\Repositories\\IPaymentRepository.cs",
@@ -147,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "D:\\DEPI\\AutoHub-System-display_all_cars\\AutoHub-System\\Views\\Payment\\Index.cshtml",
               "RelativeDocumentMoniker": "AutoHub-System\\Views\\Payment\\Index.cshtml",
