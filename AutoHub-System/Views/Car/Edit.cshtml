@@ -1,12 +1,4 @@
-﻿global using AutoHub_System.ViewModel;
-global using AutoHub_System.Models;
-global using AutoHub_System.Data;
-global using AutoHub_System.Services;
-global using AutoHub_System.Services.Interfaces;
-global using Microsoft.AspNetCore.Authorization;
-global using Microsoft.AspNetCore.Identity;
-global using Microsoft.AspNetCore.Mvc;
-@model EditCarViewModel
+﻿@model EditCarViewModel
 
 @{
     ViewData["Title"] = "Edit Car";
@@ -40,7 +32,7 @@ global using Microsoft.AspNetCore.Mvc;
         <div class="col-md-4">
             <div class="form-group">
                 <label asp-for="Year" class="control-label font-weight-bold">Year *</label>
-                <input asp-for="Year" class="form-control" min="1900" max="2024" />
+                <input asp-for="Year" class="form-control" />
                 <span asp-validation-for="Year" class="text-danger"></span>
             </div>
         </div>

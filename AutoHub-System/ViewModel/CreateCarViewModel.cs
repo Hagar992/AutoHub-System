@@ -14,7 +14,7 @@ namespace AutoHub_System.ViewModel
         public string Model { get; set; }
 
         [Required(ErrorMessage = "Year is required")]
-        [Range(1900, 2024, ErrorMessage = "Year must be between 1900 and 2024")]
+        [Range(1900, 2025, ErrorMessage = "Year must be between 1900 and 2025")]
         public int Year { get; set; }
 
         [Required(ErrorMessage = "Price is required")]
