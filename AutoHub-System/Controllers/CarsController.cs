@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using AutoHub_System.Services;
-using AutoHub_System.Models;
-namespace AutoHub_System.Controllers
+﻿namespace AutoHub_System.Controllers
 {
     [Route("/{Controller}/{action=index}/{id?}")]
     public class CarsController : Controller

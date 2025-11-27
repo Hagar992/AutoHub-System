@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace AutoHub_System.Models
+﻿namespace AutoHub_System.Models
 {
     public class Car
     {

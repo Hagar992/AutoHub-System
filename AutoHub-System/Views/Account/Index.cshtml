@@ -1,0 +1,80 @@
+﻿@using AutoHub_System.ViewModel;
+@{
+    Layout = "_DashboardLayout";
+}
+@model MainDashbardViewModel;
+<div class="main-header">
+    <h1>Dashboard Overview</h1>
+    <div class="date">
+        <input type="date" id="date-picker">
+    </div>
+</div>
+
+<div class="insights">
+    <div class="card total-cars">
+        <div class="card-icon">
+            <span class="material-symbols-sharp">directions_car</span>
+        </div>
+        <div class="card-content">
+            <h3>Total Cars</h3>
+            <h1>@Model.TotalNumberOfCars</h1>
+            <small>Available in inventory</small>
+        </div>
+    </div>
+
+    <div class="card total-deposits">
+        <div class="card-icon">
+            <span class="material-symbols-sharp">account_balance_wallet</span>
+        </div>
+        <div class="card-content">
+            <h3>Total Deposits</h3>
+            <h1>$@Model.TotalDeposits</h1>
+            <small>Current balance</small>
+        </div>
+    </div>
+
+    <div class="card active-reservations">
+        <div class="card-icon">
+            <span class="material-symbols-sharp">event_available</span>
+        </div>
+        <div class="card-content">
+            <h3>Active Reservations</h3>
+            <h1>@Model.ActiveReservations</h1>
+            <small>Ongoing rentals</small>
+        </div>
+    </div>
+</div>
+@section right {
+    <div class="recent-updates">
+        <h2>Notifications</h2>
+        <div class="updates">
+            <div class="update">
+                <div class="update-icon">
+                    <span class="material-symbols-sharp">person_add</span>
+                </div>
+                <div class="update-content">
+                    <p><b>New user registration</b></p>
+                    <small>Mohamed Ali just registered</small>
+                </div>
+            </div>
+            <div class="update">
+                <div class="update-icon">
+                    <span class="material-symbols-sharp">warning</span>
+                </div>
+                <div class="update-content">
+                    <p><b>Maintenance required</b></p>
+                    <small>Toyota Corolla needs service</small>
+                </div>
+            </div>
+            <div class="update">
+                <div class="update-icon">
+                    <span class="material-symbols-sharp">check_circle</span>
+                </div>
+                <div class="update-content">
+                    <p><b>Payment received</b></p>
+                    <small>Order #1002 fully paid</small>
+                </div>
+            </div>
+        </div>
+    </div>
+}

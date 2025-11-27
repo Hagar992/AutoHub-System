@@ -1,0 +1,78 @@
+﻿@* Views/DepositePolicy/ActivateConfirmation.cshtml *@
+@model AutoHub_System.Models.DepositePolicy
+@{
+    ViewData["Title"] = "Activate Policy";
+    Layout = "_DashboardLayout";
+}
+<div class="dashtable" style="max-width: 500px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 1.5rem;">Activate Policy</h2>
+
+    <!-- Warning Message -->
+    <div class="card" style="border-left: 4px solid var(--clr-warning); background: rgba(255, 187, 85, 0.1); margin-bottom: 1.5rem;">
+        <div class="card-content">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <i class="fas fa-exclamation-triangle" style="color: var(--clr-warning); font-size: 1.5rem;"></i>
+                <div>
+                    <h3 style="color: var(--clr-warning); margin-bottom: 0.3rem; font-size: 1.1rem;">Confirm Activation</h3>
+                    <p style="color: var(--clr-dark); font-size: 0.9rem; margin: 0;">
+                        Are you sure you want to activate this policy?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Policy Details -->
+    <div class="card" style="padding: 1.2rem;">
+        <div class="card-content">
+            <h3 style="color: var(--clr-dark); margin-bottom: 1rem;">Policy Details</h3>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1rem;">
+                <div>
+                    <strong>Policy ID:</strong><br>
+                    <span>#@Model.PolicyID</span>
+                </div>
+                <div>
+                    <strong>Effective Date:</strong><br>
+                    <span>@Model.EffectiveDate.ToString("MM/dd/yyyy")</span>
+                </div>
+                <div>
+                    <strong>Deposit Rate:</strong><br>
+                    <span style="color: var(--clr-primary); font-weight: 600;">@(Model.DepositeRate * 100)%</span>
+                </div>
+                <div>
+                    <strong>Current Status:</strong><br>
+                    <span class="status status-canceled" style="font-size: 0.75rem;">Inactive</span>
+                </div>
+            </div>
+
+            <!-- Warning Note -->
+            <div style="background: rgba(255, 187, 85, 0.05); padding: 0.8rem; border-radius: var(--border-radius-1); margin: 1rem 0;">
+                <div style="display: flex; align-items: flex-start; gap: 0.6rem;">
+                    <i class="fas fa-info-circle" style="color: var(--clr-warning); font-size: 0.9rem; margin-top: 0.1rem;"></i>
+                    <div>
+                        <strong style="color: var(--clr-warning); font-size: 0.85rem;">Note:</strong>
+                        <p style="color: var(--clr-dark); margin: 0.2rem 0 0 0; font-size: 0.8rem;">
+                            Activating this policy will automatically deactivate any other currently active policy.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Activation Form -->
+            <form asp-action="Activate" method="post" style="margin-top: 1.5rem;">
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="id" value="@Model.PolicyID" />
+
+                <div class="form-actions" style="display: flex; gap: 0.8rem; justify-content: center;">
+                    <button type="submit" class="btn btn-view" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+                        <i class="fas fa-check-circle"></i> Yes, Activate
+                    </button>
+                    <a asp-action="Index" class="btn btn-cancel" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+                        <i class="fas fa-times"></i> Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

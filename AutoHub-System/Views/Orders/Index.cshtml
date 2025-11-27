@@ -1,0 +1,226 @@
+﻿@model List<OrderDashbardVM>
+@{
+    ViewData["Title"] = "Orders Management";
+    Layout = "_DashboardLayout";
+}
+
+<div>
+    <h2>Orders Management</h2>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Success"]
+        </div>
+    }
+
+    <div class="table-container">
+        <table class="orders-table">
+            <thead>
+                <tr>
+                    <th>Order ID</th>
+                    <th>Client</th>
+                    <th>Car</th>
+                    <th>Total Price</th>
+                    <th>Status</th>
+                    <th>Order Date</th>
+                    <th style="width: 150px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td>#@order.OrderID</td>
+                        <td>
+                            <div>@order.Client</div>
+                            <small>@order.UserEmail</small>
+                        </td>
+                        <td>@order.Car</td>
+                        <td>$@order.TotalPrice.ToString("N2")</td>
+                        <td>
+                            <span class="status @order.StatusBadgeClass">@order.Status</span>
+                        </td>
+                        <td>@order.OrderDate.ToString("MM/dd/yyyy")</td>
+                        <td>
+                            <div class="action-buttons">
+                                <a asp-action="Details" asp-route-id="@order.OrderID" class="btn btn-view">
+                                    View
+                                </a>
+
+                                @if (order.CanConfirm)
+                                {
+                                    <form method="post" asp-action="Confirm" asp-route-id="@order.OrderID" class="action-form">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-confirm"
+                                                onclick="return confirm('Confirm order #@order.OrderID?')">
+                                            Confirm
+                                        </button>
+                                    </form>
+                                }
+
+                                @if (order.CanCancel)
+                                {
+                                    <form method="post" asp-action="Cancel" asp-route-id="@order.OrderID" class="action-form">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-cancel"
+                                                onclick="return confirm('Cancel order #@order.OrderID?')">
+                                            Cancel
+                                        </button>
+                                    </form>
+                                }
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<style>
+    .table-container {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .orders-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+        .orders-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .orders-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: middle;
+        }
+
+        .orders-table tr:hover {
+            background: #f8f9fa;
+        }
+
+    .status {
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        display: inline-block;
+        min-width: 80px;
+        text-align: center;
+    }
+
+    .status-pending {
+        background: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeaa7;
+    }
+
+    .status-confirmed {
+        background: #d1edff;
+        color: #0c5460;
+        border: 1px solid #b8daff;
+    }
+
+    .status-canceled {
+        background: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+    .action-buttons {
+        display: flex;
+        gap: 0.3rem;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .btn {
+        padding: 0.3rem 0.6rem;
+        border: none;
+        border-radius: 3px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        display: inline-block;
+        text-align: center;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        min-width: 50px;
+    }
+
+    .btn-view {
+        background: #6c757d;
+        color: white;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+
+    .btn-confirm {
+        background: #28a745;
+        color: white;
+    }
+
+    .btn-cancel {
+        background: #dc3545;
+        color: white;
+    }
+
+    .btn:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+    }
+
+    .action-form {
+        margin: 0;
+    }
+
+    .alert {
+        padding: 1rem;
+        border-radius: 4px;
+        margin-bottom: 1rem;
+        border: 1px solid transparent;
+    }
+
+    .alert-success {
+        background: #d4edda;
+        color: #155724;
+        border-color: #c3e6cb;
+    }
+    @@media (max-width: 768px) {
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .orders-table {
+            min-width: 800px;
+        }
+
+        .action-buttons {
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .btn {
+            padding: 0.2rem 0.4rem;
+            font-size: 0.65rem;
+            min-width: 45px;
+        }
+
+        .btn-view {
+            padding: 0.3rem 0.6rem;
+            font-size: 0.7rem;
+        }
+    }
+</style>

@@ -1,6 +1,4 @@
 using System.Diagnostics;
-using AutoHub_System.Models;
-using Microsoft.AspNetCore.Mvc;
 
 namespace AutoHub_System.Controllers
 {
