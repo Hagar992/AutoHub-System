@@ -8,7 +8,6 @@ namespace AutoHub_System.Services
     {
         protected IRepository<T> repository;
 
-        // Fix: Add the base constructor that takes IRepository<T>
         public GenericService(IRepository<T> repository)
         {
             this.repository = repository;

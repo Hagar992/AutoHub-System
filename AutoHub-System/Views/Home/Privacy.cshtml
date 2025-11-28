@@ -1,6 +1,83 @@
 ﻿@{
     ViewData["Title"] = "Privacy Policy";
+    Layout = "~/Views/Shared/_HeaderAndFooterLayout.cshtml";
 }
-<h1>@ViewData["Title"]</h1>
+@section styles {
+    <link rel="stylesheet" href="~/assets/css/privacyStyle.css">
+}
 
-<p>Use this page to detail your site's privacy policy.</p>
+<h1 class="section-title ">Privacy Policy</h1>
+<div class="container">
+    <p id="start">
+        We respect your privacy and are committed to protecting the personal data you provide to us. This Privacy
+        Policy explains how we collect, use, and protect your information when you use our car rental and sales
+        website.
+    </p>
+    <div class="priv">
+        <h2>1. Information We Collect:</h2>
+        <ul>
+            <li>Full name</li>
+            <li>Phone number</li>
+            <li>Email address</li>
+            <li>Driver's license information</li>
+            <li>Residential address</li>
+            <li>Payment details (e.g., credit card)</li>
+            <li>Geolocation data (when necessary)</li>
+        </ul>
+    </div>
+    <div class="priv">
+        <h2>2. How We Use Your Information:</h2>
+        <ul>
+            <li>Process car rental or purchase requests</li>
+            <li>Contact you regarding your booking or purchase</li>
+            <li>Enhance your user experience on the website</li>
+            <li>Send offers or updates (if you opt-in)</li>
+            <li>Ensure safety and comply with legal obligations</li>
+        </ul>
+    </div>
+    <div class="priv">
+        <h2>3. Data Protection:</h2>
+        <p>
+            We follow strict security procedures to protect your personal data from unauthorized access or misuse. All
+            information is stored securely and encrypted where applicable.
+        </p>
+    </div>
+    <div class="priv">
+        <h2>4. Information Sharing:</h2>
+        <p>
+            We do <strong>not</strong> share your personal information with third parties, except in the following cases:
+        </p>
+        <ul>
+            <li>Payment processors for completing transactions</li>
+            <li>Legal authorities when officially requested</li>
+            <li>Insurance companies in case of accidents</li>
+        </ul>
+    </div>
+    <div class="priv">
+        <h2>5. Cookies:</h2>
+        <p>
+            We use cookies to improve site performance and personalize your experience. You can disable cookies via your
+            browser settings.
+        </p>
+    </div>
+    <div class="priv">
+        <h2>6. Your Rights:</h2>
+        <ul>
+            <li>Request a copy of the data we hold about you</li>
+            <li>Modify or correct your personal information</li>
+            <li>Request deletion of your data at any time</li>
+        </ul>
+    </div>
+    <div class="priv">
+        <h2>7. Policy Updates:</h2>
+        <p>
+            We may update this Privacy Policy from time to time. Any changes will be posted here, and your continued use
+            of the site will be considered acceptance of those changes.
+        </p>
+    </div>
+    <p id="que">
+        <b>
+            For any questions, please contact us at <a href="https://mail.google.com/mail/u/0/#inbox"><span>AutoHub@gmail.com</span></a>.
+        </b>
+    </p>
+</div>

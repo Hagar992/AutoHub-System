@@ -14,6 +14,8 @@ namespace AutoHub_System.Data
         public DbSet<DepositePolicy> DepositePolicies { get; set; }
         public DbSet<Car> Cars { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
+        public DbSet<PaymentInfo> PaymentInfos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -22,6 +24,7 @@ namespace AutoHub_System.Data
             modelBuilder.Entity<DepositePolicy>().HasKey(p => p.PolicyID);
             modelBuilder.Entity<Car>().HasKey(c => c.CarID);
             modelBuilder.Entity<Order>().HasKey(o => o.OrderID);
+
 
             // CarImage + Feature => JSON conversion
 

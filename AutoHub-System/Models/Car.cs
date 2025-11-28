@@ -15,10 +15,14 @@
         public int Mileage { get; set; }
         public string Color { get; set; }
         public string EngineType { get; set; }
-        public float Price { get; set; }
+        public decimal Price { get; set; }
         public string Transimission { get; set; }
         public int Fuel_Economy { get; set; }
         // Relationship
+        public string MainImage => CarImage != null && CarImage.Any()
+        ? CarImage.First()
+        : "~/img/default-car.jpg";
+
         public ICollection<Order> Orders { get; set; }
     }
 }

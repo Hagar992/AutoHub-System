@@ -1,6 +1,7 @@
 ﻿// ICarService.cs
 using AutoHub_System.Models;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace AutoHub_System.Services
 {
@@ -11,6 +12,8 @@ namespace AutoHub_System.Services
         List<Car> GetAvailableCars();
         List<Car> GetCarsByStatus(string status);
         List<Car> SearchCars(string searchTerm);
-        List<Car> GetCarsByPriceRange(float minPrice, float maxPrice);
+        List<Car> GetCarsByPriceRange(decimal minPrice, decimal maxPrice);
+        Task<List<Car>> GetRandomMostPickedCarsAsync(int count = 3);
+        Task<Car?> GetByIdAsync(int id);
     }
 }

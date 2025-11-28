@@ -56,7 +56,7 @@
                         Brand = viewModel.Brand,
                         Model = viewModel.Model,
                         Year = viewModel.Year,
-                        Price = (float)viewModel.Price,
+                        Price = viewModel.Price,
                         Color = viewModel.Color,
                         Mileage = viewModel.Mileage,
                         EngineType = viewModel.EngineType,
@@ -158,7 +158,7 @@
                     existingCar.Brand = viewModel.Brand;
                     existingCar.Model = viewModel.Model;
                     existingCar.Year = viewModel.Year;
-                    existingCar.Price = (float)viewModel.Price;
+                    existingCar.Price = viewModel.Price;
                     existingCar.Color = viewModel.Color;
                     existingCar.Mileage = viewModel.Mileage;
                     existingCar.EngineType = viewModel.EngineType;

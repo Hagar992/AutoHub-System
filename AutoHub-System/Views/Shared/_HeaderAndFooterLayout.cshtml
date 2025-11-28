@@ -6,37 +6,28 @@
     <link rel="stylesheet" href="~/assets/css/headerFooter.css">
     @RenderSection("styles", false)
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <title>Cars</title>
+
+    <!-- Add this line to render the title section -->
+    @if (IsSectionDefined("title"))
+    {
+        @RenderSection("title", false)
+    }
+    else
+    {
+        <title>Cars</title>
+    }
 </head>
 <body>
     <!---------------------start navbar------------------------------- -->
-    <!-- <nav>
-    <a href=""id="logo"><img src="assets/img/car in logo.png" alt="logo"  width="100px" height="30pc"></a>
-    <ul id="navlinks">
-    <li><a href="">Home</a></li>
-    <li><a href="">About Us</a></li>
-    <li><a href="">Terms</a></li>
-        </ul>
-    <ul id="navicons">
-            <li><i class="fa-solid fa-heart"></i></li>
-            <li><i class="fa-solid fa-bell"></i></li>
-           <div id="user">
-                <i class="fa-solid fa-bars"></i>
-                <p>Log in</p>
-                <li ><i class="fa-solid fa-user"></i></li>
-            </div> -->
-    <!-- <li ><i class="fa-solid fa-user"></i></li>
-         </ul>
-    </nav>  -->
     <header class="top">
         <div class="logo">AutoHub</div>
         <nav class="nav" id="nav">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="Privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="contactUs.html">Contact</a>
-            <button class="btn-light">Choose Now</button>
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Home" asp-action="About">About</a>
+            <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a asp-controller="Home" asp-action="Terms">Terms</a>
+            <a asp-controller="Home" asp-action="Contact">Contact</a>
+            <a asp-controller="Cars" asp-action="Index">Choose Now</a>
         </nav>
         <div id="menu-icon">&#9776;</div>
     </header>
@@ -47,7 +38,9 @@
         <button id="close-sidebar">&times;</button>
         <div id="sidebar-data"></div>
     </aside>
-@RenderBody()
+
+    @RenderBody()
+
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
@@ -58,13 +51,12 @@
             <div class="footer-section">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="Privacy.html">Privacy Policy</a></li>
-                    <li><a href="terms.html">Terms & Conditions</a></li>
+                    <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                    <li><a asp-controller="Home" asp-action="Terms">Terms & Conditions</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="contactUs.html">Contact Us</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact" ">Contact Us</a></li>
                 </ul>
             </div>
-
             <div class="footer-section">
                 <h4>Follow Us</h4>
                 <div class="social-icons">
@@ -79,8 +71,8 @@
         </div>
     </footer>
     <!---------------------end main------------------------------- -->
-    <script src="<script src="~/assets/js/headerFooter.js"></script>
+    <!-- Fixed the duplicate script tag -->
+    <script src="~/assets/js/headerFooter.js"></script>
     @RenderSection("jscript", false)
-   
 </body>
 </html>

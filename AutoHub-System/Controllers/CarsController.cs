@@ -1,25 +1,24 @@
-﻿namespace AutoHub_System.Controllers
+﻿[AllowAnonymous]
+public class CarsController : Controller
 {
-    [Route("/{Controller}/{action=index}/{id?}")]
-    public class CarsController : Controller
+    private readonly ICarService _carService;
+
+    public CarsController(ICarService carService)
     {
-        IService<Car> cs;
-        public CarsController(IService<Car> _cs)
-        {
-            cs = _cs;
-        }
-        public IActionResult Index()
-        {
-            var cars = cs.get_all();
-            return View(cars);
-        }
-       
-        public IActionResult CarDetails(int id)
-        {
-            var car = cs.find_id(id);
-            if (car == null)
-                return NotFound();
-            return View(car);
-        }
+        _carService = carService;
+    }
+
+    public IActionResult Index()
+    {
+        var cars = _carService.get_all(); // Use synchronous version
+        return View(cars);
+    }
+
+    public async Task<IActionResult> CarDetails(int id)
+    {
+        var car = await _carService.GetByIdAsync(id);
+        if (car == null)
+            return NotFound();
+        return View(car);
     }
 }

@@ -1,9 +1,9 @@
-﻿// CarRepository.cs
-using AutoHub_System.Data;
+﻿using AutoHub_System.Data;
 using AutoHub_System.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace AutoHub_System.Repositories
 {
@@ -21,13 +21,23 @@ namespace AutoHub_System.Repositories
             return _context.Cars.Any(c => c.CarID == carId);
         }
 
-        // Removed LicensePlateExists method
+        public async Task<bool> CarExistsAsync(int carId)
+        {
+            return await _context.Cars.AnyAsync(c => c.CarID == carId);
+        }
 
         public List<Car> GetByBrand(string brand)
         {
             return _context.Cars
                 .Where(c => c.Brand.ToLower() == brand.ToLower())
                 .ToList();
+        }
+
+        public async Task<List<Car>> GetByBrandAsync(string brand)
+        {
+            return await _context.Cars
+                .Where(c => c.Brand.ToLower() == brand.ToLower())
+                .ToListAsync();
         }
 
         public List<Car> GetAvailableCars()
@@ -37,6 +47,13 @@ namespace AutoHub_System.Repositories
                 .ToList();
         }
 
+        public async Task<List<Car>> GetAvailableCarsAsync()
+        {
+            return await _context.Cars
+                .Where(c => c.CarSatus.ToLower() == "available")
+                .ToListAsync();
+        }
+
         public List<Car> GetCarsByStatus(string status)
         {
             return _context.Cars
@@ -44,7 +61,14 @@ namespace AutoHub_System.Repositories
                 .ToList();
         }
 
-        // Override GetAll to include related entities if needed
+        public async Task<List<Car>> GetCarsByStatusAsync(string status)
+        {
+            return await _context.Cars
+                .Where(c => c.CarSatus.ToLower() == status.ToLower())
+                .ToListAsync();
+        }
+
+        // Basic methods - synchronous
         public new List<Car> GetAll()
         {
             return _context.Cars
@@ -52,12 +76,26 @@ namespace AutoHub_System.Repositories
                 .ToList();
         }
 
-        // Override GetById to include related entities if needed
         public new Car? GetById(int id)
         {
             return _context.Cars
                 .Include(c => c.Orders)
                 .FirstOrDefault(c => c.CarID == id);
+        }
+
+        // Basic methods - asynchronous (same names with Async)
+        public async Task<List<Car>> GetAllAsync()
+        {
+            return await _context.Cars
+                .Include(c => c.Orders)
+                .ToListAsync();
+        }
+
+        public async Task<Car?> GetByIdAsync(int id)
+        {
+            return await _context.Cars
+                .Include(c => c.Orders)
+                .FirstOrDefaultAsync(c => c.CarID == id);
         }
     }
 }

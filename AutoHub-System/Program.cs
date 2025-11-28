@@ -1,5 +1,7 @@
 using AutoHub_System.Repositories;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
+
 namespace AutoHub_System
 {
     public class Program
@@ -15,25 +17,44 @@ namespace AutoHub_System
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineConnection"))
             );
-
             // Register Identity
             builder.Services.AddIdentity<User, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
+            // Configure Cookie Authentication
+            builder.Services.ConfigureApplicationCookie(options =>
+            {
+                options.LoginPath = "/Account/Login";         // Redirect guests to Login
+                options.AccessDeniedPath = "/Account/Login";  // Redirect users without proper role to Login
+            });
+            // Stripe Settings
+            builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 
-            // Register generic repositories and services
+            // Register generic repositories and services - FIXED AMBIGUITY
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
-            builder.Services.AddScoped(typeof(IService<>), typeof(Service<>));
+            builder.Services.AddScoped(typeof(AutoHub_System.Services.IService<>), typeof(AutoHub_System.Services.Service<>));
 
-            // Register specific repositories - ADD THIS
+            // Register specific repositories
             builder.Services.AddScoped<ICarRepository, CarRepository>();
             builder.Services.AddScoped<IDepositePolicyRepository, DepositePolicyRepository>();
-            
+            builder.Services.AddScoped<IContactRepository, ContactRepository>();
+            builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+
             // Register specific services
             builder.Services.AddScoped<ICarService, CarService>();
             builder.Services.AddScoped<ICloudinaryService, CloudinaryService>();
             builder.Services.AddScoped<IUserService, UserService>();
             builder.Services.AddScoped<IDepositePolicyService, DepositePolicyService>();
+            builder.Services.AddScoped<IContactService, ContactService>();
+            builder.Services.AddScoped<IPaymentService, PaymentService>();
+
+            // Set Stripe API Key
+            var stripeSecretKey = builder.Configuration["Stripe:SecretKey"];
+            if (string.IsNullOrWhiteSpace(stripeSecretKey))
+            {
+                throw new InvalidOperationException("Stripe Secret Key is missing or empty in appsettings.json");
+            }
+            StripeConfiguration.ApiKey = stripeSecretKey;
 
             var app = builder.Build();
 
@@ -93,7 +114,7 @@ namespace AutoHub_System
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Account}/{action=Login}/{id?}");
+                pattern: "{controller=Home}/{action=index}/{id?}");
 
             app.Run();
         }
