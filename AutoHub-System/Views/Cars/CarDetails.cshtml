@@ -26,10 +26,9 @@
             }
         }
         <div id="options">
+            <img src="@Url.Content(mainImage)" alt="img1" class="small" onclick="changeImage('@Url.Content(mainImage)', this)">
             @foreach (var img in Model.CarImage)
             {
-                <img src="@Url.Content(mainImageSrc)" alt="img1" id="mainimage">
-
                 if (!string.IsNullOrEmpty(img))
                 {
                     // Check if it's already a full URL or needs ~/ prefix

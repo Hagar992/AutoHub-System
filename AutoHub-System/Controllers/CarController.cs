@@ -150,7 +150,8 @@
                 CarStatus = car.CarSatus,
                 Description = car.Description,
                 CarImages = car.CarImage ?? new List<string>(),
-                Features = car.Feature ?? new List<string>()
+                Features = car.Feature ?? new List<string>(),
+                MainImage = car.MainImage
             };
             ViewBag.Brands = new List<string>
     {

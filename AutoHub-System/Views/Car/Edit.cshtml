@@ -136,6 +136,21 @@
         <textarea asp-for="Description" class="form-control" rows="4" placeholder="Enter car description..."></textarea>
         <span asp-validation-for="Description" class="text-danger"></span>
     </div>
+
+ @if (!string.IsNullOrEmpty(Model.MainImage))
+{
+    <div class="form-group">
+        <label class="control-label font-weight-bold">Current Main Image</label>
+        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+            <img src="@Model.MainImage"
+                 alt="Main image"
+                 style="width: 120px; height: 100px; object-fit: cover;
+                        border-radius: var(--border-radius-1);
+                        border: 2px solid var(--clr-light);" />
+        </div>
+    </div>
+}
+
     <div class="form-group">
         <label class="control-label font-weight-bold">Main Image (New)</label>
         <input type="file" asp-for="NewMainImage" class="form-control-file" accept="image/*" />
@@ -146,17 +161,17 @@
     <!-- Current Images -->
     @if (Model.CarImages != null && Model.CarImages.Any())
     {
-        <div class="form-group">
-            <label class="control-label font-weight-bold">Current Images</label>
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;">
-                @foreach (var imageUrl in Model.CarImages)
-                {
-                    <img src="@imageUrl" alt="Car image"
-                         style="width: 100px; height: 80px; object-fit: cover; border-radius: var(--border-radius-1); border: 2px solid var(--clr-light);">
-                }
-            </div>
-        </div>
+        <div class="form-group"> 
+            <label class="control-label font-weight-bold">Current Images</label> 
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;"> 
+                @foreach (var imageUrl in Model.CarImages) {
+        <img src="@imageUrl" alt="Car image"
+            style="width: 100px; height: 80px; object-fit: cover;
+border-radius: var(--border-radius-1); border: 2px solid var(--clr-light);">
     }
+ </div> </div>
+        }
+
 
     <!-- Add New Images -->
     <div class="form-group">

@@ -1,4 +1,4 @@
-wwwroot\css\cars.css
+wwwroot\assets\css\cars.css
 wwwroot\assets\css\contactStyle.css
 wwwroot\assets\css\details.css
 wwwroot\assets\css\headerFooter.css
@@ -12,9 +12,9 @@ wwwroot\assets\js\details.js
 wwwroot\assets\js\headerFooter.js
 wwwroot\assets\js\validation_script.js
 wwwroot\css\bootstrap.min.css
-wwwroot\assets\css\cars.css
-wwwroot\css\details.css
+wwwroot\css\cars.css
 wwwroot\css\dashboard.css
+wwwroot\css\details.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\2.jpg
@@ -23,6 +23,7 @@ wwwroot\images\car in logo.png
 wwwroot\images\cyberpunk-mclaren-supercars-neon-art--1003.jpg
 wwwroot\images\icon.png
 wwwroot\images\Yahya.jpg
+wwwroot\img\black1.png
 wwwroot\img\car in logo.png
 wwwroot\img\cars.jpg
 wwwroot\img\default-car.jpg
@@ -94,83 +95,82 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-wwwroot\img\black1.png
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\css\cars.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\css\contactStyle.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\css\details.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\css\headerFooter.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\css\MainStyle.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\css\PaymentStyle.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\css\privacyStyle.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\css\termsStyle.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\js\cars.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\js\details.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\js\headerFooter.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\assets\js\validation_script.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\css\bootstrap.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\css\cars.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\css\details.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\css\dashboard.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\css\site.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\favicon.ico
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\js\dashboard.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\js\site.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery-validation\dist\additional-methods.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery-validation\dist\jquery.validate.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery-validation\LICENSE.md
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery\dist\jquery.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery\dist\jquery.min.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery\dist\jquery.min.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery\dist\jquery.slim.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery\dist\jquery.slim.min.js
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery\dist\jquery.slim.min.map
-D:\AutoHub-System-Yahya-Doha-AyaTasks\AutoHub-System\wwwroot\lib\jquery\LICENSE.txt
+E:\Final autohub\AutoHub-System\wwwroot\assets\css\details.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery\LICENSE.txt
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery\dist\jquery.slim.min.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery\dist\jquery.slim.min.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery\dist\jquery.slim.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery\dist\jquery.min.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery\dist\jquery.min.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery\dist\jquery.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery-validation\LICENSE.md
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery-validation\dist\jquery.validate.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery-validation\dist\additional-methods.min.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery-validation-unobtrusive\LICENSE.txt
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery-validation\dist\additional-methods.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css.map
+E:\Final autohub\AutoHub-System\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
+E:\Final autohub\AutoHub-System\wwwroot\js\site.js
+E:\Final autohub\AutoHub-System\wwwroot\js\dashboard.js
+E:\Final autohub\AutoHub-System\wwwroot\favicon.ico
+E:\Final autohub\AutoHub-System\wwwroot\css\site.css
+E:\Final autohub\AutoHub-System\wwwroot\css\details.css
+E:\Final autohub\AutoHub-System\wwwroot\css\dashboard.css
+E:\Final autohub\AutoHub-System\wwwroot\css\cars.css
+E:\Final autohub\AutoHub-System\wwwroot\css\bootstrap.min.css
+E:\Final autohub\AutoHub-System\wwwroot\assets\js\validation_script.js
+E:\Final autohub\AutoHub-System\wwwroot\assets\js\headerFooter.js
+E:\Final autohub\AutoHub-System\wwwroot\assets\js\details.js
+E:\Final autohub\AutoHub-System\wwwroot\assets\js\cars.js
+E:\Final autohub\AutoHub-System\wwwroot\assets\css\termsStyle.css
+E:\Final autohub\AutoHub-System\wwwroot\assets\css\privacyStyle.css
+E:\Final autohub\AutoHub-System\wwwroot\assets\css\PaymentStyle.css
+E:\Final autohub\AutoHub-System\wwwroot\assets\css\MainStyle.css
+E:\Final autohub\AutoHub-System\wwwroot\assets\css\headerFooter.css
+E:\Final autohub\AutoHub-System\wwwroot\assets\css\contactStyle.css
+E:\Final autohub\AutoHub-System\wwwroot\assets\css\cars.css

@@ -59,7 +59,7 @@ namespace AutoHub_System.ViewModel
        
 
         public string MainImage { get; set; }  
-        public IFormFile NewMainImage { get; set; }   
+        public IFormFile? NewMainImage { get; set; }   
 
     }
 }
