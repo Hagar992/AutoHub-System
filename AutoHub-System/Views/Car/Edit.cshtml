@@ -1,4 +1,4 @@
-﻿@model EditCarViewModel
+@model EditCarViewModel
 
 @{
     ViewData["Title"] = "Edit Car";
@@ -150,7 +150,7 @@
         </div>
     </div>
 }
-
+    <input type="hidden" asp-for="MainImage" />
     <div class="form-group">
         <label class="control-label font-weight-bold">Main Image (New)</label>
         <input type="file" asp-for="NewMainImage" class="form-control-file" accept="image/*" />
