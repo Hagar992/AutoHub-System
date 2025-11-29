@@ -1,0 +1,121 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - AutoHub Dashboard</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp" />
+
+    <!-- Dashboard CSS -->
+    <link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="container">
+
+        <!-- ============ SIDEBAR ============ -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="~/images/car in logo.png" alt="AutoHub Logo" />
+                    <h2>Auto<span class="danger">Hub</span></h2>
+                </div>
+
+                <div id="close-btn" class="close">
+                    <span class="material-symbols-sharp">close</span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+
+                <a asp-controller="Dashboard" asp-action="Index"
+                   class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Dashboard" ? "active" : "")">
+                    <span class="material-symbols-sharp">dashboard</span>
+                    <h3>Dashboard</h3>
+                </a>
+
+                <a asp-controller="Car" asp-action="Manage"
+                   class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Car" ? "active" : "")">
+                    <span class="material-symbols-sharp">directions_car</span>
+                    <h3>Cars</h3>
+                </a>
+
+                <a asp-controller="Orders" asp-action="Index"
+                   class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Orders" ? "active" : "")">
+                    <span class="material-symbols-sharp">receipt_long</span>
+                    <h3>Orders</h3>
+                </a>
+
+                @* <a asp-controller="Users" asp-action="Index"
+                   class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Users" ? "active" : "")">
+                    <span class="material-symbols-sharp">people</span>
+                    <h3>Users</h3>
+                </a> *@
+
+                <a asp-controller="DepositePolicy" asp-action="Index"
+                   class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "DepositePolicy" ? "active" : "")">
+                    <span class="material-symbols-sharp">account_balance_wallet</span>
+                    <h3>Deposit Policy</h3>
+                </a>
+
+                <a asp-controller="Account" asp-action="Logout" class="logout"
+                   onclick="return confirm('Are you sure you want to logout?');">
+                    <span class="material-symbols-sharp">logout</span>
+                    <h3>Logout</h3>
+                </a>
+            </div>
+        </aside>
+
+
+
+        <!-- ============ MAIN CONTENT ============ -->
+        <main>
+            @RenderSection("breadcrumb", required: false)
+            @RenderBody()
+        </main>
+
+
+
+        <!-- ============ RIGHT PANEL ============ -->
+        <div class="right-section">
+
+            <div class="top">
+                <button id="menu-btn">
+                    <span class="material-symbols-sharp">menu</span>
+                </button>
+
+                <div class="theme-toggler">
+                    <span class="material-symbols-sharp active">light_mode</span>
+                    <span class="material-symbols-sharp">dark_mode</span>
+                </div>
+
+                <div class="profile">
+                    <div class="info">
+                        <p>Hello, <b>@ViewBag.UserName</b></p>
+                        <small class="text-muted">Admin</small>
+                    </div>
+
+                    <div class="profile-photo">
+                        <img src="@ViewBag.ProfilePicture" alt="Profile" />
+                    </div>
+                </div>
+            </div>
+
+            @RenderSection("right", required: false)
+        </div>
+
+    </div>
+
+    <!-- Dashboard JavaScript -->
+    <script src="~/js/dashboard.js" asp-append-version="true"></script>
+
+</body>
+</html>

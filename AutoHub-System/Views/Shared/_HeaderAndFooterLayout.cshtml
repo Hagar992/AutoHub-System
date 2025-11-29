@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/assets/css/headerFooter.css">
+    @RenderSection("styles", false)
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+    <!-- Add this line to render the title section -->
+    @if (IsSectionDefined("title"))
+    {
+        @RenderSection("title", false)
+    }
+    else
+    {
+        <title>Cars</title>
+    }
+</head>
+<body>
+    <!---------------------start navbar------------------------------- -->
+    <header class="top">
+        <div class="logo">AutoHub</div>
+        <nav class="nav" id="nav">
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Home" asp-action="About">About</a>
+            <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a asp-controller="Cars" asp-action="Index">Choose Now</a>
+            <a asp-controller="Account" asp-action="Login"><i class="fa-solid fa-user fa-lg" style="color: #9b9b9b; margin:3px;"></i></a>
+        </nav>
+        <div id="menu-icon">&#9776;</div>
+    </header>
+
+    <!-- Sidebar + overlay -->
+    <div id="overlay"></div>
+    <aside id="sidebar">
+        <button id="close-sidebar">&times;</button>
+        <div id="sidebar-data"></div>
+    </aside>
+
+    @RenderBody()
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AutoHub</h4>
+                <p>Find your perfect car in just a few clicks — reliable, fast, and affordable.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                    <li><a asp-controller="Home" asp-action="Terms">Terms & Conditions</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact" ">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AutoHub. All rights reserved.</p>
+        </div>
+    </footer>
+    <!---------------------end main------------------------------- -->
+    <!-- Fixed the duplicate script tag -->
+    <script src="~/assets/js/headerFooter.js"></script>
+    @RenderSection("jscript", false)
+</body>
+</html>

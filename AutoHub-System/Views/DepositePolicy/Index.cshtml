@@ -1,0 +1,97 @@
+﻿@* Views/DepositePolicy/Index.cshtml *@
+@model IEnumerable<AutoHub_System.Models.DepositePolicy>
+@{
+    ViewData["Title"] = "Deposit Policies";
+    Layout = "_DashboardLayout";
+}
+<div  style="max-width: 900px; margin: 0 auto;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem;">
+        <h2 style="margin: 0;">Deposit Policies</h2>
+        <a asp-action="Create" class="btn btn-confirm" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+            <i class="fas fa-plus"></i> New Policy
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="card" style="background: rgba(65, 241, 182, 0.1); border-left: 4px solid var(--clr-success); margin-bottom: 1rem; padding: 0.8rem;">
+            <div class="card-content" style="padding: 0;">
+                <div style="display: flex; align-items: center; gap: 0.8rem;">
+                    <i class="fas fa-check-circle" style="color: var(--clr-success); font-size: 1rem;"></i>
+                    <span style="color: var(--clr-success); font-weight: 600; font-size: 0.9rem;">@TempData["Success"]</span>
+                </div>
+            </div>
+        </div>
+    }
+
+    <table style="font-size: 0.85rem;">
+        <thead>
+            <tr>
+                <th style="padding: 0.8rem;">ID</th>
+                <th style="padding: 0.8rem;">Date</th>
+                <th style="padding: 0.8rem;">Rate</th>
+                <th style="padding: 0.8rem;">Status</th>
+                <th style="padding: 0.8rem; width: 180px;">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td style="padding: 0.8rem;">#@item.PolicyID</td>
+                    <td style="padding: 0.8rem;">@item.EffectiveDate.ToString("MM/dd/yyyy")</td>
+                    <td style="padding: 0.8rem; font-weight: 600; color: var(--clr-primary);">@(item.DepositeRate * 100)%</td>
+                    <td style="padding: 0.8rem;">
+                        @if (item.IsActive)
+                        {
+                            <span class="status status-completed" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">Active</span>
+                        }
+                        else
+                        {
+                            <span class="status status-canceled" style="font-size: 0.75rem; padding: 0.4rem 0.8rem;">Inactive</span>
+                        }
+                    </td>
+                    <td style="padding: 0.8rem;">
+                        <div class="actions" style="display: flex; gap: 0.3rem; flex-wrap: nowrap;">
+           
+                            <a asp-action="Edit" asp-route-id="@item.PolicyID" class="btn btn-confirm"
+                               style="padding: 0.3rem 0.6rem; font-size: 0.7rem; min-width: 45px; text-decoration: none; text-align: center;">
+                                Edit
+                            </a>
+
+           
+                            @if (item.IsActive)
+                            {
+                                <a asp-action="DeactivateConfirmation" asp-route-id="@item.PolicyID" class="btn btn-cancel"
+                                   style="padding: 0.3rem 0.6rem; font-size: 0.7rem; min-width: 80px; min-height80pxtext-decoration: none; text-align: center;">
+                                    Deactivate
+                                </a>
+                            }
+                            else
+                            {
+                                <a asp-action="ActivateConfirmation" asp-route-id="@item.PolicyID" class="btn btn-view"
+                                   style="padding: 0.3rem 0.6rem; font-size: 0.7rem; min-width: 80px; min-height80px;text-decoration: none; text-align: center;">
+                                    Activate
+                                </a>
+                            }
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    @if (!Model.Any())
+    {
+        <div class="card" style="text-align: center; padding: 2rem;">
+            <div class="card-content">
+                <i class="fas fa-file-contract" style="font-size: 2rem; color: var(--clr-info-light); margin-bottom: 1rem;"></i>
+                <h3 style="color: var(--clr-dark); margin-bottom: 0.5rem; font-size: 1.1rem;">No Policies Found</h3>
+                <p style="color: var(--clr-info-dark); margin-bottom: 1.5rem; font-size: 0.9rem;">Create your first deposit policy to get started.</p>
+                <a asp-action="Create" class="btn btn-confirm" style="padding: 0.6rem 1.2rem; font-size: 0.9rem;">
+                    <i class="fas fa-plus"></i> Create Policy
+                </a>
+            </div>
+        </div>
+    }
+</div>

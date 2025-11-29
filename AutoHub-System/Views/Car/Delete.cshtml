@@ -1,0 +1,120 @@
+﻿
+@model Car
+
+@{
+    ViewData["Title"] = "Delete Car";
+    Layout = "_DashboardLayout";
+}
+<div class="dashtable" style="max-width: 800px; margin: 0 auto;">
+    <h2 style="text-align: center; margin-bottom: 2rem;">Delete Car</h2>
+    <div asp-validation-summary="All" class="text-danger mb-2"></div>
+    <!-- Warning Message - Smaller Card -->
+    <div class="card" style="border-left: 4px solid var(--clr-danger); background: rgba(255, 119, 130, 0.1); margin-bottom: 1.5rem; padding: 1rem;">
+        <div class="card-content">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <i class="fas fa-exclamation-triangle" style="color: var(--clr-danger); font-size: 1.5rem;"></i>
+                <div>
+                    <h3 style="color: var(--clr-danger); margin-bottom: 0.3rem; font-size: 1.2rem;">⚠ Confirm Deletion</h3>
+                    <p style="color: var(--clr-dark); font-size: 0.9rem; margin: 0;">
+                        Are you sure you want to delete this car? This action cannot be undone.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Car Details - Smaller Card -->
+    <div class="card" style="padding: 1.5rem;">
+        <div class="card-content">
+            <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 1.5rem; align-items: start;">
+                <!-- Car Image - Smaller -->
+                <div>
+                    @if (Model.CarImage != null && Model.CarImage.Any())
+                    {
+                        <img src="@Model.CarImage.First()" alt="@Model.Brand @Model.Model"
+                             style="width: 100%; max-width: 200px; border-radius: var(--border-radius-2);">
+                    }
+                    else
+                    {
+                        <div style="width: 200px; height: 150px; background: var(--clr-light); border-radius: var(--border-radius-2); display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-car" style="font-size: 2rem; color: var(--clr-info-dark);"></i>
+                        </div>
+                    }
+                </div>
+
+                <!-- Car Information - Compact -->
+                <div>
+                    <h3 style="color: var(--clr-dark); margin-bottom: 1rem; font-size: 1.3rem;">@Model.Brand @Model.Model</h3>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; margin-bottom: 1.2rem; font-size: 0.9rem;">
+                        <div>
+                            <strong>Brand:</strong><br>
+                            <span>@Model.Brand</span>
+                        </div>
+                        <div>
+                            <strong>Model:</strong><br>
+                            <span>@Model.Model</span>
+                        </div>
+                        <div>
+                            <strong>Year:</strong><br>
+                            <span>@Model.Year</span>
+                        </div>
+                        <div>
+                            <strong>Price:</strong><br>
+                            <span style="color: var(--clr-success); font-weight: 600;">$@Model.Price.ToString("N0")</span>
+                        </div>
+                        <div>
+                            <strong>Color:</strong><br>
+                            <span>@Model.Color</span>
+                        </div>
+                        <div>
+                            <strong>Status:</strong><br>
+                            <span class="status @(Model.CarSatus == "Available" ? "status-completed" : "status-pending")" style="font-size: 0.8rem;">
+                                @Model.CarSatus
+                            </span>
+                        </div>
+                    </div>
+
+                    @if (!string.IsNullOrEmpty(Model.Description))
+                    {
+                        <div style="margin-bottom: 1.2rem;">
+                            <strong>Description:</strong>
+                            <p style="margin-top: 0.3rem; color: var(--clr-dark-variant); line-height: 1.5; font-size: 0.9rem;">@Model.Description</p>
+                        </div>
+                    }
+
+                    <!-- Delete Form -->
+                    <form asp-action="Delete" method="post" style="margin-top: 1.5rem;">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="CarID" />
+
+                        <div class="form-actions" style="display: flex; gap: 1rem; align-items: center; justify-content: center;">
+                            <button type="submit" class="btn btn-cancel" style="background: var(--clr-danger); padding: 0.8rem 1.5rem; font-size: 1rem;">
+                                <i class="fas fa-trash"></i> Delete Car
+                            </button>
+                            <a asp-action="Manage" class="btn btn-confirm" style="padding: 0.8rem 1.5rem; font-size: 1rem;">
+                                <i class="fas fa-times"></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional Warning - Smaller Card -->
+    <div class="card" style="background: rgba(255, 119, 130, 0.05); margin-top: 1rem; padding: 1rem;">
+        <div class="card-content">
+            <div style="display: flex; align-items: flex-start; gap: 0.8rem;">
+                <i class="fas fa-info-circle" style="color: var(--clr-danger); font-size: 1rem; margin-top: 0.1rem;"></i>
+                <div>
+                    <strong style="color: var(--clr-danger); font-size: 0.9rem;">Important Note:</strong>
+                    <p style="color: var(--clr-dark); margin: 0.3rem 0 0 0; font-size: 0.85rem;">
+                        All car data including images will be permanently deleted. Deleted data cannot be recovered.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

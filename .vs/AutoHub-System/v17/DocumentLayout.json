@@ -1,0 +1,463 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\views\\cars\\cardetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\cars\\cardetails.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\viewmodel\\editcarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\viewmodel\\editcarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Migrations\\20251129153518_v5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AutoHub-System\\Migrations\\20251129153518_v5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\controllers\\carcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\car.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\cars\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\views\\car\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\car\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\views\\car\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\car\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\viewmodel\\createcarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\viewmodel\\createcarviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\services\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\models\\paymentinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\paymentinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\wwwroot\\assets\\css\\contactstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\wwwroot\\assets\\css\\contactstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\orders\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\contactmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\wwwroot\\assets\\css\\details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\wwwroot\\assets\\css\\details.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\viewmodel\\depositepolicyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\viewmodel\\depositepolicyviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|d:\\autohub-system-yahya-doha-ayatasks\\autohub-system\\viewmodel\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\viewmodel\\paymentviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CarDetails.cshtml",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Cars\\CarDetails.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Cars\\CarDetails.cshtml",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Cars\\CarDetails.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Cars\\CarDetails.cshtml",
+              "ViewState": "AgIAABUAAAAAAAAAAAAhwB4AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T16:33:19.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20251129153518_v5.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Migrations\\20251129153518_v5.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Migrations\\20251129153518_v5.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Migrations\\20251129153518_v5.cs",
+              "RelativeToolTip": "AutoHub-System\\Migrations\\20251129153518_v5.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T15:35:19.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Cars\\Index.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Cars\\Index.cshtml",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Cars\\Index.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Cars\\Index.cshtml",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAMwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "OverriddenGroupName": "AutoHub-System\\Views\\Cars",
+              "WhenOpened": "2025-11-29T15:24:20.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "EditCarViewModel.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\ViewModel\\EditCarViewModel.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\ViewModel\\EditCarViewModel.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\ViewModel\\EditCarViewModel.cs",
+              "RelativeToolTip": "AutoHub-System\\ViewModel\\EditCarViewModel.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAhwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "AutoHub-System\\ViewModel",
+              "WhenOpened": "2025-11-29T15:23:30.437Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CreateCarViewModel.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\ViewModel\\CreateCarViewModel.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\ViewModel\\CreateCarViewModel.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\ViewModel\\CreateCarViewModel.cs",
+              "RelativeToolTip": "AutoHub-System\\ViewModel\\CreateCarViewModel.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAIA9wAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "AutoHub-System\\ViewModel",
+              "WhenOpened": "2025-11-29T15:21:03.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Car.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\Car.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Models\\Car.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\Car.cs",
+              "RelativeToolTip": "AutoHub-System\\Models\\Car.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAlwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "AutoHub-System\\Models",
+              "WhenOpened": "2025-11-29T15:17:49.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Services\\PaymentService.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Services\\PaymentService.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Services\\PaymentService.cs",
+              "RelativeToolTip": "AutoHub-System\\Services\\PaymentService.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T14:15:49.043Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CarController.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Controllers\\CarController.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Controllers\\CarController.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Controllers\\CarController.cs",
+              "RelativeToolTip": "AutoHub-System\\Controllers\\CarController.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAAAFoAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "OverriddenGroupName": "AutoHub-System\\Controllers",
+              "WhenOpened": "2025-11-29T02:42:53.473Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAUwBUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T12:14:51.505Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Car\\Edit.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Car\\Edit.cshtml",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Car\\Edit.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Car\\Edit.cshtml",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "OverriddenGroupName": "AutoHub-System\\Views\\Car",
+              "WhenOpened": "2025-11-29T02:53:31.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Car\\Create.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Car\\Create.cshtml",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Car\\Create.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Car\\Create.cshtml",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAcwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "OverriddenGroupName": "AutoHub-System\\Views\\Car",
+              "WhenOpened": "2025-11-29T02:52:43.147Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "AutoHub-System\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T12:18:57.94Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "contactStyle.css",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\wwwroot\\assets\\css\\contactStyle.css",
+              "RelativeDocumentMoniker": "AutoHub-System\\wwwroot\\assets\\css\\contactStyle.css",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\wwwroot\\assets\\css\\contactStyle.css",
+              "RelativeToolTip": "AutoHub-System\\wwwroot\\assets\\css\\contactStyle.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-29T12:28:15.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Controllers\\PaymentController.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "AutoHub-System\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAAAMMAAABXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-28T21:16:21.968Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PaymentInfo.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\PaymentInfo.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Models\\PaymentInfo.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\PaymentInfo.cs",
+              "RelativeToolTip": "AutoHub-System\\Models\\PaymentInfo.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAwwCQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T13:51:30.827Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Orders\\Index.cshtml",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Orders\\Index.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Orders\\Index.cshtml",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAmwCkAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:24:18.421Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "AutoHub-System\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAYwCwAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:20:05.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Orders\\Details.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Orders\\Details.cshtml",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Views\\Orders\\Details.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Orders\\Details.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-29T11:13:01.913Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "ContactMessage.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\ContactMessage.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Models\\ContactMessage.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\ContactMessage.cs",
+              "RelativeToolTip": "AutoHub-System\\Models\\ContactMessage.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:11:48.173Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ErrorViewModel.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\ErrorViewModel.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Models\\ErrorViewModel.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\ErrorViewModel.cs",
+              "RelativeToolTip": "AutoHub-System\\Models\\ErrorViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:11:44.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Order.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Models\\Order.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\Models\\Order.cs",
+              "RelativeToolTip": "AutoHub-System\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T11:11:40.456Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "PaymentViewModel.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\ViewModel\\PaymentViewModel.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\ViewModel\\PaymentViewModel.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\ViewModel\\PaymentViewModel.cs",
+              "RelativeToolTip": "AutoHub-System\\ViewModel\\PaymentViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAA0wA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T10:41:16.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DepositePolicyViewModel.cs",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\ViewModel\\DepositePolicyViewModel.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\ViewModel\\DepositePolicyViewModel.cs",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\ViewModel\\DepositePolicyViewModel.cs",
+              "RelativeToolTip": "AutoHub-System\\ViewModel\\DepositePolicyViewModel.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAADwvxEAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T10:40:56.888Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "details.css",
+              "DocumentMoniker": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\wwwroot\\assets\\css\\details.css",
+              "RelativeDocumentMoniker": "AutoHub-System\\wwwroot\\assets\\css\\details.css",
+              "ToolTip": "D:\\AutoHub-System-Yahya-Doha-AyaTasks\\AutoHub-System\\wwwroot\\assets\\css\\details.css",
+              "RelativeToolTip": "AutoHub-System\\wwwroot\\assets\\css\\details.css",
+              "ViewState": "AgIAAKAAAAAAAAAAAADwv+QAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-29T02:49:28.548Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 425,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1268,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{a80febb4-e7e0-4147-b476-21aaf2453969}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
