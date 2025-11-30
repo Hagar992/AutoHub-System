@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace AutoHub_System.Migrations
 {
     /// <inheritdoc />
-    public partial class aya2 : Migration
+    public partial class Yahya : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

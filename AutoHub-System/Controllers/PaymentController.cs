@@ -1,8 +1,4 @@
-﻿using AutoHub_System.Models;
-using AutoHub_System.Services;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+﻿
 using Stripe.Checkout;
 namespace AutoHub_System.Controllers
 {

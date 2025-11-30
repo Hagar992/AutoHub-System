@@ -15,7 +15,7 @@ namespace AutoHub_System
 
             // Register DbContext + Connection String
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                options.UseSqlServer(builder.Configuration.GetConnectionString("OnlineConnection"))
             );
             // Register Identity
             builder.Services.AddIdentity<User, IdentityRole>()
@@ -98,13 +98,11 @@ namespace AutoHub_System
                 }
             }
 
-            // Configure the HTTP request pipeline
-            if (!app.Environment.IsDevelopment())
-            {
-                app.UseExceptionHandler("/Home/Error");
-                app.UseHsts();
-            }
 
+
+
+            app.UseExceptionHandler("/Home/Error");
+            app.UseHsts();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();

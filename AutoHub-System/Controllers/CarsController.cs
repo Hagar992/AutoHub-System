@@ -1,9 +1,10 @@
 ﻿[AllowAnonymous]
-public class CarsController : Controller
+public class CarsController : BaseController
 {
     private readonly ICarService _carService;
 
-    public CarsController(ICarService carService)
+    public CarsController(ICarService carService, UserManager<User> userManager)
+        : base(userManager)
     {
         _carService = carService;
     }

@@ -35,7 +35,6 @@
             </div>
 
             <div class="sidebar">
-
                 <a asp-controller="Dashboard" asp-action="Index"
                    class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Dashboard" ? "active" : "")">
                     <span class="material-symbols-sharp">dashboard</span>
@@ -54,12 +53,6 @@
                     <h3>Orders</h3>
                 </a>
 
-                @* <a asp-controller="Users" asp-action="Index"
-                   class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "Users" ? "active" : "")">
-                    <span class="material-symbols-sharp">people</span>
-                    <h3>Users</h3>
-                </a> *@
-
                 <a asp-controller="DepositePolicy" asp-action="Index"
                    class="@(ViewContext.RouteData.Values["controller"]?.ToString() == "DepositePolicy" ? "active" : "")">
                     <span class="material-symbols-sharp">account_balance_wallet</span>
@@ -74,19 +67,14 @@
             </div>
         </aside>
 
-
-
         <!-- ============ MAIN CONTENT ============ -->
         <main>
             @RenderSection("breadcrumb", required: false)
             @RenderBody()
         </main>
 
-
-
         <!-- ============ RIGHT PANEL ============ -->
         <div class="right-section">
-
             <div class="top">
                 <button id="menu-btn">
                     <span class="material-symbols-sharp">menu</span>
@@ -109,13 +97,15 @@
                 </div>
             </div>
 
-            @RenderSection("right", required: false)
+            @if (IsSectionDefined("right"))
+            {
+                @RenderSection("right", required: false)
+            }
         </div>
 
-    </div>
+        <!-- Dashboard JavaScript -->
+        <script src="~/js/dashboard.js" asp-append-version="true"></script>
 
-    <!-- Dashboard JavaScript -->
-    <script src="~/js/dashboard.js" asp-append-version="true"></script>
-
+        @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

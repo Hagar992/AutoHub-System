@@ -25,7 +25,9 @@
                 <a asp-controller="Home" asp-action="About">About</a>
                 <a asp-controller="Home" asp-action="Contact">Contact</a>
                 <a asp-controller="Cars" asp-action="Index">Choose Now</a>
-                <a asp-controller="Account" asp-action="Login"><i class="fa-solid fa-user fa-lg" style="color: #9b9b9b; margin:3px;"></i></a>
+                <a asp-controller="Account" asp-action="Login">
+                    <img src="@ViewBag.ProfilePicture" alt="Profile" style="width: 24px; height: 24px; object-fit: cover; border-radius: 50%;" />
+                </a>
             </nav>
             <div id="menu-icon">&#9776;</div>
         </header>

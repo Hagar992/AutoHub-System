@@ -3,191 +3,220 @@
 @{
     ViewData["Title"] = "Add New Car";
     Layout = "_DashboardLayout";
-
 }
-<form asp-action="Create" method="post" enctype="multipart/form-data" class="form">
 
+@section breadcrumb {
+    <div class="breadcrumb">
+        <a asp-controller="Dashboard" asp-action="Index">Dashboard</a> /
+        <a asp-controller="Car" asp-action="Manage">Cars</a> /
+        <span>Add New Car</span>
+    </div>
+}
 
-<div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+<div class="form-container">
+    <div class="form-header">
+        <h1>Add New Car</h1>
+        <p>Fill in the details below to add a new car to your inventory</p>
+    </div>
 
-<div class="row">
-    <div class="col-md-6">
-        <div class="form-group">
-            @* <label asp-for="Brand" class="control-label font-weight-bold">Brand *</label>
-            <input asp-for="Brand" class="form-control" placeholder="e.g., Toyota, BMW" />
-            <span asp-validation-for="Brand" class="text-danger"></span> *@
-                <label asp-for="Brand" class="control-label font-weight-bold">Brand</label>
-                <select asp-for="Brand" class="form-control">
-                    @* <option value="">Select Brand</option>
-                    <option value="BMW">BMW</option>
-                    <option value="Mercedes">Mercedes</option>
-                    <option value="Toyota">Toyota</option>
-                    <option value="Honda">Honda</option>
-                    <option value="Nissan">Nissan</option>
-                    <option value="Hyundai">Hyundai</option>
-                    <option value="Kia">Kia</option>
-                    <option value="Mazda">Mazda</option>
-                    <option value="Volkswagen">Volkswagen</option>
-                    <option value="">Mercedes</option>
-                    <option value="Chevrolet">Chevrolet</option>
-                    <option value="Opel">Opel</option>
-                    <option value="Dodge">Dodge</option>
-                    <option value="Tesla">Tesla</option>
-                    <option value="Jeep">Jeep</option>
-                    <option value="GMC">GMC</option>
-                    <option value="Ferrari">Ferrari</option>
-                    <option value="Fiat">Fiat</option>
-                    <option value="Land Rover">Land Rover</option>
-                    <option value="Jaguar">Jaguar</option>
-                    <option value="Lamborghini">Lamborghini</option> *@
-                    @foreach (var brand in ViewBag.Brands as List<string>)
-                    {
-                        <option value="@brand">@brand</option>
-                    }
-                </select>
-                <span asp-validation-for="Brand" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <div class="form-group">
-            <label asp-for="Model" class="control-label font-weight-bold">Model *</label>
-            <input asp-for="Model" class="form-control" placeholder="e.g., Camry, X5" />
-            <span asp-validation-for="Model" class="text-danger"></span>
-        </div>
-    </div>
-</div>
+    <form asp-action="Create" method="post" enctype="multipart/form-data" class="car-form">
+        <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="Year" class="control-label font-weight-bold">Year *</label>
-            <input asp-for="Year" class="form-control"  />
-            <span asp-validation-for="Year" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="Price" class="control-label font-weight-bold">Price ($) *</label>
-            <input asp-for="Price" class="form-control" type="number" step="1" placeholder="0.00" />
-            <span asp-validation-for="Price" class="text-danger"></span>
-        </div>
-    </div>
-    @* Aya Quantityyy *@
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label font-weight-bold">Quantity *</label>
-                <input asp-for="Quantity" class="form-control" type="number" step="1" placeholder="0" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
+        <!-- Basic Information -->
+        <div class="form-section">
+            <h3 class="section-title">Basic Information</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label asp-for="Brand" class="form-label">Brand *</label>
+                    <select asp-for="Brand" class="form-select">
+                        <option value="">Select Brand</option>
+                        @foreach (var brand in ViewBag.Brands as List<string>)
+                        {
+                            <option value="@brand">@brand</option>
+                        }
+                    </select>
+                    <span asp-validation-for="Brand" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Model" class="form-label">Model *</label>
+                    <input asp-for="Model" class="form-input" placeholder="e.g., Camry, X5" />
+                    <span asp-validation-for="Model" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Year" class="form-label">Year *</label>
+                    <input asp-for="Year" class="form-input" />
+                    <span asp-validation-for="Year" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Price" class="form-label">Price ($) *</label>
+                    <input asp-for="Price" class="form-input" type="number" step="1" placeholder="0.00" />
+                    <span asp-validation-for="Price" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Quantity" class="form-label">Quantity *</label>
+                    <input asp-for="Quantity" class="form-input" type="number" step="1" placeholder="0" />
+                    <span asp-validation-for="Quantity" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Mileage" class="form-label">Mileage</label>
+                    <input asp-for="Mileage" class="form-input" placeholder="e.g., 15000" />
+                    <span asp-validation-for="Mileage" class="validation-message"></span>
+                </div>
             </div>
         </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="Mileage" class="control-label font-weight-bold">Mileage</label>
-            <input asp-for="Mileage" class="form-control" placeholder="e.g., 15000" />
-            <span asp-validation-for="Mileage" class="text-danger"></span>
-        </div>
-    </div>
-</div>
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="Color" class="control-label font-weight-bold">Color</label>
-            <input asp-for="Color" class="form-control" placeholder="e.g., Red, Blue" />
-            <span asp-validation-for="Color" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            @* <label asp-for="EngineType" class="control-label font-weight-bold">Engine Type</label>
-            <input asp-for="EngineType" class="form-control" placeholder="e.g., V6, Electric" />
-            <span asp-validation-for="EngineType" class="text-danger"></span> *@
-                <label asp-for="EngineType" class="control-label font-weight-bold">Engine Type</label>
-                <select asp-for="EngineType" class="form-control">
-                    <option value="">Select Engine Type</option>
-                    <option value="Petrol (Gasoline) Engine">Petrol (Gasoline) Engine</option>
-                    <option value="Diesel Engine">Diesel Engine</option>
-                    <option value="Electric Motor">Electric Motor</option>
-                    <option value="Hybrid Engine">Hybrid Engine</option>
-                    <option value="Plug-In Hybrid (PHEV)">Hybrid Engine</option>
-                </select>
-                <span asp-validation-for="EngineType" class="text-danger"></span>
+        <!-- Specifications -->
+        <div class="form-section">
+            <h3 class="section-title">Specifications</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label asp-for="Color" class="form-label">Color</label>
+                    <input asp-for="Color" class="form-input" placeholder="e.g., Red, Blue" />
+                    <span asp-validation-for="Color" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="EngineType" class="form-label">Engine Type</label>
+                    <select asp-for="EngineType" class="form-select">
+                        <option value="">Select Engine Type</option>
+                        <option value="Petrol (Gasoline) Engine">Petrol (Gasoline) Engine</option>
+                        <option value="Diesel Engine">Diesel Engine</option>
+                        <option value="Electric Motor">Electric Motor</option>
+                        <option value="Hybrid Engine">Hybrid Engine</option>
+                        <option value="Plug-In Hybrid (PHEV)">Plug-In Hybrid (PHEV)</option>
+                    </select>
+                    <span asp-validation-for="EngineType" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Transmission" class="form-label">Transmission</label>
+                    <select asp-for="Transmission" class="form-select">
+                        <option value="">Select Transmission</option>
+                        <option value="Automatic">Automatic</option>
+                        <option value="Manual">Manual</option>
+                        <option value="CVT">CVT</option>
+                        <option value="Semi-Automatic">Semi-Automatic</option>
+                    </select>
+                    <span asp-validation-for="Transmission" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FuelEconomy" class="form-label">Fuel Economy (MPG)</label>
+                    <input asp-for="FuelEconomy" class="form-input" placeholder="e.g., 30" />
+                    <span asp-validation-for="FuelEconomy" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SeatNumber" class="form-label">Seat Number</label>
+                    <input asp-for="SeatNumber" class="form-input" min="1" max="10" />
+                    <span asp-validation-for="SeatNumber" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CarStatus" class="form-label">Status</label>
+                    <select asp-for="CarStatus" class="form-select">
+                        <option value="New">New</option>
+                        <option value="Used">Used</option>
+                    </select>
+                    <span asp-validation-for="CarStatus" class="validation-message"></span>
+                </div>
             </div>
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="Transmission" class="control-label font-weight-bold">Transmission</label>
-            <select asp-for="Transmission" class="form-control">
-                <option value="">Select Transmission</option>
-                <option value="Automatic">Automatic</option>
-                <option value="Manual">Manual</option>
-                <option value="CVT">CVT</option>
-                <option value="Semi-Automatic">Semi-Automatic</option>
-            </select>
-            <span asp-validation-for="Transmission" class="text-danger"></span>
         </div>
-    </div>
+
+        <!-- Description & Features -->
+        <div class="form-section">
+            <h3 class="section-title">Description & Features</h3>
+            <div class="form-group full-width">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea asp-for="Description" class="form-textarea" rows="4" placeholder="Enter car description..."></textarea>
+                <span asp-validation-for="Description" class="validation-message"></span>
+            </div>
+
+            <div class="form-group full-width">
+                <label class="form-label">Car Features</label>
+                <textarea name="Features" class="form-textarea" rows="3" placeholder="GPS, Bluetooth, Leather Seats"></textarea>
+                <small class="form-hint">Enter car features separated by commas (e.g., GPS, Bluetooth, Leather Seats)</small>
+            </div>
+        </div>
+
+        <!-- Images -->
+        <div class="form-section">
+            <h3 class="section-title">Car Images</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label class="form-label">Main Image *</label>
+                    <div class="file-upload">
+                        <input type="file" asp-for="MainImage" class="file-input" accept="image/*" />
+                        <div class="file-upload-area">
+                            <span class="material-symbols-sharp">image</span>
+                            <p>Click to upload main image</p>
+                            <small>Only one image</small>
+                        </div>
+                    </div>
+                    <span asp-validation-for="MainImage" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Additional Images</label>
+                    <div class="file-upload">
+                        <input type="file" asp-for="Images" multiple class="file-input" accept="image/*" />
+                        <div class="file-upload-area">
+                            <span class="material-symbols-sharp">collections</span>
+                            <p>Click to upload multiple images</p>
+                            <small>Multiple images allowed</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                <span class="material-symbols-sharp">add_circle</span>
+                Add Car
+            </button>
+            <a asp-action="Manage" class="btn btn-secondary">
+                <span class="material-symbols-sharp">cancel</span>
+                Cancel
+            </a>
+        </div>
+
+        <div asp-validation-summary="All" class="validation-summary"></div>
+    </form>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="FuelEconomy" class="control-label font-weight-bold">Fuel Economy (MPG)</label>
-            <input asp-for="FuelEconomy" class="form-control" placeholder="e.g., 30" />
-            <span asp-validation-for="FuelEconomy" class="text-danger"></span>
+@section right {
+    <div class="help-card">
+        <h3>Quick Tips</h3>
+        <div class="tip-item">
+            <span class="material-symbols-sharp">info</span>
+            <div>
+                <p><b>Required Fields</b></p>
+                <small>Fields marked with * are required</small>
+            </div>
+        </div>
+        <div class="tip-item">
+            <span class="material-symbols-sharp">image</span>
+            <div>
+                <p><b>Image Guidelines</b></p>
+                <small>Main image should be high quality. Multiple images recommended.</small>
+            </div>
+        </div>
+        <div class="tip-item">
+            <span class="material-symbols-sharp">description</span>
+            <div>
+                <p><b>Description</b></p>
+                <small>Provide detailed description for better customer engagement.</small>
+            </div>
         </div>
     </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="SeatNumber" class="control-label font-weight-bold">Seat Number</label>
-            <input asp-for="SeatNumber" class="form-control" min="1" max="10" />
-            <span asp-validation-for="SeatNumber" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="col-md-4">
-        <div class="form-group">
-            <label asp-for="CarStatus" class="control-label font-weight-bold">Status</label>
-            <select asp-for="CarStatus" class="form-control">
-                    <option value="New">New</option>  @*DOHA*@
-                    <option value="Used">Used</option>
-                @* <option value="Available">Available</option>
-                <option value="Sold">Sold</option>
-                <option value="Reserved">Reserved</option>
-                <option value="Maintenance">Maintenance</option> *@
-            </select>
-            <span asp-validation-for="CarStatus" class="text-danger"></span>
-        </div>
-    </div>
-</div>
+}
 
-<div class="form-group">
-    <label asp-for="Description" class="control-label font-weight-bold">Description</label>
-    <textarea asp-for="Description" class="form-control" rows="4" placeholder="Enter car description..."></textarea>
-    <span asp-validation-for="Description" class="text-danger"></span>
-</div>
-    <div class="form-group">
-        <label class="control-label font-weight-bold">Main Image</label>
-        <input type="file" asp-for="MainImage" class="form-control-file" accept="image/*" />
-        <small class="form-text text-muted">Select only one Image</small>
-    </div>
-<div class="form-group">
-    <label class="control-label font-weight-bold">Car Images</label>
-    <input type="file" asp-for="Images" multiple class="form-control-file" accept="image/*" />
-    <small class="form-text text-muted">You can select multiple images</small>
-</div>
-
-<div class="form-group">
-        <label class="control-label font-weight-bold">Enter car features separated by commas (e.g., GPS, Bluetooth, Leather Seats)</label>
-        <textarea name="Features" class="form-control" rows="3" placeholder="GPS, Bluetooth, Leather Seats"></textarea>
-    <small class="form-text text-muted">Enter each feature on a new line</small>
-</div>
-
-<div class="form-group mt-4">
-    <button type="submit" class="btn btn-confirm" style="margin-bottom:20px">
-        <i class="fas fa-plus-circle"></i> Add Car
-    </button>
-    <a asp-action="Manage" class="btn btn-cancel">Cancel</a>
-</div>
-    <div asp-validation-summary="All" class="text-danger mb-2"></div>
-</form>
-       
+<link rel="stylesheet" href="~/css/CreateCar.css" asp-append-version="true" />
+<script src="~/js/dashboard - Copy.js" asp-append-version="true"></script>

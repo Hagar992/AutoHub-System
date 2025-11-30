@@ -5,193 +5,246 @@
     Layout = "_DashboardLayout";
 }
 
-<form asp-action="Edit" method="post" enctype="multipart/form-data" class="form">
-    @Html.AntiForgeryToken()
-    <input type="hidden" asp-for="CarID" />
-
-    <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
-
-    <div class="row">
-        <div class="col-md-6">
-            <div class="form-group">
-                @* <label asp-for="Brand" class="control-label font-weight-bold">Brand *</label>
-                <input asp-for="Brand" class="form-control" placeholder="e.g., Toyota, BMW" />
-                <span asp-validation-for="Brand" class="text-danger"></span> *@
-                <select asp-for="Brand" class="form-control" asp-items="@(new SelectList(ViewBag.Brands))">
-                    <option value="">Select Brand</option>
-                </select>
-
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label asp-for="Model" class="control-label font-weight-bold">Model *</label>
-                <input asp-for="Model" class="form-control" placeholder="e.g., Camry, X5" />
-                <span asp-validation-for="Model" class="text-danger"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="Year" class="control-label font-weight-bold">Year *</label>
-                <input asp-for="Year" class="form-control" />
-                <span asp-validation-for="Year" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="Price" class="control-label font-weight-bold">Price ($) *</label>
-                <input asp-for="Price" class="form-control" type="number" step="1" placeholder="0.00" />
-                <span asp-validation-for="Price" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="Quantity" class="control-label font-weight-bold">Quantity *</label>
-                <input asp-for="Quantity" class="form-control" type="number" step="1" placeholder="0" />
-                <span asp-validation-for="Quantity" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="Mileage" class="control-label font-weight-bold">Mileage</label>
-                <input asp-for="Mileage" class="form-control" placeholder="e.g., 15000" />
-                <span asp-validation-for="Mileage" class="text-danger"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="Color" class="control-label font-weight-bold">Color</label>
-                <input asp-for="Color" class="form-control" placeholder="e.g., Red, Blue" />
-                <span asp-validation-for="Color" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="EngineType" class="control-label font-weight-bold">Engine Type</label>
-                <select asp-for="EngineType" class="form-control">
-                    <option value="">Select Engine Type</option>
-                    <option value="Petrol (Gasoline) Engine">Petrol (Gasoline) Engine</option>
-                    <option value="Diesel Engine">Diesel Engine</option>
-                    <option value="Electric Motor">Electric Motor</option>
-                    <option value="Hybrid Engine">Hybrid Engine</option>
-                    <option value="Plug-In Hybrid (PHEV)">Hybrid Engine</option>
-                </select>
-                <span asp-validation-for="EngineType" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="Transmission" class="control-label font-weight-bold">Transmission</label>
-                <select asp-for="Transmission" class="form-control">
-                    <option value="">Select Transmission</option>
-                    <option value="Automatic">Automatic</option>
-                    <option value="Manual">Manual</option>
-                    <option value="CVT">CVT</option>
-                    <option value="Semi-Automatic">Semi-Automatic</option>
-                </select>
-                <span asp-validation-for="Transmission" class="text-danger"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="FuelEconomy" class="control-label font-weight-bold">Fuel Economy (MPG)</label>
-                <input asp-for="FuelEconomy" class="form-control" placeholder="e.g., 30" />
-                <span asp-validation-for="FuelEconomy" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="SeatNumber" class="control-label font-weight-bold">Seat Number</label>
-                <input asp-for="SeatNumber" class="form-control" min="1" max="10" />
-                <span asp-validation-for="SeatNumber" class="text-danger"></span>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="form-group">
-                <label asp-for="CarStatus" class="control-label font-weight-bold">Status</label>
-                <select asp-for="CarStatus" class="form-control">
-                    <option value="New">New</option> @* DOHA *@
-                    <option value="Used">Used</option>
-                    @* <option value="Available">Available</option>
-                    <option value="Sold">Sold</option> *@
-                    @* <option value="Reserved">Reserved</option>
-                    <option value="Maintenance">Maintenance</option> *@
-                </select>
-                <span asp-validation-for="CarStatus" class="text-danger"></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="form-group">
-        <label asp-for="Description" class="control-label font-weight-bold">Description</label>
-        <textarea asp-for="Description" class="form-control" rows="4" placeholder="Enter car description..."></textarea>
-        <span asp-validation-for="Description" class="text-danger"></span>
-    </div>
-
- @if (!string.IsNullOrEmpty(Model.MainImage))
-{
-    <div class="form-group">
-        <label class="control-label font-weight-bold">Current Main Image</label>
-        <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
-            <img src="@Model.MainImage"
-                 alt="Main image"
-                 style="width: 120px; height: 100px; object-fit: cover;
-                        border-radius: var(--border-radius-1);
-                        border: 2px solid var(--clr-light);" />
-        </div>
+@section breadcrumb {
+    <div class="breadcrumb">
+        <a asp-controller="Dashboard" asp-action="Index">Dashboard</a> /
+        <a asp-controller="Car" asp-action="Manage">Cars</a> /
+        <span>Edit Car</span>
     </div>
 }
-    <input type="hidden" asp-for="MainImage" />
-    <div class="form-group">
-        <label class="control-label font-weight-bold">Main Image (New)</label>
-        <input type="file" asp-for="NewMainImage" class="form-control-file" accept="image/*" />
-        <small class="form-text text-muted">Upload a new main image (optional)</small>
+
+<div class="form-container">
+    <div class="form-header">
+        <h1>Edit Car</h1>
+        <p>Update the car information below</p>
     </div>
 
+    <form asp-action="Edit" method="post" enctype="multipart/form-data" class="car-form">
+        @Html.AntiForgeryToken()
+        <input type="hidden" asp-for="CarID" />
 
-    <!-- Current Images -->
-    @if (Model.CarImages != null && Model.CarImages.Any())
-    {
-        <div class="form-group"> 
-            <label class="control-label font-weight-bold">Current Images</label> 
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 0.5rem;"> 
-                @foreach (var imageUrl in Model.CarImages) {
-        <img src="@imageUrl" alt="Car image"
-            style="width: 100px; height: 80px; object-fit: cover;
-border-radius: var(--border-radius-1); border: 2px solid var(--clr-light);">
+        <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+        <!-- Basic Information -->
+        <div class="form-section">
+            <h3 class="section-title">Basic Information</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label asp-for="Brand" class="form-label">Brand *</label>
+                    <select asp-for="Brand" class="form-select" asp-items="@(new SelectList(ViewBag.Brands))">
+                        <option value="">Select Brand</option>
+                    </select>
+                    <span asp-validation-for="Brand" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Model" class="form-label">Model *</label>
+                    <input asp-for="Model" class="form-input" placeholder="e.g., Camry, X5" />
+                    <span asp-validation-for="Model" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Year" class="form-label">Year *</label>
+                    <input asp-for="Year" class="form-input" />
+                    <span asp-validation-for="Year" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Price" class="form-label">Price ($) *</label>
+                    <input asp-for="Price" class="form-input" type="number" step="1" placeholder="0.00" />
+                    <span asp-validation-for="Price" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Quantity" class="form-label">Quantity *</label>
+                    <input asp-for="Quantity" class="form-input" type="number" step="1" placeholder="0" />
+                    <span asp-validation-for="Quantity" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Mileage" class="form-label">Mileage</label>
+                    <input asp-for="Mileage" class="form-input" placeholder="e.g., 15000" />
+                    <span asp-validation-for="Mileage" class="validation-message"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Specifications -->
+        <div class="form-section">
+            <h3 class="section-title">Specifications</h3>
+            <div class="form-grid">
+                <div class="form-group">
+                    <label asp-for="Color" class="form-label">Color</label>
+                    <input asp-for="Color" class="form-input" placeholder="e.g., Red, Blue" />
+                    <span asp-validation-for="Color" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="EngineType" class="form-label">Engine Type</label>
+                    <select asp-for="EngineType" class="form-select">
+                        <option value="">Select Engine Type</option>
+                        <option value="Petrol (Gasoline) Engine">Petrol (Gasoline) Engine</option>
+                        <option value="Diesel Engine">Diesel Engine</option>
+                        <option value="Electric Motor">Electric Motor</option>
+                        <option value="Hybrid Engine">Hybrid Engine</option>
+                        <option value="Plug-In Hybrid (PHEV)">Plug-In Hybrid (PHEV)</option>
+                    </select>
+                    <span asp-validation-for="EngineType" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Transmission" class="form-label">Transmission</label>
+                    <select asp-for="Transmission" class="form-select">
+                        <option value="">Select Transmission</option>
+                        <option value="Automatic">Automatic</option>
+                        <option value="Manual">Manual</option>
+                        <option value="CVT">CVT</option>
+                        <option value="Semi-Automatic">Semi-Automatic</option>
+                    </select>
+                    <span asp-validation-for="Transmission" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="FuelEconomy" class="form-label">Fuel Economy (MPG)</label>
+                    <input asp-for="FuelEconomy" class="form-input" placeholder="e.g., 30" />
+                    <span asp-validation-for="FuelEconomy" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="SeatNumber" class="form-label">Seat Number</label>
+                    <input asp-for="SeatNumber" class="form-input" min="1" max="10" />
+                    <span asp-validation-for="SeatNumber" class="validation-message"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="CarStatus" class="form-label">Status</label>
+                    <select asp-for="CarStatus" class="form-select">
+                        <option value="New">New</option>
+                        <option value="Used">Used</option>
+                    </select>
+                    <span asp-validation-for="CarStatus" class="validation-message"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Description & Features -->
+        <div class="form-section">
+            <h3 class="section-title">Description & Features</h3>
+            <div class="form-group full-width">
+                <label asp-for="Description" class="form-label">Description</label>
+                <textarea asp-for="Description" class="form-textarea" rows="4" placeholder="Enter car description..."></textarea>
+                <span asp-validation-for="Description" class="validation-message"></span>
+            </div>
+
+            <div class="form-group full-width">
+                <label class="form-label">Features</label>
+                <textarea name="Features" class="form-textarea" rows="3" placeholder="GPS&#10;Bluetooth&#10;Backup Camera">@string.Join("\n", Model.Features ?? new List<string>())</textarea>
+                <small class="form-hint">Enter each feature on a new line</small>
+            </div>
+        </div>
+
+        <!-- Images -->
+        <div class="form-section">
+            <h3 class="section-title">Car Images</h3>
+
+            <!-- Current Main Image -->
+            @if (!string.IsNullOrEmpty(Model.MainImage))
+            {
+                <div class="form-group">
+                    <label class="form-label">Current Main Image</label>
+                    <div class="image-preview-container">
+                        <img src="@Model.MainImage" alt="Main image" class="image-preview" />
+                    </div>
+                </div>
+            }
+
+            <input type="hidden" asp-for="MainImage" />
+
+            <!-- New Main Image -->
+            <div class="form-group">
+                <label class="form-label">Update Main Image</label>
+                <div class="file-upload">
+                    <input type="file" asp-for="NewMainImage" class="file-input" accept="image/*" />
+                    <div class="file-upload-area">
+                        <span class="material-symbols-sharp">image</span>
+                        <p>Click to upload new main image</p>
+                        <small>Optional - Leave empty to keep current image</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Additional Images -->
+            @if (Model.CarImages != null && Model.CarImages.Any())
+            {
+                <div class="form-group">
+                    <label class="form-label">Current Additional Images</label>
+                    <div class="images-grid">
+                        @foreach (var imageUrl in Model.CarImages)
+                        {
+                            <div class="image-item">
+                                <img src="@imageUrl" alt="Car image" class="image-preview" />
+                            </div>
+                        }
+                    </div>
+                </div>
+            }
+
+            <!-- New Additional Images -->
+            <div class="form-group">
+                <label class="form-label">Add New Images</label>
+                <div class="file-upload">
+                    <input type="file" asp-for="NewImages" multiple class="file-input" accept="image/*" />
+                    <div class="file-upload-area">
+                        <span class="material-symbols-sharp">collections</span>
+                        <p>Click to upload multiple images</p>
+                        <small>Optional - Add more images to the car</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                <span class="material-symbols-sharp">save</span>
+                Save Changes
+            </button>
+            <a asp-action="Manage" class="btn btn-secondary">
+                <span class="material-symbols-sharp">cancel</span>
+                Cancel
+            </a>
+        </div>
+
+        <div asp-validation-summary="All" class="validation-summary"></div>
+    </form>
+</div>
+
+@section right {
+    <div class="help-card">
+        <h3>Editing Tips</h3>
+        <div class="tip-item">
+            <span class="material-symbols-sharp">info</span>
+            <div>
+                <p><b>Required Fields</b></p>
+                <small>Fields marked with * are required</small>
+            </div>
+        </div>
+        <div class="tip-item">
+            <span class="material-symbols-sharp">image</span>
+            <div>
+                <p><b>Image Updates</b></p>
+                <small>Upload new images or keep existing ones</small>
+            </div>
+        </div>
+        <div class="tip-item">
+            <span class="material-symbols-sharp">warning</span>
+            <div>
+                <p><b>Data Preservation</b></p>
+                <small>Empty fields will replace existing data</small>
+            </div>
+        </div>
+    </div>
     }
- </div> </div>
-        }
-
-
-    <!-- Add New Images -->
-    <div class="form-group">
-        <label class="control-label font-weight-bold">Add New Images</label>
-        <input type="file" asp-for="NewImages" multiple class="form-control-file" accept="image/*" />
-        <small class="form-text text-muted">Select additional images (optional)</small>
-    </div>
-
-    <div class="form-group">
-        <label class="control-label font-weight-bold">Features (one per line)</label>
-        <textarea name="Features" class="form-control" rows="3" placeholder="GPS&#10;Bluetooth&#10;Backup Camera">@string.Join("\n", Model.Features ?? new List<string>())</textarea>
-        <small class="form-text text-muted">Enter each feature on a new line</small>
-    </div>
-
-    <div class="form-group mt-4">
-        <button type="submit" class="btn btn-confirm" style="margin-bottom:20px">
-            <i class="fas fa-save"></i> Save Changes
-        </button>
-        <a asp-action="Manage" class="btn btn-cancel">Cancel</a>
-    </div>
-    <div asp-validation-summary="All" class="text-danger mb-2"></div>
-</form>
-
+  
+<link rel="stylesheet" href="~/css/CreateCar.css" asp-append-version="true" />
+<script src="~/js/dashboard - Copy.js" asp-append-version="true"></script>

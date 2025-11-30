@@ -15,7 +15,7 @@
         ViewBag.UserName = user?.Name ?? "Guest";
         ViewBag.ProfilePicture = !string.IsNullOrEmpty(user?.ProfilePicture)
                                  ? user.ProfilePicture
-                                 : "https://res.cloudinary.com/dmsmksagp/image/upload/v1764107340/profiles/default.png";
+                                 : "https://res.cloudinary.com/dmsmksagp/image/upload/v1764462344/profiles/j6lypf9ytgtdue9zxjl8.jpg";
     }
 }
 //this Controller only for profile picture 

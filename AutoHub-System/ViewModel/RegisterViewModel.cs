@@ -14,8 +14,10 @@ namespace AutoHub_System.ViewModel
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Password is required")]
-        [MinLength(6, ErrorMessage = "Password must be at least 6 characters")]
+        [RegularExpression(@"^(?=.*[A-Z])(?=.*[!@#$%^&*(),.?""':{}|<>]).{6,}$",
+        ErrorMessage = "Password must be at least 6 characters, include an uppercase letter and a special character")]
         public string Password { get; set; }
+
 
         [Compare("Password", ErrorMessage = "Passwords do not match")]
         public string ConfirmPassword { get; set; }

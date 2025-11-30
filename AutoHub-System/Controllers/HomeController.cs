@@ -1,13 +1,15 @@
+using Microsoft.AspNetCore.Identity;
 using System.Diagnostics;
 namespace AutoHub_System.Controllers
 {
     [AllowAnonymous]
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ICarService _carService;
         private readonly IContactService _contactService;
 
-        public HomeController(ICarService carService, IContactService contactService)
+        public HomeController(ICarService carService, IContactService contactService,UserManager<User> userManager)
+        : base(userManager)
         {
             _carService = carService;
             _contactService = contactService;
@@ -27,7 +29,7 @@ namespace AutoHub_System.Controllers
         public IActionResult Terms() => View();
 
         public IActionResult Contact() => View();
-
+        public IActionResult About() => View();
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Contact(string Name, string Email, string Message)
