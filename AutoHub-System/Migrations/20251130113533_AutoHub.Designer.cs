@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AutoHub_System.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20251129213042_Yahya")]
-    partial class Yahya
+    [Migration("20251130113533_AutoHub")]
+    partial class AutoHub
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

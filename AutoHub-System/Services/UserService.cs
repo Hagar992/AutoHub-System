@@ -34,7 +34,7 @@ namespace AutoHub_System.Services
             }
 
             // Upload profile image if provided
-            string profileUrl = "default.png";
+            string profileUrl = "https://res.cloudinary.com/dmsmksagp/image/upload/v1764462344/profiles/j6lypf9ytgtdue9zxjl8.jpg";
             if (model.ProfileImage != null)
             {
                 profileUrl = await _cloudinaryService.UploadImageAsync(model.ProfileImage, "profiles");
@@ -45,7 +45,7 @@ namespace AutoHub_System.Services
                 UserName = model.Email,
                 Email = model.Email,
                 Name = model.FullName,
-                Address = "Default address",
+                Address = model.Address,
                 ProfilePicture = profileUrl
             };
 

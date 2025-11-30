@@ -3,6 +3,38 @@
   "WorkspaceRootPath": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\services\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\services\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\autohub-system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\autohub-system.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|c:\\users\\yar95\\desktop\\new folder (9)\\autohub-system\\autohub-system\\views\\car\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\car\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -30,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,11 +70,118 @@
             },
             {
               "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\appsettings.json",
+              "RelativeDocumentMoniker": "AutoHub-System\\appsettings.json",
+              "ToolTip": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\appsettings.json",
+              "RelativeToolTip": "AutoHub-System\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-30T11:19:56.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Program.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Program.cs",
+              "ToolTip": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Program.cs",
+              "RelativeToolTip": "AutoHub-System\\Program.cs",
+              "ViewState": "AgIAADwAAAAAAAAAAAAmwEcAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T11:19:41.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Models\\User.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Models\\User.cs",
+              "RelativeToolTip": "AutoHub-System\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T11:17:41.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Services\\Service.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Services\\Service.cs",
+              "ToolTip": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Services\\Service.cs",
+              "RelativeToolTip": "AutoHub-System\\Services\\Service.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-30T11:14:29.441Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T11:14:21.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "AutoHub-System\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-30T11:14:04.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "AutoHub-System\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Properties\\launchSettings.json",
+              "RelativeToolTip": "AutoHub-System\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-30T06:34:35.317Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AutoHub-System.csproj",
+              "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj",
+              "RelativeDocumentMoniker": "AutoHub-System\\AutoHub-System.csproj",
+              "ToolTip": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj",
+              "RelativeToolTip": "AutoHub-System\\AutoHub-System.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-11-30T05:48:45.306Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Edit.cshtml",
               "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Views\\Car\\Edit.cshtml",
               "RelativeDocumentMoniker": "AutoHub-System\\Views\\Car\\Edit.cshtml",
@@ -50,12 +189,11 @@
               "RelativeToolTip": "AutoHub-System\\Views\\Car\\Edit.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAKkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-11-29T18:26:40.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-29T18:26:40.024Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 11,
               "Title": "EditCarViewModel.cs",
               "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\ViewModel\\EditCarViewModel.cs",
               "RelativeDocumentMoniker": "AutoHub-System\\ViewModel\\EditCarViewModel.cs",
@@ -67,7 +205,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 10,
               "Title": "CarController.cs",
               "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Controllers\\CarController.cs",
               "RelativeDocumentMoniker": "AutoHub-System\\Controllers\\CarController.cs",
@@ -79,7 +217,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "CarDetails.cshtml",
               "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Views\\Cars\\CarDetails.cshtml",
               "RelativeDocumentMoniker": "AutoHub-System\\Views\\Cars\\CarDetails.cshtml",
@@ -91,7 +229,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "Car.cs",
               "DocumentMoniker": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\Models\\Car.cs",
               "RelativeDocumentMoniker": "AutoHub-System\\Models\\Car.cs",

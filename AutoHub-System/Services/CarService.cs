@@ -44,10 +44,10 @@ namespace AutoHub_System.Services
         {
             var allCars = _carRepository.GetAll();
             return allCars.Where(c =>
-                c.Brand.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase) ||
-                c.Model.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase) ||
-                c.Color.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase) ||
-                c.Description.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase)
+                c.Brand.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                c.Model.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                c.Color.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                c.Description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
             ).ToList();
         }
 
@@ -60,7 +60,7 @@ namespace AutoHub_System.Services
         public List<Car> GetNewArrivals(int days = 7)
         {
             var allCars = _carRepository.GetAll();
-            var cutoffDate = System.DateTime.Now.AddDays(-days);
+            var cutoffDate = DateTime.Now.AddDays(-days);
             return allCars.Where(c => c.DateAdded >= cutoffDate).ToList();
         }
 
@@ -117,10 +117,10 @@ namespace AutoHub_System.Services
         {
             var allCars = await _carRepository.GetAllAsync();
             return allCars.Where(c =>
-                c.Brand.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase) ||
-                c.Model.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase) ||
-                c.Color.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase) ||
-                c.Description.Contains(searchTerm, System.StringComparison.OrdinalIgnoreCase)
+                c.Brand.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                c.Model.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                c.Color.Contains(searchTerm, StringComparison.OrdinalIgnoreCase) ||
+                c.Description.Contains(searchTerm, StringComparison.OrdinalIgnoreCase)
             ).ToList();
         }
 
@@ -133,7 +133,7 @@ namespace AutoHub_System.Services
         public async Task<List<Car>> GetNewArrivalsAsync(int days = 7)
         {
             var allCars = await _carRepository.GetAllAsync();
-            var cutoffDate = System.DateTime.Now.AddDays(-days);
+            var cutoffDate =DateTime.Now.AddDays(-days);
             return allCars.Where(c => c.DateAdded >= cutoffDate).ToList();
         }
 

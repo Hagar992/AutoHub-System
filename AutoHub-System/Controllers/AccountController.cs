@@ -29,10 +29,8 @@
                 return View(model);
             }
 
-            //TempData["SuccessMessage"] = "Your account has been created successfully! Please log in.";
-            //return RedirectToAction("Login");
             TempData["SuccessMessage"] = "Your account has been created successfully! Please log in.";
-            return RedirectToAction("Login");////////////////ال home اسمها اييييييي
+            return RedirectToAction("Login");
         }
 
         public IActionResult Login()

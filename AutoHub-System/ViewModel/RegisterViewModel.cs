@@ -24,7 +24,7 @@ namespace AutoHub_System.ViewModel
 
         [Required(ErrorMessage = "Address is required")]
         [StringLength(200, ErrorMessage = "Address can't exceed 200 characters")]
-        public string Address { get; set; }
+        public required string Address { get; set; }
 
         public IFormFile? ProfileImage { get; set; }
     }

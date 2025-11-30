@@ -1,9 +1,5 @@
-﻿using AutoHub_System.Models;
-using AutoHub_System.ViewModel;
-using CloudinaryDotNet;
+﻿using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
-using Microsoft.AspNetCore.Identity;
-
 namespace AutoHub_System.Services
 {
     public class AccountService
@@ -24,7 +20,7 @@ namespace AutoHub_System.Services
 
         public async Task<(bool Success, string ErrorMessage)> RegisterAsync(RegisterViewModel model)
         {
-            string profileUrl = "default.png";
+            string profileUrl = "https://res.cloudinary.com/dmsmksagp/image/upload/v1764462344/profiles/j6lypf9ytgtdue9zxjl8.jpg";
 
             // Upload to Cloudinary
             if (model.ProfileImage != null)
@@ -45,7 +41,8 @@ namespace AutoHub_System.Services
                 Email = model.Email,
                 Name = model.FullName,
                 ProfilePicture = profileUrl,
-                DateRegistered = DateTime.UtcNow
+                DateRegistered = DateTime.UtcNow,
+                Address= model.Address
             };
 
             var result = await _userManager.CreateAsync(user, model.Password);

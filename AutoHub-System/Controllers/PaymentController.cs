@@ -1,5 +1,4 @@
-﻿
-using Stripe.Checkout;
+﻿using Stripe.Checkout;
 namespace AutoHub_System.Controllers
 {
     [Authorize(Roles = "User")]
@@ -184,7 +183,9 @@ namespace AutoHub_System.Controllers
                 UserId = currentUser.Id,
                 DepositePolicyId = policyId,           
                 PaymentInfoId = payment.Id,
-                PaymentInfo = payment                 
+                PaymentInfo = payment ,
+               
+               
             };
 
             await _paymentService.CreateOrderAsync(order);
