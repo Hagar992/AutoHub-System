@@ -19,6 +19,19 @@ namespace AutoHub_System.Controllers
 
         public IActionResult Index()
         {
+            var expiredOrders = _context.Orders
+       .Include(o => o.DepositePolicy)
+       .Where(o => o.Status == OrderStatus.Pending &&
+                   DateTime.Now > o.OrderDate.AddMonths(1))
+       .ToList();
+
+            foreach (var order in expiredOrders)
+            {
+                order.Status = OrderStatus.Canceled;
+                order.TotalPaid = order.PriceWhenBook * (float)order.DepositePolicy.DepositeRate;
+            }
+
+            _context.SaveChanges();
             var orders = _context.Orders
                 .Include(o => o.User)
                 .Include(o => o.Car)

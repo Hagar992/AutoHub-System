@@ -56,7 +56,7 @@
                         <option value="">All Brands</option>
                         @foreach (var brand in ViewBag.Brands)
                         {
-                            <option value="@brand" selected="@(brand == selectedBrand)">@brand</option>
+                            <option  value="@brand" selected="@(brand == selectedBrand)">@brand</option>
                         }
                     </select>
                 </div>
@@ -64,9 +64,9 @@
                 <div class="filter-group">
                     <label for="status">Status:</label>
                     <select id="status" name="status">
-                        <option value="">All Status</option>
-                        <option value="New" selected="@("New" == selectedStatus)">New</option>
-                        <option value="Used" selected="@("Used" == selectedStatus)">Used</option>
+                        <option   value="">All Status</option>
+                        <option  value="New" selected="@("New" == selectedStatus)">New</option>
+                        <option  value="Used" selected="@("Used" == selectedStatus)">Used</option>
                     </select>
                 </div>
 
@@ -124,7 +124,7 @@
     <!-- Cars Table -->
     <div class="table-container">
         <div class="table-header">
-            <h3>Filtered Cars (@Model.Count total)</h3>
+            <h3> Cars (@Model.Count total)</h3>
             @if (!string.IsNullOrEmpty(selectedBrand) || !string.IsNullOrEmpty(selectedStatus) || !string.IsNullOrEmpty(searchTerm))
             {
                 <div class="active-filters">

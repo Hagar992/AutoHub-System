@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj": {}
+    "E:\\Tryeditcss\\AutoHub-System\\AutoHub-System.csproj": {}
   },
   "projects": {
-    "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj": {
+    "E:\\Tryeditcss\\AutoHub-System\\AutoHub-System.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj",
+        "projectUniqueName": "E:\\Tryeditcss\\AutoHub-System\\AutoHub-System.csproj",
         "projectName": "AutoHub-System",
-        "projectPath": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\AutoHub-System.csproj",
-        "packagesPath": "C:\\Users\\yar95\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\yar95\\Desktop\\New folder (9)\\AutoHub-System\\AutoHub-System\\obj\\",
+        "projectPath": "E:\\Tryeditcss\\AutoHub-System\\AutoHub-System.csproj",
+        "packagesPath": "C:\\Users\\dell\\.nuget\\packages\\",
+        "outputPath": "E:\\Tryeditcss\\AutoHub-System\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\yar95\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net9.0": {
@@ -100,7 +100,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

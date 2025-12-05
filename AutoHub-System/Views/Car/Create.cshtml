@@ -32,7 +32,7 @@
                         <option value="">Select Brand</option>
                         @foreach (var brand in ViewBag.Brands as List<string>)
                         {
-                            <option value="@brand">@brand</option>
+                            <option value="@brand" >@brand</option>
                         }
                     </select>
                     <span asp-validation-for="Brand" class="validation-message"></span>
@@ -46,7 +46,7 @@
 
                 <div class="form-group">
                     <label asp-for="Year" class="form-label">Year *</label>
-                    <input asp-for="Year" class="form-input" />
+                    <input asp-for="Year" class="form-input" placeholder="Choose Year" />
                     <span asp-validation-for="Year" class="validation-message"></span>
                 </div>
 
@@ -84,11 +84,11 @@
                     <label asp-for="EngineType" class="form-label">Engine Type</label>
                     <select asp-for="EngineType" class="form-select">
                         <option value="">Select Engine Type</option>
-                        <option value="Petrol (Gasoline) Engine">Petrol (Gasoline) Engine</option>
-                        <option value="Diesel Engine">Diesel Engine</option>
-                        <option value="Electric Motor">Electric Motor</option>
-                        <option value="Hybrid Engine">Hybrid Engine</option>
-                        <option value="Plug-In Hybrid (PHEV)">Plug-In Hybrid (PHEV)</option>
+                        <option value="Petrol (Gasoline) Engine" >Petrol (Gasoline) Engine</option>
+                        <option value="Diesel Engine" >Diesel Engine</option>
+                        <option value="Electric Motor" >Electric Motor</option>
+                        <option value="Hybrid Engine" >Hybrid Engine</option>
+                        <option value="Plug-In Hybrid (PHEV)" >Plug-In Hybrid (PHEV)</option>
                     </select>
                     <span asp-validation-for="EngineType" class="validation-message"></span>
                 </div>
@@ -96,11 +96,11 @@
                 <div class="form-group">
                     <label asp-for="Transmission" class="form-label">Transmission</label>
                     <select asp-for="Transmission" class="form-select">
-                        <option value="">Select Transmission</option>
-                        <option value="Automatic">Automatic</option>
-                        <option value="Manual">Manual</option>
+                        <option  value="">Select Transmission</option>
+                        <option  value="Automatic">Automatic</option>
+                        <option  value="Manual">Manual</option>
                         <option value="CVT">CVT</option>
-                        <option value="Semi-Automatic">Semi-Automatic</option>
+                        <option  value="Semi-Automatic">Semi-Automatic</option>
                     </select>
                     <span asp-validation-for="Transmission" class="validation-message"></span>
                 </div>
@@ -113,15 +113,16 @@
 
                 <div class="form-group">
                     <label asp-for="SeatNumber" class="form-label">Seat Number</label>
-                    <input asp-for="SeatNumber" class="form-input" min="1" max="10" />
+                    <input asp-for="SeatNumber" class="form-input" min="1" max="10" placeholder="Enter Seat Number" />
                     <span asp-validation-for="SeatNumber" class="validation-message"></span>
                 </div>
 
                 <div class="form-group">
                     <label asp-for="CarStatus" class="form-label">Status</label>
                     <select asp-for="CarStatus" class="form-select">
+                        <option  value="">Select Status</option>
                         <option value="New">New</option>
-                        <option value="Used">Used</option>
+                        <option  value="Used">Used</option>
                     </select>
                     <span asp-validation-for="CarStatus" class="validation-message"></span>
                 </div>

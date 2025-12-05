@@ -126,6 +126,10 @@ namespace AutoHub_System.Controllers
        
         public async Task<IActionResult> Success(string session_id)
         {
+            DateTime bookingDate = DateTime.Now; // أو تاريخ الحجز الفعلي من الداتا بيز
+            DateTime lastPickupDate = bookingDate.AddMonths(1);
+
+            ViewBag.LastPickupDate = lastPickupDate.ToString("dd MMMM yyyy");
             if (string.IsNullOrEmpty(session_id))
                 return RedirectToAction("Cancel");
 

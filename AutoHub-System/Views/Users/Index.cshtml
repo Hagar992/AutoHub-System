@@ -1,0 +1,51 @@
+﻿@model List<AutoHub_System.Models.User>
+
+@{
+    ViewData["Title"] = "Users";
+    Layout = "_DashboardLayout";
+}
+
+<h2>All Users</h2>
+
+<table class="usertable">
+    <thead>
+        <tr>
+            <th>Profile</th>
+            <th>Full Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            @* <th>Address</th> *@
+            <th>Registered At</th>
+            <th>Orders Count</th>
+            <th>Operations</th>
+            
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                <td>
+                    <img src="~/images/@user.ProfilePicture"
+                         width="50"
+                         height="50"
+                         style="border-radius:50%" />
+                </td>
+                <td>@user.Name</td>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                @* <td>@user.Address</td> *@
+                <td>@user.DateRegistered.ToString("dd MMM yyyy")</td>
+                <td>@user.Orders.Count</td>
+                <td>
+                    <a class="btn btn-view">
+                        View
+                    </a> 
+                </td>
+              
+
+            </tr>
+        }
+    </tbody>
+</table>

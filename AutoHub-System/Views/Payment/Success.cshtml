@@ -48,6 +48,12 @@
         <p>Amount: <strong>@ViewBag.DepositAmount EGP</strong></p>
         <p>The Car you booked: <strong>@ViewBag.CarName </strong></p>
         <p>Your data has been securely saved.</p>
+        <p>
+            You can pick up the car anytime within this month.
+            After this date, the reservation and deposit will be forfeited.
+            
+        </p>
+        <p><strong>Your last pickup date is: @ViewBag.LastPickupDate</strong></p>
         <a href="/Home/index" class="btn">Back to Home</a>
     </div>
 </body>
