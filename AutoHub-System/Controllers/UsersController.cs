@@ -40,21 +40,7 @@ namespace AutoHub_System.Controllers
                 return View(user);
             }
 
-            //[HttpPost]
-            //[ValidateAntiForgeryToken]
-            //public async Task<IActionResult> Block(string id)
-            //{
-            //    var user = await _userManager.FindByIdAsync(id);
-            //    if (user == null)
-            //        return NotFound();
-
-            //    user.LockoutEnabled = true;
-            //    user.LockoutEnd = DateTime.Now.AddYears(100);
-
-            //    await _userManager.UpdateAsync(user);
-
-            //    return RedirectToAction(nameof(Index));
-            //}
+           
             [HttpPost]
             [ValidateAntiForgeryToken]
             public async Task<IActionResult> ToggleBlock(string id)
