@@ -10,5 +10,9 @@ namespace AutoHub_System.Services
         Task<User?> GetByEmailAsync(string email);
         Task<bool> IsInRoleAsync(User user, string role);
         Task LogoutAsync();
+        Task<List<User>> GetAllWithOrdersAsync();
+        Task<User?> GetUserDetailsAsync(string id);
+        Task<User?> GetByIdAsync(string id);
+        Task<List<User>> GetAllAsync();
     }
 }

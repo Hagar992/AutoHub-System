@@ -1,4 +1,5 @@
 using AutoHub_System.Repositories;
+using AutoHub_System.Repositories.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Stripe;
 
@@ -39,6 +40,7 @@ namespace AutoHub_System
             builder.Services.AddScoped<IDepositePolicyRepository, DepositePolicyRepository>();
             builder.Services.AddScoped<IContactRepository, ContactRepository>();
             builder.Services.AddScoped<IPaymentRepository, PaymentRepository>();
+            builder.Services.AddScoped<IUserRepository, UserRepository>(); //Aya
             builder.Services.AddScoped<IOrderRepository, OrderRepository>();  //DOHA
 
             // Register specific services

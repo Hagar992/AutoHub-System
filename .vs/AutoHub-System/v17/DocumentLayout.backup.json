@@ -3,36 +3,28 @@
   "WorkspaceRootPath": "E:\\Tryeditcss\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\users\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\wwwroot\\css\\dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\views\\shared\\_dashboardlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\shared\\_dashboardlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\views\\car\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\car\\manage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\services\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|solutionrelative:autohub-system\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{66C7F2F4-1116-4061-9F41-D28EF3859E79}|AutoHub-System\\AutoHub-System.csproj|e:\\tryeditcss\\autohub-system\\wwwroot\\assets\\css\\mainstyle.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
@@ -67,110 +59,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Views\\Users\\Index.cshtml",
-              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Users\\Index.cshtml",
-              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Views\\Users\\Index.cshtml*",
-              "RelativeToolTip": "AutoHub-System\\Views\\Users\\Index.cshtml*",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAuwCUAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-05T13:22:26.295Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Manage.cshtml",
-              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Views\\Car\\Manage.cshtml",
-              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Car\\Manage.cshtml",
-              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Views\\Car\\Manage.cshtml",
-              "RelativeToolTip": "AutoHub-System\\Views\\Car\\Manage.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T23:06:18.385Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Models\\User.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Models\\User.cs",
-              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Models\\User.cs",
-              "RelativeToolTip": "AutoHub-System\\Models\\User.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAYwA0AAABHAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Program.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Program.cs",
+              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Program.cs*",
+              "RelativeToolTip": "AutoHub-System\\Program.cs*",
+              "ViewState": "AgIAADQAAAAAAAAAAAAewD0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T13:00:29.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "_DashboardLayout.cshtml",
-              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Views\\Shared\\_DashboardLayout.cshtml",
-              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Shared\\_DashboardLayout.cshtml",
-              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Views\\Shared\\_DashboardLayout.cshtml",
-              "RelativeToolTip": "AutoHub-System\\Views\\Shared\\_DashboardLayout.cshtml",
-              "ViewState": "AgIAADYAAAAAAAAAAAAAAD8AAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T22:44:49.346Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Controllers\\PaymentController.cs",
-              "RelativeDocumentMoniker": "AutoHub-System\\Controllers\\PaymentController.cs",
-              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Controllers\\PaymentController.cs",
-              "RelativeToolTip": "AutoHub-System\\Controllers\\PaymentController.cs",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAAAH0AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-05T11:44:02.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "dashboard.css",
-              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\wwwroot\\css\\dashboard.css",
-              "RelativeDocumentMoniker": "AutoHub-System\\wwwroot\\css\\dashboard.css",
-              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\wwwroot\\css\\dashboard.css",
-              "RelativeToolTip": "AutoHub-System\\wwwroot\\css\\dashboard.css",
-              "ViewState": "AgIAAD0CAAAAAAAAAAAiwEoCAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-12-04T17:00:32.584Z",
+              "WhenOpened": "2025-12-05T23:44:45.789Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "IUserRepository.cs",
+              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Repositories\\IUserRepository.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Repositories\\IUserRepository.cs",
+              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Repositories\\IUserRepository.cs",
+              "RelativeToolTip": "AutoHub-System\\Repositories\\IUserRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T23:23:48.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Repositories\\UserRepository.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Repositories\\UserRepository.cs",
+              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Repositories\\UserRepository.cs",
+              "RelativeToolTip": "AutoHub-System\\Repositories\\UserRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAswCQAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T23:23:28.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Services\\UserService.cs",
+              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Services\\UserService.cs",
+              "RelativeToolTip": "AutoHub-System\\Services\\UserService.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAowG0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T23:19:49.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Services\\IUserService.cs",
+              "RelativeDocumentMoniker": "AutoHub-System\\Services\\IUserService.cs",
+              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Services\\IUserService.cs",
+              "RelativeToolTip": "AutoHub-System\\Services\\IUserService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T23:19:28.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "UsersController.cs",
               "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Controllers\\UsersController.cs",
               "RelativeDocumentMoniker": "AutoHub-System\\Controllers\\UsersController.cs",
               "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Controllers\\UsersController.cs",
               "RelativeToolTip": "AutoHub-System\\Controllers\\UsersController.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-12-05T13:21:26.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Views\\Orders\\Index.cshtml",
-              "RelativeDocumentMoniker": "AutoHub-System\\Views\\Orders\\Index.cshtml",
-              "ToolTip": "E:\\Tryeditcss\\AutoHub-System\\Views\\Orders\\Index.cshtml",
-              "RelativeToolTip": "AutoHub-System\\Views\\Orders\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-03T23:36:32.492Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
               "Title": "MainStyle.css",
               "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\wwwroot\\assets\\css\\MainStyle.css",
               "RelativeDocumentMoniker": "AutoHub-System\\wwwroot\\assets\\css\\MainStyle.css",
@@ -183,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "Login.cshtml",
               "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "AutoHub-System\\Views\\Account\\Login.cshtml",
@@ -195,7 +161,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 8,
               "Title": "cars.css",
               "DocumentMoniker": "E:\\Tryeditcss\\AutoHub-System\\wwwroot\\css\\cars.css",
               "RelativeDocumentMoniker": "AutoHub-System\\wwwroot\\css\\cars.css",

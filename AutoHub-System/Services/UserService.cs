@@ -1,5 +1,6 @@
 ﻿using AutoHub_System.Models;
 using AutoHub_System.Repositories;
+using AutoHub_System.Repositories.Interfaces;
 using AutoHub_System.Services.Interfaces;
 using AutoHub_System.ViewModel;
 using Microsoft.AspNetCore.Identity;
@@ -11,14 +12,17 @@ namespace AutoHub_System.Services
         private readonly UserManager<User> _userManager;
         private readonly SignInManager<User> _signInManager;
         private readonly ICloudinaryService _cloudinaryService;
+        private readonly IUserRepository _userRepository;
 
         public UserService(
             IRepository<User> repo,
+             IUserRepository userRepository,
             UserManager<User> userManager,
             SignInManager<User> signInManager,
             ICloudinaryService cloudinaryService
         ) : base(repo)
         {
+            _userRepository = userRepository;
             _userManager = userManager;
             _signInManager = signInManager;
             _cloudinaryService = cloudinaryService;
@@ -83,6 +87,23 @@ namespace AutoHub_System.Services
         public async Task<bool> IsInRoleAsync(User user, string role)
         {
             return await _userManager.IsInRoleAsync(user, role);
+        }
+        public async Task<User?> GetUserDetailsAsync(string id)
+        {
+            return await _userRepository.GetUserWithOrdersDetailsAsync(id);
+        }
+        public async Task<List<User>> GetAllWithOrdersAsync()
+        {
+            return await _userRepository.GetAllWithOrdersAsync();
+        }
+        public async Task<User?> GetByIdAsync(string id)
+        {
+            return await _userRepository.GetByIdAsync(id);
+        }
+        public async Task<List<User>> GetAllAsync()
+        {
+           
+            return await _userRepository.GetAllWithOrdersAsync();
         }
     }
 }
