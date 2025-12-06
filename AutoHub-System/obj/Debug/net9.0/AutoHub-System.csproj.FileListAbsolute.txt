@@ -1679,7 +1679,7 @@ E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-Syst
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\scopedcss\bundle\AutoHub-System.styles.css
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\scopedcss\projectbundle\AutoHub-System.bundle.scp.css
-E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\eeulv6ya1q-455fcfcsb6.gz
+E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\eeulv6ya1q-cxz6j8903m.gz
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\pxxypd2o02-1d75rj6yko.gz
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\yw8gug35r8-jiccieylfn.gz
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\zllcly3ram-shxjx1lm23.gz
@@ -1688,6 +1688,7 @@ E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-Syst
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\zk0qd6rvo1-kfnpkvgsvo.gz
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\c2h3x75mqk-ci9xjsmyf3.gz
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\haborzmi7v-ve5a27q4ec.gz
+E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\9q2idh1vj2-eszn2lro8d.gz
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\xay7cry0g5-4yzj3lv77v.gz
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\7cyes2gip0-00yshb15nj.gz
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\obj\Debug\net9.0\compressed\yg0y8fe82y-1z7ggdyf93.gz

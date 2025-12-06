@@ -7,6 +7,7 @@ wwwroot\assets\css\MainStyle.css
 wwwroot\assets\css\PaymentStyle.css
 wwwroot\assets\css\privacyStyle.css
 wwwroot\assets\css\termsStyle.css
+wwwroot\assets\css\userProfileStyle.css
 wwwroot\assets\img\black1.png
 wwwroot\assets\js\about.js
 wwwroot\assets\js\cars.js
@@ -25,13 +26,17 @@ wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\images\2.jpg
 wwwroot\images\3.jpg
+wwwroot\images\Aya.jpeg
 wwwroot\images\bmw black car wallpaper.jpg
 wwwroot\images\bmwcar.jpg
 wwwroot\images\car in logo.png
 wwwroot\images\cyberpunk-mclaren-supercars-neon-art--1003.jpg
+wwwroot\images\Doha.jpeg
 wwwroot\images\download (18).jpg
+wwwroot\images\hagar.jpeg
 wwwroot\images\icon.png
 wwwroot\images\Yahya.jpg
+wwwroot\images\yihia.jpeg
 wwwroot\img\black1.png
 wwwroot\img\bmw black car wallpaper.jpg
 wwwroot\img\car in logo.png
@@ -119,6 +124,7 @@ E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-Syst
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\wwwroot\assets\css\PaymentStyle.css
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\wwwroot\assets\css\privacyStyle.css
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\wwwroot\assets\css\termsStyle.css
+E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\wwwroot\assets\css\userProfileStyle.css
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\wwwroot\assets\js\about.js
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\wwwroot\assets\js\cars.js
 E:\رواد مصر الرقميه\Graduation project\AutoHub-System\AutoHub-System\wwwroot\assets\js\details.js
