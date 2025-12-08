@@ -1,0 +1,80 @@
+﻿@model PaymentViewModel
+@{
+    ViewData["Title"] = "Pay Now";
+    Layout = null;
+    var carBrand = Model?.CarBrand ?? "Unknown";
+    var carModel = Model?.CarModel ?? "Car";
+    var price = Model?.Price ?? 0;
+    var depositAmount = Model?.Deposit ?? 0;
+
+    var depositRatePercent = (depositAmount / price) * 100;
+    var displayRate = depositRatePercent > 0 ? $"{depositRatePercent:F1}%" : "N/A";
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/assets/css/PaymentStyle.css" />
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <div class="card">
+        <h2>Request & Pay ( @displayRate Deposit ) </h2>
+        <p class="muted">
+            You are booking: <strong>@carBrand @carModel</strong><br>
+            Total Price: <strong> @price EGP</strong><br>
+            Deposit (<strong>@displayRate</strong>): <strong> @depositAmount EGP </strong>
+        </p>
+
+        <form asp-action="CreateCheckoutSession" method="post" id="payForm" novalidate>
+               @Html.AntiForgeryToken()
+               <input type="hidden" name="CarID" value="@(Model?.CarID ?? 0)" />
+               <input type="hidden" name="Deposit" value="@depositAmount" />
+
+               <div class="grid">
+                    <div class="field">
+                        <label>Name *</label>
+                        <input type="text" name="Name" id="name" value="@Model?.Name" class="input" required />
+                        <span id="name-error" class="error"></span>
+                    </div>
+
+                    <div class="field">
+                        <label>Email *</label>
+                        <input type="email" name="Email" id="email" value="@Model?.Email" class="input" required />
+                        <span id="email-error" class="error"></span>
+                    </div>
+
+                    <div class="field">
+                        <label>Phone *</label>
+                        <input type="text" name="Phone" id="phone" value="@Model?.Phone" class="input" required />
+                        <span id="phone-error" class="error"></span>
+                    </div>
+
+                    <div class="field">
+                        <label>Another Phone (optional)</label>
+                        <input type="text" name="Phone2" id="phone2" value="@Model?.Phone2" class="input" />
+                        <span id="phone2-error" class="error"></span>
+                    </div>
+
+                    <div class="field full">
+                        <label>National ID (14 digits) *</label>
+                        <input type="text" name="SSN" id="ssn" value="@Model?.SSN" class="input" maxlength="14" required />
+                        <span id="ssn-error" class="error"></span>
+                    </div>
+
+
+            </div>
+            <div class="actions">
+                <div class="muted">
+                    Amount to pay: <strong> @depositAmount EGP</strong>
+                </div>
+                <button type="submit" class="btn" id="submit-btn">Pay Deposit Now</button>
+
+            </div>
+        </form>
+    </div>
+    <script src="~/assets/js/validation_script.js"> </script>
+</body>
+</html>

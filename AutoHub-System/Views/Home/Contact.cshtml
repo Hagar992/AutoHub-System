@@ -1,0 +1,51 @@
+﻿@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_HeaderAndFooterLayout.cshtml";
+}
+
+@section styles {
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/assets/css/contactStyle.css">
+}
+
+<!-- Hero Section -->
+<section class="contact-hero">
+    <h1>Get in Touch</h1>
+    <p>Have questions or need assistance? We're here to help.</p>
+</section>
+
+<section class="contact-section">
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p><strong>Email:</strong> support@autohub.com</p>
+        <p><strong>Phone:</strong> +20 101 234 5678</p>
+        <p><strong>Address:</strong> Cairo, Egypt</p>
+
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+
+    <form class="contact-form">
+        <h2>Send us a Message</h2>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<section class="map-section">
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3453.227864338728!2d31.235711!3d30.044420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145840c21d2e8d11%3A0x8b7d85d993c5c9bb!2sCairo%2C%20Egypt!5e0!3m2!1sen!2seg!4v1700000000000"
+                width="100%"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</section>

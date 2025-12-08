@@ -1,0 +1,136 @@
+﻿@model UserProfileViewModel
+@{
+    ViewData["Title"] = "My Profile";
+    Layout = "~/Views/Shared/_HeaderAndFooterLayout.cshtml";
+}
+
+@section styles {
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="~/assets/css/userProfileStyle.css">
+}
+
+<!-- Hero Section -->
+<section class="profile-hero">
+    <div class="profile-header">
+        <img src="@Model.ProfilePicture" alt="@Model.Name" class="profile-avatar">
+        <div class="profile-info">
+            <h1>@Model.Name</h1>
+            <p class="email">@Model.Email</p>
+            <p class="member-since">Member since @Model.DateRegistered.ToString("MMMM yyyy")</p>
+        </div>
+    </div>
+</section>
+
+<!-- User Stats -->
+<section class="stats-section">
+    <div class="stat-card">
+        <div class="stat-icon">📦</div>
+        <div class="stat-info">
+            <h3>@Model.TotalOrders</h3>
+            <p>Total Orders</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">⏳</div>
+        <div class="stat-info">
+            <h3>@Model.PendingOrders</h3>
+            <p>Pending Orders</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-info">
+            <h3>@Model.ConfirmedOrders</h3>
+            <p>Confirmed Orders</p>
+        </div>
+    </div>
+    <div class="stat-card">
+        <div class="stat-icon">💰</div>
+        <div class="stat-info">
+            <h3>$@Model.TotalSpent.ToString("N0")</h3>
+            <p>Total Spent</p>
+        </div>
+    </div>
+</section>
+
+<!-- Orders Section -->
+<section class="orders-section">
+    <h2>My Orders</h2>
+
+    @if (Model.Orders.Any())
+    {
+        <div class="orders-grid">
+            @foreach (var order in Model.Orders)
+            {
+                <div class="order-card">
+                    <div class="order-header">
+                        <span class="order-id">Order #@order.OrderID</span>
+                        <span class="order-status status-@order.Status.ToLower()">@order.Status</span>
+                    </div>
+
+                    <div class="order-car">
+                        <img src="@order.CarImage" alt="@order.CarName">
+                        <div class="car-details">
+                            <h4>@order.CarName</h4>
+                            <p class="order-date">
+                                <i class="far fa-calendar"></i>
+                                Ordered: @order.OrderDate.ToString("MMM dd, yyyy")
+                            </p>
+                            @if (order.Status == "Confirmed" && order.BuyingDate.HasValue)
+                            {
+                                <p class="buying-date">
+                                    <i class="fas fa-check-circle"></i>
+                                    Confirmed: @order.BuyingDate.Value.ToString("MMM dd, yyyy")
+                                </p>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="order-pricing">
+                        <div class="price-row">
+                            <span>Car Price:</span>
+                            <strong>$@order.CarPrice.ToString("N0")</strong>
+                        </div>
+                        <div class="price-row">
+                            <span>Deposit (@(order.DepositRate * 100)%):</span>
+                            <strong>$@order.Deposit.ToString("N0")</strong>
+                        </div>
+                        <div class="price-row total">
+                            <span>Total Paid:</span>
+                            <strong>$@order.TotalPaid.ToString("N0")</strong>
+                        </div>
+                    </div>
+
+                    <div class="order-actions">
+                        <a asp-controller="Cars" asp-action="CarDetails" asp-route-id="@order.CarID"
+                           class="btn-details">View Details</a>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="no-orders">
+            <div class="no-orders-icon">🚗</div>
+            <h3>No Orders Yet</h3>
+            <p>You haven't made any orders. Start browsing our cars!</p>
+            <a asp-controller="Cars" asp-action="Index" class="btn-browse">Browse Cars</a>
+        </div>
+    }
+</section>
+
+@section jscript {
+    <script>
+        // Auto-hide success messages
+        setTimeout(function() {
+            var alerts = document.querySelectorAll('.alert');
+            alerts.forEach(function(alert) {
+                alert.style.opacity = '0';
+                setTimeout(function() {
+                    alert.remove();
+                }, 500);
+            });
+        }, 3000);
+    </script>
+}

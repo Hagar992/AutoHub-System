@@ -1,0 +1,127 @@
+﻿@model AutoHub_System.ViewModel.DepositePolicyViewModel
+@{
+    ViewData["Title"] = "Create Deposit Policy";
+    Layout = "_DashboardLayout";
+}
+
+@section breadcrumb {
+    <div class="breadcrumb">
+        <a asp-controller="Dashboard" asp-action="Index">Dashboard</a> /
+        <a asp-controller="DepositePolicy" asp-action="Index">Deposit Policies</a> /
+        <span>Create Policy</span>
+    </div>
+}
+
+<div class="policy-form-container">
+    <div class="form-header">
+        <h1>Create Deposit Policy</h1>
+        <p>Define a new deposit policy for car rentals</p>
+    </div>
+
+    <form asp-action="Create" method="post" class="policy-form">
+        @Html.AntiForgeryToken()
+
+        <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+
+        <div class="form-section">
+            <h3 class="section-title">Policy Details</h3>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label asp-for="EffectiveDate" class="form-label">Effective Date *</label>
+                    <div class="date-input-container">
+                        <input asp-for="EffectiveDate" class="form-input" type="date" />
+                        <span class="material-symbols-sharp date-icon">calendar_today</span>
+                    </div>
+                    <span asp-validation-for="EffectiveDate" class="validation-message"></span>
+                    <small class="form-hint">The date when this policy becomes active</small>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="DepositeRate" class="form-label">Deposit Rate *</label>
+                    <div class="rate-input-container">
+                        <input asp-for="DepositeRate" class="form-input rate-input"
+                               step="0.01" min="0.01" max="1.0"
+                               placeholder="0.10" />
+                        <span class="rate-suffix">%</span>
+                    </div>
+                    <span asp-validation-for="DepositeRate" class="validation-message"></span>
+                    <small class="form-hint">Enter as decimal (e.g., 0.10 for 10%)</small>
+
+                    <!-- Rate Preview -->
+                    <div class="rate-preview">
+                        <div class="preview-item">
+                            <span class="preview-label">Sample Calculation:</span>
+                            <span class="preview-value">
+                                $1,000 car → $<span id="depositAmount">100</span> deposit
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                <span class="material-symbols-sharp">add_circle</span>
+                Create Policy
+            </button>
+            <a asp-action="Index" class="btn btn-secondary">
+                <span class="material-symbols-sharp">cancel</span>
+                Cancel
+            </a>
+        </div>
+
+        <div asp-validation-summary="All" class="validation-summary"></div>
+    </form>
+</div>
+
+@section right {
+    <div class="help-card">
+        <h3>Policy Guidelines</h3>
+        <div class="tip-item">
+            <span class="material-symbols-sharp">info</span>
+            <div>
+                <p><b>Effective Date</b></p>
+                <small>Policy becomes active from this date forward</small>
+            </div>
+        </div>
+        <div class="tip-item">
+            <span class="material-symbols-sharp">percent</span>
+            <div>
+                <p><b>Deposit Rate</b></p>
+                <small>Percentage of car price required as deposit</small>
+            </div>
+        </div>
+      
+
+    <div class="rate-examples-card">
+        <h3>Rate Examples</h3>
+        <div class="example-list">
+            <div class="example-item">
+                <span class="example-rate">10%</span>
+                <div class="example-details">
+                    <p>Standard Rate</p>
+                    <small>$1,000 car → $100 deposit</small>
+                </div>
+            </div>
+            <div class="example-item">
+                <span class="example-rate">15%</span>
+                <div class="example-details">
+                    <p>Premium Rate</p>
+                    <small>$1,000 car → $150 deposit</small>
+                </div>
+            </div>
+            <div class="example-item">
+                <span class="example-rate">20%</span>
+                <div class="example-details">
+                    <p>High-Risk Rate</p>
+                    <small>$1,000 car → $200 deposit</small>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<link rel="stylesheet" href="~/css/Deposit.css" asp-append-version="true" />

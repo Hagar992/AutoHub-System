@@ -1,0 +1,102 @@
+﻿@model IEnumerable<AutoHub_System.Models.DepositePolicy>
+@{
+    ViewData["Title"] = "Deposit Policies";
+    Layout = "_DashboardLayout";
+}
+
+<div class="deposit-policies-container">
+    <div class="page-header">
+        <h2>Deposit Policies</h2>
+        <a asp-action="Create" class="btn btn-primary">
+            <i class="fas fa-plus"></i> New Policy
+        </a>
+    </div>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">
+            <div class="alert-content">
+                <i class="fas fa-check-circle"></i>
+                <span>@TempData["Success"]</span>
+            </div>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-error">
+            <div class="alert-content">
+                <i class="fas fa-exclamation-circle"></i>
+                <span>@TempData["Error"]</span>
+            </div>
+        </div>
+    }
+
+    @if (Model.Any())
+    {
+        <div class="table-container">
+            <table class="policies-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Rate</th>
+                        <th>Status</th>
+                        <th class="actions-column">Actions</th>
+                    </tr>
+                </thead>
+                <tbody style="color:black">
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>#@item.PolicyID</td>
+                            <td>@item.EffectiveDate.ToString("MM/dd/yyyy")</td>
+                            <td class="rate-cell">@(item.DepositeRate * 100)%</td>
+                            <td>
+                                @if (item.IsActive)
+                                {
+                                    <span class="status status-active">Active</span>
+                                }
+                                else
+                                {
+                                    <span class="status status-inactive">Inactive</span>
+                                }
+                            </td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a asp-action="Edit" asp-route-id="@item.PolicyID" class="btn btn-edit">
+                                        <i class="fas fa-edit"></i> Edit
+                                    </a>
+                                    @if (item.IsActive)
+                                    {
+                                        <a asp-action="DeactivateConfirmation" asp-route-id="@item.PolicyID" class="btn btn-deactivate">
+                                            <i class="fas fa-pause"></i> Deactivate
+                                        </a>
+                                    }
+                                    else
+                                    {
+                                        <a asp-action="ActivateConfirmation" asp-route-id="@item.PolicyID" class="btn btn-activate">
+                                            <i class="fas fa-play"></i> Activate
+                                        </a>
+                                    }
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="empty-state">
+            <i class="fas fa-file-contract"></i>
+            <h3>No Policies Found</h3>
+            <p>Create your first deposit policy to get started.</p>
+            <a asp-action="Create" class="btn btn-primary">
+                <i class="fas fa-plus"></i> Create Policy
+            </a>
+        </div>
+    }
+</div>
+ <link rel="stylesheet" href="~/css/DepositIndex.css" />
