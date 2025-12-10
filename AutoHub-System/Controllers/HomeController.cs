@@ -19,7 +19,7 @@ namespace AutoHub_System.Controllers
         {
             var model = new IndexViewModel
             {
-                MostPickedCars = await _carService.GetRandomMostPickedCarsAsync(6)
+                MostPickedCars = await _carService.GetRandomMostPickedCarsAsync(3)
             };
             return View(model);
         }
