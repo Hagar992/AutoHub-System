@@ -18,4 +18,3 @@
                                  : "https://res.cloudinary.com/dmsmksagp/image/upload/v1764462344/profiles/j6lypf9ytgtdue9zxjl8.jpg";
     }
 }
-//this Controller only for profile picture 

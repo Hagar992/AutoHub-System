@@ -67,6 +67,49 @@ namespace AutoHub_System.Controllers
                 return RedirectToAction(nameof(Index));
             }
 
+            [Authorize(Roles = "Admin")]
+            public async Task<IActionResult> ManageRoles(string id)
+            {
+                var user = await _userManager.FindByIdAsync(id);
+                if (user == null) return NotFound();
+
+                var roles = await _userManager.GetRolesAsync(user);
+                var allRoles = new List<string> { "Admin", "User" };
+
+                var viewModel = new ManageRolesViewModel
+                {
+                    UserId = id,
+                    UserName = user.UserName,
+                    UserRoles = roles,
+                    AvailableRoles = allRoles.Except(roles).ToList()
+                };
+
+                return View(viewModel);
+            }
+
+            [HttpPost]
+            [ValidateAntiForgeryToken]
+            public async Task<IActionResult> AddRole(string userId, string role)
+            {
+                var user = await _userManager.FindByIdAsync(userId);
+                if (user == null) return NotFound();
+
+                await _userManager.AddToRoleAsync(user, role);
+                return RedirectToAction("ManageRoles", new { id = userId });
+            }
+
+            [HttpPost]
+            [ValidateAntiForgeryToken]
+            public async Task<IActionResult> RemoveRole(string userId, string role)
+            {
+                var user = await _userManager.FindByIdAsync(userId);
+                if (user == null) return NotFound();
+
+                await _userManager.RemoveFromRoleAsync(user, role);
+                return RedirectToAction("ManageRoles", new { id = userId });
+            }
+
+
         }
     }
 
