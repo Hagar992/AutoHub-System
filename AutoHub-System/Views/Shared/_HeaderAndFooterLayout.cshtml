@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -171,7 +171,20 @@
 <body>
     <!---------------------start navbar------------------------------- -->
     <header class="top">
-        <div class="logo">AutoHub</div>
+        <div class="logo">
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" style="color: inherit; text-decoration: none;">
+                    AutoHub
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Home" asp-action="Index" style="color: inherit; text-decoration: none;">
+                    AutoHub
+                </a>
+            }
+        </div>
         <nav class="nav" id="nav">
             <a asp-controller="Home" asp-action="Index">Home</a>
             <a asp-controller="Home" asp-action="About">About</a>
