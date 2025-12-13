@@ -87,6 +87,7 @@
 
         @foreach (var item in Model)
         {
+              if (item.Quantity > 0){
              <a href="/cars/cardetails/@item.CarID" class="card"> 
                  <img src="@item.MainImage" alt="Carimg">
                 <div class="carinfo">
@@ -104,6 +105,7 @@
                     <p class="money">@item.Price.ToString("N0") EGP</p> 
                 </div>
              </a>
+            }
 
         }
 
