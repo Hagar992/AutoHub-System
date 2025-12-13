@@ -1,4 +1,4 @@
-﻿@model Car
+@model Car
 
 @{
     ViewData["Title"] = "Delete Car";
@@ -74,10 +74,10 @@
                     <input type="hidden" asp-for="CarID" />
 
                     <div class="form-actions" style="display: flex; gap: 1rem; align-items: center; justify-content: center;">
-                        <button type="submit" class="btn" style="background: var(--clr-danger); color: white; padding: 0.8rem 1.5rem; font-size: 1rem;">
+                        <button type="submit" class="btn btn-confirm">
                             <i class="fas fa-trash"></i> Delete Car
                         </button>
-                        <a asp-action="Manage" class="btn btn-cancel" style="padding: 0.8rem 1.5rem; font-size: 1rem;">
+                        <a asp-action="Manage" class="btn btn-cancel" >
                             <i class="fas fa-times"></i> Cancel
                         </a>
                     </div>
