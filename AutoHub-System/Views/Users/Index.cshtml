@@ -1,0 +1,125 @@
+﻿@model List<AutoHub_System.Models.User>
+
+@{
+    ViewData["Title"] = "Users";
+    Layout = "_DashboardLayout";
+}
+
+<h2>All Users</h2>
+
+<table class="usertable">
+    <thead>
+        <tr>
+            @* <th>Profile</th> *@
+            <th>Full Name</th>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Registered At</th>
+            <th>Orders Count</th>
+            <th>Operations</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var user in Model)
+        {
+            <tr>
+                @* <td>
+                    <img src="~/images/@user.ProfilePicture"
+                         width="50"
+                         height="50"
+                         style="border-radius:50%" />
+                </td> *@
+
+                <td>@user.Name</td>
+                <td>@user.UserName</td>
+                <td>@user.Email</td>
+                <td>@user.DateRegistered.ToString("dd MMM yyyy")</td>
+                <td>@user.Orders.Count</td>
+
+                <td>
+                    <div style="display:flex; gap:8px; justify-content:center;">
+
+                       
+                        <a asp-controller="Users"
+                           asp-action="Details"
+                           asp-route-id="@user.Id"
+                           style="
+                    background-color:#0d6efd;
+                    color:white;
+                    padding:6px 14px;
+                    border-radius:6px;
+                    text-decoration:none;
+                    font-size:14px;
+                    font-weight:500;
+                    transition:0.3s;">
+                            View
+                        </a>
+
+                      
+                        @* <form method="post"
+                              asp-controller="Users"
+                              asp-action="Block"
+                              asp-route-id="@user.Id"
+                              style="display:inline-block;">
+
+                            @Html.AntiForgeryToken()
+
+                            <button type="submit"
+                                    onclick="return confirm('Are you sure you want to block @user.UserName?')"
+                                    style="
+                            background-color:#dc3545;
+                            color:white;
+                            padding:6px 14px;
+                            border:none;
+                            border-radius:6px;
+                            font-size:14px;
+                            font-weight:500;
+                            cursor:pointer;
+                            transition:0.3s;">
+                                Block
+                            </button>
+                        </form> *@
+                        <form method="post"
+                              asp-controller="Users"
+                              asp-action="ToggleBlock"
+                              asp-route-id="@user.Id"
+                              style="display:inline-block;">
+                            @Html.AntiForgeryToken()
+                            <button type="submit"
+                                    onclick="return confirm('Are you sure you want to @(user.LockoutEnd.HasValue && user.LockoutEnd > DateTime.Now ? "unblock" : "block") @user.UserName?')"
+                                    style="
+                                    background-color:@(user.LockoutEnd.HasValue && user.LockoutEnd > DateTime.Now ? "#28a745" : "#dc3545");
+                                    color:white;
+                                    padding:6px 14px;
+                                    border:none;
+                                    border-radius:6px;
+                                    font-size:14px;
+                                    font-weight:500;
+                                    cursor:pointer;
+                                    transition:0.3s;
+                                ">
+                                @(user.LockoutEnd.HasValue && user.LockoutEnd > DateTime.Now ? "Unblock" : "Block")
+                            </button>
+                        </form>
+                        <a asp-controller="Users"
+                           asp-action="ManageRoles"
+                           asp-route-id="@user.Id"
+                           style="
+                            background-color:#ffc107;
+                            color:white;
+                            padding:6px 14px;
+                            border-radius:6px;
+                            text-decoration:none;
+                            font-size:14px;
+                            font-weight:500;
+                            transition:0.3s;">
+                            Manage Roles
+                        </a>
+
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

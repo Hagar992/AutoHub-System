@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/assets/css/headerFooter.css">
+    @RenderSection("styles", false)
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Add this line to render the title section -->
+    @if (IsSectionDefined("title"))
+    {
+        @RenderSection("title", false)
+    }
+    else
+    {
+        <title>Cars</title>
+    }
+    <style>
+        /* Profile Dropdown Styles */
+        .profile-dropdown {
+            position: relative;
+        }
+
+        .profile-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--glass, rgba(255,255,255,0.05));
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 6px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            color: var(--white,#fff);
+            font-family: 'Poppins', sans-serif;
+        }
+
+            .profile-btn:hover {
+                background: rgba(255, 255, 255, 0.08);
+                border-color: var(--accent,#ffd166);
+            }
+
+        .profile-img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--accent,#ffd166);
+        }
+
+        .username {
+            font-size: 14px;
+            font-weight: 600;
+            max-width: 100px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .profile-btn i {
+            font-size: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .profile-btn.active i {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background: var(--card, rgba(0,0,0,0.7));
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            min-width: 200px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            overflow: hidden;
+        }
+
+            .dropdown-menu.show {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+        .dropdown-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 20px;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+            .dropdown-item:last-child {
+                border-bottom: none;
+            }
+
+            .dropdown-item:hover {
+                background: rgba(255,255,255,0.05);
+                color: var(--accent,#ffd166);
+            }
+
+            .dropdown-item i {
+                font-size: 16px;
+                width: 20px;
+                text-align: center;
+            }
+
+            .dropdown-item.logout:hover {
+                background: rgba(244, 67, 54, 0.1);
+                color: #f44336;
+            }
+
+        .login-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent,#ffd166);
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+            .login-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba(255, 209, 102, 0.4);
+            }
+
+        /* Mobile */
+        @@media(max - width:980px) {
+            .profile-btn
+
+        {
+            width: 100%;
+            padding: 10px 15px;
+            justify-content: flex-start;
+        }
+
+        .dropdown-menu {
+            position: static;
+            opacity: 1;
+            visibility: visible;
+            transform: none;
+            display: none;
+            box-shadow: none;
+            margin-top: 10px
+        }
+
+            .dropdown-menu.show {
+                display: block;
+            }
+
+        }
+    </style>
+
+</head>
+<body>
+    <!---------------------start navbar------------------------------- -->
+    <header class="top">
+        <div class="logo">
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index" style="color: inherit; text-decoration: none;">
+                    AutoHub
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Home" asp-action="Index" style="color: inherit; text-decoration: none;">
+                    AutoHub
+                </a>
+            }
+        </div>
+        <nav class="nav" id="nav">
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Home" asp-action="About">About</a>
+            <a asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a asp-controller="Cars" asp-action="Index">Choose Now</a>
+            <div class="profile-dropdown">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <button class="profile-btn" id="profileBtn">
+                        <img src="@ViewBag.ProfilePicture" alt="Profile" class="profile-img" />
+                        <span class="username">@ViewBag.UserName</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a asp-controller="Account" asp-action="Profile" class="dropdown-item">
+                            <i class="fas fa-user"></i> My Profile
+                        </a>
+
+                        <form asp-controller="Account" asp-action="Logout"  style="margin: 0;" id="logoutForm">
+                            @Html.AntiForgeryToken()
+                            <a href="javascript:void(0);" onclick="document.getElementById('logoutForm').submit();" class="dropdown-item logout">
+                                <i class="fas fa-sign-out-alt"></i> Logout
+                            </a>
+                        </form>
+                    </div>
+                }
+                else
+                {
+                    <a asp-controller="Account" asp-action="Login" class="login-btn">
+                        <i class="fas fa-user"></i> Login
+                    </a>
+                }
+            </div>
+
+        </nav>
+        <div id="menu-icon">&#9776;</div>
+    </header>
+
+    <!-- Sidebar + overlay -->
+    <div id="overlay"></div>
+    <aside id="sidebar">
+        <button id="close-sidebar">&times;</button>
+        <div id="sidebar-data"></div>
+    </aside>
+
+    @RenderBody()
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>AutoHub</h4>
+                <p>Find your perfect car in just a few clicks — reliable, fast, and affordable.</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a asp-controller="Home" asp-action="Privacy">Privacy Policy</a></li>
+                    <li><a asp-controller="Home" asp-action="Terms">Terms & Conditions</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a asp-controller="Home" asp-action="Contact" ">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 AutoHub. All rights reserved.</p>
+        </div>
+    </footer>
+    <!---------------------end main------------------------------- -->
+    <!-- Fixed the duplicate script tag -->
+    <script src="~/assets/js/headerFooter.js"></script>
+    @RenderSection("jscript", false)
+</body>
+</html>

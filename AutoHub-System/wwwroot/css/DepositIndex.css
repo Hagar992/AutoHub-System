@@ -1,0 +1,224 @@
+/* wwwroot/css/DepositePolicy/index.css */
+.deposit-policies-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+    .page-header h2 {
+        margin: 0;
+        color: #333;
+        font-weight: 600;
+    }
+
+.alert {
+    border-radius: 6px;
+    padding: 0.8rem 1rem;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid;
+}
+
+.alert-success {
+    background: rgba(65, 241, 182, 0.1);
+    border-left-color: #28a745;
+}
+
+.alert-error {
+    background: rgba(241, 65, 65, 0.1);
+    border-left-color: #dc3545;
+}
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.alert-success i {
+    color: #28a745;
+}
+
+.alert-error i {
+    color: #dc3545;
+}
+
+.table-container {
+    overflow-x: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.policies-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+}
+
+    .policies-table th {
+        background-color: #f8f9fa;
+        padding: 0.8rem;
+        text-align: left;
+        font-weight: 600;
+        color: #495057;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .policies-table td {
+        padding: 0.8rem;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .policies-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .policies-table tr:hover {
+        background-color: #f8f9fa;
+    }
+
+.rate-cell {
+    font-weight: 600;
+    color: #007bff;
+}
+
+.status {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.status-active {
+    background: rgba(40, 167, 69, 0.1);
+    color: #28a745;
+}
+
+.status-inactive {
+    background: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+}
+
+.actions-column {
+    width: 200px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+.btn-edit {
+    background-color: #17a2b8;
+    color: white;
+}
+
+    .btn-edit:hover {
+        background-color: #138496;
+    }
+
+.btn-deactivate {
+    background-color: #ffc107;
+    color: #212529;
+}
+
+    .btn-deactivate:hover {
+        background-color: #e0a800;
+    }
+
+.btn-activate {
+    background-color: #28a745;
+    color: white;
+}
+
+    .btn-activate:hover {
+        background-color: #218838;
+    }
+
+.empty-state {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+    .empty-state i {
+        font-size: 3rem;
+        color: #6c757d;
+        margin-bottom: 1rem;
+    }
+
+    .empty-state h3 {
+        color: #495057;
+        margin-bottom: 0.5rem;
+        font-size: 1.25rem;
+    }
+
+    .empty-state p {
+        color: #6c757d;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+
+    .btn {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .policies-table {
+        font-size: 0.8rem;
+    }
+
+        .policies-table th,
+        .policies-table td {
+            padding: 0.6rem;
+        }
+}

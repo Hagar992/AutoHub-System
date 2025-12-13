@@ -1,0 +1,30 @@
+﻿@model ManageRolesViewModel
+
+<h2>Manage Roles for: @Model.UserName</h2>
+
+<h3>Current Roles</h3>
+<ul>
+    @foreach (var role in Model.UserRoles)
+    {
+        <li>
+            @role
+            <form method="post" asp-action="RemoveRole">
+                <input type="hidden" name="userId" value="@Model.UserId" />
+                <input type="hidden" name="role" value="@role" />
+                <button type="submit" class="btn btn-danger btn-sm">Remove</button>
+            </form>
+        </li>
+    }
+</ul>
+
+<h3>Add New Role</h3>
+<form method="post" asp-action="AddRole">
+    <input type="hidden" name="userId" value="@Model.UserId" />
+    <select name="role" class="form-control">
+        @foreach (var role in Model.AvailableRoles)
+        {
+            <option value="@role">@role</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-primary mt-2">Add Role</button>
+</form>

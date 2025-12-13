@@ -1,0 +1,218 @@
+﻿@model List<Car>
+@{
+    ViewData["Title"] = "Manage Cars";
+    Layout = "_DashboardLayout";
+
+    // Get filter values from ViewBag
+    var selectedBrand = ViewBag.SelectedBrand as string ?? "";
+    var selectedStatus = ViewBag.SelectedStatus as string ?? "";
+    var searchTerm = ViewBag.SearchTerm as string ?? "";
+}
+
+@section breadcrumb {
+    <div class="breadcrumb">
+        <a asp-controller="Dashboard" asp-action="Index">Dashboard</a> /
+        <span>Manage Cars</span>
+    </div>
+}
+
+<div class="cars-management">
+    <!-- Header Section -->
+    <div class="management-header">
+        <div class="header-content">
+            <h1>Car Management</h1>
+            <p>Manage your car inventory and listings</p>
+        </div>
+        <a asp-action="Create" class="btn btn-primary">
+            <span class="material-symbols-sharp">add</span>
+            Add New Car
+        </a>
+    </div>
+
+    <!-- Success Messages -->
+    @if (TempData["Success"] != null)
+    {
+        <div class="success-alert">
+            <span class="material-symbols-sharp">check_circle</span>
+            <span class="alert-message">@TempData["Success"]</span>
+        </div>
+    }
+
+    @if (TempData["Error"] != null)
+    {
+        <div class="error-alert">
+            <span class="material-symbols-sharp">error</span>
+            <span class="alert-message">@TempData["Error"]</span>
+        </div>
+    }
+
+    <!-- Server-Side Filter Form -->
+    <div class="search-filter-section">
+        <form method="get" asp-action="Manage" class="filter-form">
+            <div class="filter-controls">
+                <div class="filter-group">
+                    <label for="brand">Brand:</label>
+                    <select id="brand" name="brand">
+                        <option value="">All Brands</option>
+                        @foreach (var brand in ViewBag.Brands)
+                        {
+                            <option  value="@brand" selected="@(brand == selectedBrand)">@brand</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status">
+                        <option   value="">All Status</option>
+                        <option  value="New" selected="@("New" == selectedStatus)">New</option>
+                        <option  value="Used" selected="@("Used" == selectedStatus)">Used</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="search">Search:</label>
+                    <input type="text" id="search" name="search" value="@searchTerm"
+                           placeholder="Search by brand, model..." />
+                </div>
+
+                <div class="filter-actions">
+                    <button type="submit" class="btn btn-primary">
+                      
+                        Apply Filters
+                    </button>
+                    <a asp-action="Manage" class="btn btn-secondary">
+                        <span class="material-symbols-sharp">clear_all</span>
+                        Clear
+                    </a>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="stats-cards">
+        <div class="stat-card">
+            <div class="stat-icon">
+                <span class="material-symbols-sharp">directions_car</span>
+            </div>
+            <div class="stat-content">
+                <h3>@Model.Count</h3>
+                <p>Filtered Cars</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon available">
+                <span class="material-symbols-sharp">check_circle</span>
+            </div>
+            <div class="stat-content">
+                <h3>@Model.Count(c => c.CarSatus == "New")</h3>
+                <p>New Cars</p>
+            </div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon sold">
+                <span class="material-symbols-sharp">inventory</span>
+            </div>
+            <div class="stat-content">
+                <h3>@Model.Count(c => c.CarSatus == "Used")</h3>
+                <p>Used Cars</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cars Table -->
+    <div class="table-container">
+        <div class="table-header">
+            <h3> Cars (@Model.Count total)</h3>
+            @if (!string.IsNullOrEmpty(selectedBrand) || !string.IsNullOrEmpty(selectedStatus) || !string.IsNullOrEmpty(searchTerm))
+            {
+                <div class="active-filters">
+                    <small>Active filters:</small>
+                    @if (!string.IsNullOrEmpty(selectedBrand))
+                    {
+                        <span class="filter-tag">Brand: @selectedBrand</span>
+                    }
+                    @if (!string.IsNullOrEmpty(selectedStatus))
+                    {
+                        <span class="filter-tag">Status: @selectedStatus</span>
+                    }
+                    @if (!string.IsNullOrEmpty(searchTerm))
+                    {
+                        <span class="filter-tag">Search: "@searchTerm"</span>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="table-responsive">
+            <table class="cars-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Year</th>
+                        <th>Price</th>
+                        <th>Status</th>
+                        <th>Date Added</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.CarID</td>
+                            <td>
+                                <div class="car-brand">
+                                    <span class="brand-logo">@item.Brand?.Substring(0, 1)</span>
+                                    @item.Brand
+                                </div>
+                            </td>
+                            <td>@item.Model</td>
+                            <td>@item.Year</td>
+                            <td class="price">$@item.Price.ToString("N2")</td>
+                            <td>
+                                <span class="status-badge status-@item.CarSatus?.ToLower()">
+                                    @item.CarSatus
+                                </span>
+                            </td>
+                            <td>@item.DateAdded.ToString("MMM dd, yyyy")</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a asp-action="Edit" asp-route-id="@item.CarID" class="btn-action btn-edit" title="Edit">
+                                        <span class="material-symbols-sharp">edit</span>
+                                    </a>
+                                    <a asp-controller="Cars" asp-action="CarDetails" asp-route-id="@item.CarID" class="btn-action btn-view" title="View Details">
+                                        <span class="material-symbols-sharp">visibility</span>
+                                    </a>
+                                    <a asp-action="Delete" asp-route-id="@item.CarID" class="btn-action btn-delete" title="Delete">
+                                        <span class="material-symbols-sharp">delete</span>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Empty State -->
+        @if (!Model.Any())
+        {
+            <div class="empty-state">
+                <span class="material-symbols-sharp">search_off</span>
+                <h3>No Cars Found</h3>
+                <p>No cars match your current filters.</p>
+                <a asp-action="Manage" class="btn btn-primary">
+                    <span class="material-symbols-sharp">refresh</span>
+                    Clear Filters
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+<link rel="stylesheet" href="~/css/Manage.css" asp-append-version="true" />
+<script src="~/js/Manage.js" asp-append-version="true"></script>
