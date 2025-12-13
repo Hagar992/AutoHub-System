@@ -233,6 +233,7 @@ namespace AutoHub_System.Controllers
                 existingCar.SeatNumer = viewModel.SeatNumber;
                 existingCar.CarSatus = viewModel.CarStatus;
                 existingCar.Description = viewModel.Description;
+                existingCar.Quantity = viewModel.Quantity;
 
                 // Combine existing images with new ones
                 if (newImageUrls.Any())
