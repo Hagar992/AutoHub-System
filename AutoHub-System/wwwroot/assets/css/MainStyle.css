@@ -1,4 +1,4 @@
-﻿:root{
+:root{
     --bg:#0f0f10;
     --card:#111214;
     --muted:#9b9b9b;
@@ -223,19 +223,22 @@ body{
     margin-top: auto;
     padding-top: 16px;
     border-top: 1px solid #eee;
+    margin-bottom:10px;
 }
 
 .price {
     font-size: 1.6rem;
     font-weight: 800;
     color: #e67e22;
+    margin-bottom: 10px;
 }
 
-.price small {
-    font-size: 0.9rem;
-    color: #888;
-    font-weight: normal;
-}
+    .price small {
+        font-size: 0.9rem;
+        color: #888;
+        font-weight: normal;
+        margin-bottom: 10px;
+    }
 
 /* زر الحجز */
 .btn-book {
@@ -248,7 +251,7 @@ body{
     font-size: 1rem;
     transition: all 0.3s;
     align-self: center;
-    margin-top: -10px;
+/*    margin-top: -10px;*/
     box-shadow: 0 6px 20px rgba(230, 126, 34, 0.3);
 }
 
